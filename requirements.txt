@@ -3,6 +3,9 @@ uvicorn[standard]>=0.29
 pydantic>=2.6
 python-dotenv>=1.0
 psycopg[binary]>=3.2   # used only when DATABASE_URL is set (Render Postgres)
+python-multipart>=0.0.9   # admin document upload (FR10)
 # optional – retrieval (RAG). Without these the app runs with template / no-context explanations.
 # sentence-transformers>=2.7
 # faiss-cpu>=1.8
+# evaluation script eval_rq5.py (Wilcoxon test):
+# scipy>=1.11

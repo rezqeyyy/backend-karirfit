@@ -1,8 +1,5 @@
 {
  "version": 1,
- "demand_source": "demand_measured.csv",
- "data_label": "dataset lowongan (isi nama & periode, mis. 'lowongan IT Indonesia 2015–2025')",
- "n_ads_train": 200,
  "params": {
   "alpha": 0.5,
   "threshold": 0.1,
@@ -28,194 +25,99 @@
    "group": "primary",
    "requirements": [
     {
-     "skill": "docker",
-     "demand": 0.3333,
-     "weight": 0.417588
-    },
-    {
-     "skill": "html_css",
-     "demand": 0.2593,
-     "weight": 0.403963
-    },
-    {
      "skill": "javascript",
-     "demand": 0.2593,
-     "weight": 0.403963
+     "demand": 0.42,
+     "weight": 0.752539
     },
     {
-     "skill": "git",
-     "demand": 0.4074,
-     "weight": 0.399597
-    },
-    {
-     "skill": "spring",
-     "demand": 0.1852,
-     "weight": 0.396309
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.3333,
-     "weight": 0.381711
-    },
-    {
-     "skill": "dotnet",
-     "demand": 0.1852,
-     "weight": 0.331807
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.4074,
-     "weight": 0.330379
-    },
-    {
-     "skill": "typescript",
-     "demand": 0.1481,
-     "weight": 0.317047
-    },
-    {
-     "skill": "react",
-     "demand": 0.1481,
-     "weight": 0.317047
-    },
-    {
-     "skill": "hardware",
-     "demand": 0.2963,
-     "weight": 0.312904
-    },
-    {
-     "skill": "cpp",
-     "demand": 0.2222,
-     "weight": 0.308065
-    },
-    {
-     "skill": "ui_design",
-     "demand": 0.2222,
-     "weight": 0.308065
-    },
-    {
-     "skill": "ci_cd",
-     "demand": 0.2593,
-     "weight": 0.296886
-    },
-    {
-     "skill": "kubernetes",
-     "demand": 0.2222,
-     "weight": 0.278392
-    },
-    {
-     "skill": "documentation",
-     "demand": 0.2593,
-     "weight": 0.273791
-    },
-    {
-     "skill": "codeigniter",
-     "demand": 0.2593,
-     "weight": 0.273791
-    },
-    {
-     "skill": "angular",
-     "demand": 0.1481,
-     "weight": 0.265446
+     "skill": "php",
+     "demand": 0.33,
+     "weight": 0.706222
     },
     {
      "skill": "java",
-     "demand": 0.2222,
-     "weight": 0.254474
+     "demand": 0.45,
+     "weight": 0.701165
     },
     {
-     "skill": "python",
-     "demand": 0.2593,
-     "weight": 0.254289
+     "skill": "microservices",
+     "demand": 0.25,
+     "weight": 0.693147
     },
     {
-     "skill": "adobe",
-     "demand": 0.1111,
-     "weight": 0.237785
+     "skill": "rest_api",
+     "demand": 0.36,
+     "weight": 0.645033
     },
     {
-     "skill": "vue",
-     "demand": 0.1111,
-     "weight": 0.237785
+     "skill": "html_css",
+     "demand": 0.34,
+     "weight": 0.609198
     },
     {
-     "skill": "ux_research",
-     "demand": 0.2222,
-     "weight": 0.234678
+     "skill": "git",
+     "demand": 0.38,
+     "weight": 0.592095
     },
     {
      "skill": "sql",
-     "demand": 0.2222,
-     "weight": 0.234678
+     "demand": 0.52,
+     "weight": 0.549147
     },
     {
-     "skill": "product_management",
-     "demand": 0.1852,
-     "weight": 0.231993
+     "skill": "spring",
+     "demand": 0.18,
+     "weight": 0.499066
     },
     {
-     "skill": "prototyping",
-     "demand": 0.1481,
-     "weight": 0.230836
+     "skill": "mysql",
+     "demand": 0.25,
+     "weight": 0.44794
     },
     {
-     "skill": "data_structures",
-     "demand": 0.1481,
-     "weight": 0.205377
+     "skill": "nodejs",
+     "demand": 0.2,
+     "weight": 0.428013
+    },
+    {
+     "skill": "react",
+     "demand": 0.2,
+     "weight": 0.428013
     },
     {
      "skill": "unit_testing",
-     "demand": 0.1111,
-     "weight": 0.199084
+     "demand": 0.15,
+     "weight": 0.415888
     },
     {
-     "skill": "networking",
-     "demand": 0.2222,
-     "weight": 0.180207
+     "skill": "oop",
+     "demand": 0.22,
+     "weight": 0.394187
     },
     {
-     "skill": "erp",
-     "demand": 0.2222,
-     "weight": 0.180207
+     "skill": "agile_scrum",
+     "demand": 0.24,
+     "weight": 0.332711
     },
     {
-     "skill": "monitoring",
-     "demand": 0.1481,
-     "weight": 0.169649
+     "skill": "golang",
+     "demand": 0.12,
+     "weight": 0.332711
     },
     {
-     "skill": "aws",
-     "demand": 0.1111,
-     "weight": 0.154033
+     "skill": "docker",
+     "demand": 0.18,
+     "weight": 0.322517
     },
     {
-     "skill": "csharp",
-     "demand": 0.1111,
-     "weight": 0.154033
+     "skill": "android",
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "sdlc",
-     "demand": 0.1111,
-     "weight": 0.139196
-    },
-    {
-     "skill": "requirement_analysis",
-     "demand": 0.1111,
-     "weight": 0.139196
-    },
-    {
-     "skill": "project_management",
-     "demand": 0.1111,
-     "weight": 0.127237
-    },
-    {
-     "skill": "azure",
-     "demand": 0.1111,
-     "weight": 0.108981
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.1111,
-     "weight": 0.10181
+     "skill": "kotlin",
+     "demand": 0.11,
+     "weight": 0.235407
     }
    ]
   },
@@ -226,219 +128,94 @@
    "group": "primary",
    "requirements": [
     {
-     "skill": "angular",
-     "demand": 0.3333,
-     "weight": 0.597253
+     "skill": "php",
+     "demand": 0.355,
+     "weight": 0.759723
     },
     {
      "skill": "javascript",
-     "demand": 0.359,
-     "weight": 0.559334
-    },
-    {
-     "skill": "dotnet",
-     "demand": 0.3077,
-     "weight": 0.551311
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.4359,
-     "weight": 0.49916
-    },
-    {
-     "skill": "java",
-     "demand": 0.4359,
-     "weight": 0.49916
-    },
-    {
-     "skill": "typescript",
-     "demand": 0.2308,
-     "weight": 0.493861
-    },
-    {
-     "skill": "sql",
-     "demand": 0.4615,
-     "weight": 0.487409
-    },
-    {
-     "skill": "csharp",
-     "demand": 0.3333,
-     "weight": 0.462098
-    },
-    {
-     "skill": "react",
-     "demand": 0.2051,
-     "weight": 0.438988
-    },
-    {
-     "skill": "graphql",
-     "demand": 0.1538,
-     "weight": 0.426552
-    },
-    {
-     "skill": "docker",
-     "demand": 0.3333,
-     "weight": 0.417588
-    },
-    {
-     "skill": "ci_cd",
-     "demand": 0.359,
-     "weight": 0.411073
-    },
-    {
-     "skill": "git",
-     "demand": 0.4103,
-     "weight": 0.402391
+     "demand": 0.416,
+     "weight": 0.745372
     },
     {
      "skill": "html_css",
-     "demand": 0.2564,
-     "weight": 0.399524
+     "demand": 0.404,
+     "weight": 0.723871
+    },
+    {
+     "skill": "java",
+     "demand": 0.407,
+     "weight": 0.634165
+    },
+    {
+     "skill": "laravel",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "sql",
+     "demand": 0.495,
+     "weight": 0.522746
+    },
+    {
+     "skill": "mysql",
+     "demand": 0.28,
+     "weight": 0.501693
+    },
+    {
+     "skill": "rest_api",
+     "demand": 0.26,
+     "weight": 0.465857
+    },
+    {
+     "skill": "git",
+     "demand": 0.24,
+     "weight": 0.373955
+    },
+    {
+     "skill": "react",
+     "demand": 0.17,
+     "weight": 0.363811
     },
     {
      "skill": "codeigniter",
-     "demand": 0.359,
-     "weight": 0.379096
+     "demand": 0.13,
+     "weight": 0.360437
     },
     {
-     "skill": "unit_testing",
-     "demand": 0.2051,
-     "weight": 0.36754
+     "skill": "csharp",
+     "demand": 0.12,
+     "weight": 0.332711
+    },
+    {
+     "skill": "dotnet",
+     "demand": 0.12,
+     "weight": 0.332711
     },
     {
      "skill": "nodejs",
-     "demand": 0.1538,
-     "weight": 0.329241
+     "demand": 0.15,
+     "weight": 0.32101
     },
     {
-     "skill": "mongodb",
-     "demand": 0.1538,
-     "weight": 0.329241
-    },
-    {
-     "skill": "spring",
-     "demand": 0.1538,
-     "weight": 0.329241
-    },
-    {
-     "skill": "microservices",
-     "demand": 0.1795,
-     "weight": 0.321598
-    },
-    {
-     "skill": "kubernetes",
-     "demand": 0.2564,
-     "weight": 0.321221
-    },
-    {
-     "skill": "ui_design",
-     "demand": 0.2308,
-     "weight": 0.319914
-    },
-    {
-     "skill": "ux_research",
-     "demand": 0.2821,
-     "weight": 0.297861
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.359,
-     "weight": 0.291103
-    },
-    {
-     "skill": "nosql",
-     "demand": 0.1282,
-     "weight": 0.274367
+     "skill": "css_framework",
+     "demand": 0.11,
+     "weight": 0.304985
     },
     {
      "skill": "vue",
-     "demand": 0.1282,
-     "weight": 0.274367
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.2821,
-     "weight": 0.258441
-    },
-    {
-     "skill": "azure",
-     "demand": 0.2564,
-     "weight": 0.251495
+     "demand": 0.1,
+     "weight": 0.277259
     },
     {
      "skill": "oop",
-     "demand": 0.1026,
-     "weight": 0.219494
-    },
-    {
-     "skill": "sql_server",
-     "demand": 0.1026,
-     "weight": 0.219494
-    },
-    {
-     "skill": "cpp",
-     "demand": 0.1538,
-     "weight": 0.213276
-    },
-    {
-     "skill": "project_management",
-     "demand": 0.1795,
-     "weight": 0.205537
-    },
-    {
-     "skill": "hardware",
-     "demand": 0.1795,
-     "weight": 0.189548
-    },
-    {
-     "skill": "networking",
-     "demand": 0.2308,
-     "weight": 0.187138
-    },
-    {
-     "skill": "aws",
-     "demand": 0.1282,
-     "weight": 0.17773
-    },
-    {
-     "skill": "documentation",
-     "demand": 0.1538,
-     "weight": 0.16247
-    },
-    {
-     "skill": "product_management",
-     "demand": 0.1282,
-     "weight": 0.160611
-    },
-    {
-     "skill": "requirement_analysis",
-     "demand": 0.1282,
-     "weight": 0.160611
-    },
-    {
-     "skill": "sdlc",
-     "demand": 0.1282,
-     "weight": 0.160611
+     "demand": 0.14,
+     "weight": 0.250846
     },
     {
      "skill": "python",
-     "demand": 0.1538,
-     "weight": 0.150897
-    },
-    {
-     "skill": "data_structures",
-     "demand": 0.1026,
-     "weight": 0.142184
-    },
-    {
-     "skill": "spark",
-     "demand": 0.1026,
-     "weight": 0.128489
-    },
-    {
-     "skill": "erp",
-     "demand": 0.1282,
-     "weight": 0.103965
+     "demand": 0.16,
+     "weight": 0.183221
     }
    ]
   },
@@ -449,179 +226,54 @@
    "group": "primary",
    "requirements": [
     {
-     "skill": "os_install",
-     "demand": 0.5,
-     "weight": 0.89588
+     "skill": "requirement_analysis",
+     "demand": 0.469,
+     "weight": 1.003691
     },
     {
-     "skill": "mysql",
-     "demand": 0.25,
-     "weight": 0.693147
-    },
-    {
-     "skill": "itil",
-     "demand": 0.375,
-     "weight": 0.584304
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.5,
-     "weight": 0.458145
-    },
-    {
-     "skill": "linux",
-     "demand": 0.375,
-     "weight": 0.429425
-    },
-    {
-     "skill": "erp",
-     "demand": 0.5,
-     "weight": 0.405465
-    },
-    {
-     "skill": "networking",
-     "demand": 0.5,
-     "weight": 0.405465
-    },
-    {
-     "skill": "hardware",
-     "demand": 0.375,
-     "weight": 0.39602
-    },
-    {
-     "skill": "ansible",
-     "demand": 0.25,
-     "weight": 0.389536
-    },
-    {
-     "skill": "scripting",
-     "demand": 0.25,
-     "weight": 0.389536
-    },
-    {
-     "skill": "php",
-     "demand": 0.125,
-     "weight": 0.346574
-    },
-    {
-     "skill": "windows_server",
-     "demand": 0.125,
-     "weight": 0.346574
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.25,
-     "weight": 0.286283
-    },
-    {
-     "skill": "sql_server",
-     "demand": 0.125,
-     "weight": 0.267508
-    },
-    {
-     "skill": "uml",
-     "demand": 0.125,
-     "weight": 0.267508
-    },
-    {
-     "skill": "active_directory",
-     "demand": 0.125,
-     "weight": 0.267508
-    },
-    {
-     "skill": "virtualization",
-     "demand": 0.125,
-     "weight": 0.267508
-    },
-    {
-     "skill": "python",
-     "demand": 0.25,
-     "weight": 0.245207
-    },
-    {
-     "skill": "firewall",
-     "demand": 0.125,
-     "weight": 0.22397
-    },
-    {
-     "skill": "machine_learning",
-     "demand": 0.125,
-     "weight": 0.22397
-    },
-    {
-     "skill": "cisco",
-     "demand": 0.125,
-     "weight": 0.22397
-    },
-    {
-     "skill": "tableau",
-     "demand": 0.125,
-     "weight": 0.194768
-    },
-    {
-     "skill": "aws",
-     "demand": 0.125,
-     "weight": 0.173287
-    },
-    {
-     "skill": "csharp",
-     "demand": 0.125,
-     "weight": 0.173287
-    },
-    {
-     "skill": "data_visualization",
-     "demand": 0.125,
-     "weight": 0.173287
-    },
-    {
-     "skill": "oracle_db",
-     "demand": 0.125,
-     "weight": 0.156595
-    },
-    {
-     "skill": "docker",
-     "demand": 0.125,
-     "weight": 0.156595
-    },
-    {
-     "skill": "kubernetes",
-     "demand": 0.125,
-     "weight": 0.156595
-    },
-    {
-     "skill": "java",
-     "demand": 0.125,
-     "weight": 0.143142
-    },
-    {
-     "skill": "excel",
-     "demand": 0.125,
-     "weight": 0.143142
-    },
-    {
-     "skill": "project_management",
-     "demand": 0.125,
-     "weight": 0.143142
-    },
-    {
-     "skill": "monitoring",
-     "demand": 0.125,
-     "weight": 0.143142
+     "skill": "bpmn",
+     "demand": 0.22,
+     "weight": 0.60997
     },
     {
      "skill": "documentation",
-     "demand": 0.125,
-     "weight": 0.132007
+     "demand": 0.28,
+     "weight": 0.599219
     },
     {
-     "skill": "azure",
-     "demand": 0.125,
-     "weight": 0.122604
+     "skill": "uml",
+     "demand": 0.148,
+     "weight": 0.410343
     },
     {
-     "skill": "git",
-     "demand": 0.125,
-     "weight": 0.122604
+     "skill": "sdlc",
+     "demand": 0.219,
+     "weight": 0.392395
+    },
+    {
+     "skill": "sql",
+     "demand": 0.312,
+     "weight": 0.329488
+    },
+    {
+     "skill": "data_modeling",
+     "demand": 0.13,
+     "weight": 0.278209
+    },
+    {
+     "skill": "erp",
+     "demand": 0.12,
+     "weight": 0.256808
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.151,
+     "weight": 0.20933
+    },
+    {
+     "skill": "jira",
+     "demand": 0.11,
+     "weight": 0.197094
     }
    ]
   },
@@ -633,63 +285,63 @@
    "requirements": [
     {
      "skill": "backup_recovery",
-     "demand": 1.0,
-     "weight": 2.140066
+     "demand": 0.477,
+     "weight": 1.322525
     },
     {
-     "skill": "data_modeling",
-     "demand": 1.0,
-     "weight": 2.140066
+     "skill": "sql_server",
+     "demand": 0.399,
+     "weight": 1.106263
     },
     {
      "skill": "db_tuning",
-     "demand": 1.0,
-     "weight": 2.140066
-    },
-    {
-     "skill": "data_warehouse",
-     "demand": 1.0,
-     "weight": 1.791759
-    },
-    {
-     "skill": "microservices",
-     "demand": 1.0,
-     "weight": 1.791759
-    },
-    {
-     "skill": "os_install",
-     "demand": 1.0,
-     "weight": 1.791759
-    },
-    {
-     "skill": "itil",
-     "demand": 1.0,
-     "weight": 1.558145
+     "demand": 0.3,
+     "weight": 0.831777
     },
     {
      "skill": "oracle_db",
-     "demand": 1.0,
-     "weight": 1.252763
-    },
-    {
-     "skill": "linux",
-     "demand": 1.0,
-     "weight": 1.145132
-    },
-    {
-     "skill": "documentation",
-     "demand": 1.0,
-     "weight": 1.056053
+     "demand": 0.288,
+     "weight": 0.798506
     },
     {
      "skill": "sql",
-     "demand": 1.0,
-     "weight": 1.056053
+     "demand": 0.641,
+     "weight": 0.67693
     },
     {
-     "skill": "troubleshooting",
-     "demand": 1.0,
-     "weight": 0.916291
+     "skill": "mysql",
+     "demand": 0.35,
+     "weight": 0.627116
+    },
+    {
+     "skill": "postgresql",
+     "demand": 0.268,
+     "weight": 0.573538
+    },
+    {
+     "skill": "mongodb",
+     "demand": 0.13,
+     "weight": 0.360437
+    },
+    {
+     "skill": "linux",
+     "demand": 0.22,
+     "weight": 0.342792
+    },
+    {
+     "skill": "data_modeling",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "scripting",
+     "demand": 0.12,
+     "weight": 0.186977
+    },
+    {
+     "skill": "monitoring",
+     "demand": 0.1,
+     "weight": 0.179176
     }
    ]
   },
@@ -700,69 +352,64 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "kotlin",
-     "demand": 1.0,
-     "weight": 2.772589
-    },
-    {
      "skill": "android",
-     "demand": 1.0,
-     "weight": 2.140066
+     "demand": 0.62,
+     "weight": 1.326841
     },
     {
-     "skill": "dotnet",
-     "demand": 1.0,
-     "weight": 1.791759
+     "skill": "flutter",
+     "demand": 0.35,
+     "weight": 0.970406
     },
     {
-     "skill": "csharp",
-     "demand": 1.0,
-     "weight": 1.386294
+     "skill": "kotlin",
+     "demand": 0.42,
+     "weight": 0.898828
     },
     {
-     "skill": "ui_design",
-     "demand": 1.0,
-     "weight": 1.386294
+     "skill": "ios",
+     "demand": 0.28,
+     "weight": 0.776325
     },
     {
-     "skill": "product_management",
-     "demand": 1.0,
-     "weight": 1.252763
+     "skill": "dart",
+     "demand": 0.22,
+     "weight": 0.60997
     },
     {
-     "skill": "requirement_analysis",
-     "demand": 1.0,
-     "weight": 1.252763
-    },
-    {
-     "skill": "sdlc",
-     "demand": 1.0,
-     "weight": 1.252763
-    },
-    {
-     "skill": "spark",
-     "demand": 1.0,
-     "weight": 1.252763
+     "skill": "swift",
+     "demand": 0.22,
+     "weight": 0.60997
     },
     {
      "skill": "java",
-     "demand": 1.0,
-     "weight": 1.145132
+     "demand": 0.38,
+     "weight": 0.592095
     },
     {
-     "skill": "ux_research",
-     "demand": 1.0,
-     "weight": 1.056053
+     "skill": "rest_api",
+     "demand": 0.32,
+     "weight": 0.573363
     },
     {
-     "skill": "troubleshooting",
-     "demand": 1.0,
-     "weight": 0.916291
+     "skill": "git",
+     "demand": 0.28,
+     "weight": 0.43628
     },
     {
-     "skill": "agile_scrum",
-     "demand": 1.0,
-     "weight": 0.81093
+     "skill": "react_native",
+     "demand": 0.14,
+     "weight": 0.388162
+    },
+    {
+     "skill": "nosql",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "oop",
+     "demand": 0.1,
+     "weight": 0.179176
     }
    ]
   },
@@ -773,124 +420,69 @@
    "group": "alternative",
    "requirements": [
     {
+     "skill": "manual_testing",
+     "demand": 0.48,
+     "weight": 1.330843
+    },
+    {
      "skill": "test_case",
-     "demand": 0.2941,
-     "weight": 0.815467
+     "demand": 0.45,
+     "weight": 1.247665
     },
     {
      "skill": "automation_testing",
-     "demand": 0.2353,
-     "weight": 0.652374
-    },
-    {
-     "skill": "api_testing",
-     "demand": 0.1765,
-     "weight": 0.48928
+     "demand": 0.4,
+     "weight": 1.109035
     },
     {
      "skill": "selenium",
-     "demand": 0.1765,
-     "weight": 0.48928
+     "demand": 0.32,
+     "weight": 0.887228
     },
     {
-     "skill": "ms_office",
-     "demand": 0.2353,
-     "weight": 0.326187
+     "skill": "api_testing",
+     "demand": 0.28,
+     "weight": 0.776325
     },
     {
-     "skill": "manual_testing",
-     "demand": 0.1176,
-     "weight": 0.326187
-    },
-    {
-     "skill": "jenkins",
-     "demand": 0.1765,
-     "weight": 0.316193
-    },
-    {
-     "skill": "statistics",
-     "demand": 0.1765,
-     "weight": 0.274967
-    },
-    {
-     "skill": "javascript",
-     "demand": 0.1765,
-     "weight": 0.274967
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.2353,
-     "weight": 0.269443
-    },
-    {
-     "skill": "csharp",
-     "demand": 0.1765,
-     "weight": 0.24464
-    },
-    {
-     "skill": "ci_cd",
-     "demand": 0.1765,
-     "weight": 0.202082
+     "skill": "performance_testing",
+     "demand": 0.14,
+     "weight": 0.388162
     },
     {
      "skill": "jira",
-     "demand": 0.1176,
-     "weight": 0.183311
-    },
-    {
-     "skill": "sdlc",
-     "demand": 0.1176,
-     "weight": 0.147384
-    },
-    {
-     "skill": "product_management",
-     "demand": 0.1176,
-     "weight": 0.147384
+     "demand": 0.2,
+     "weight": 0.358352
     },
     {
      "skill": "agile_scrum",
-     "demand": 0.1765,
-     "weight": 0.143105
+     "demand": 0.22,
+     "weight": 0.304985
+    },
+    {
+     "skill": "sql",
+     "demand": 0.24,
+     "weight": 0.253453
+    },
+    {
+     "skill": "sdlc",
+     "demand": 0.14,
+     "weight": 0.250846
     },
     {
      "skill": "java",
-     "demand": 0.1176,
-     "weight": 0.134721
+     "demand": 0.12,
+     "weight": 0.186977
     },
     {
-     "skill": "codeigniter",
-     "demand": 0.1176,
-     "weight": 0.124241
+     "skill": "javascript",
+     "demand": 0.1,
+     "weight": 0.179176
     },
     {
      "skill": "python",
-     "demand": 0.1176,
-     "weight": 0.115392
-    },
-    {
-     "skill": "azure",
-     "demand": 0.1176,
-     "weight": 0.115392
-    },
-    {
-     "skill": "git",
-     "demand": 0.1176,
-     "weight": 0.115392
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.1176,
-     "weight": 0.107799
-    },
-    {
-     "skill": "networking",
-     "demand": 0.1176,
-     "weight": 0.095404
-    },
-    {
-     "skill": "erp",
-     "demand": 0.1176,
-     "weight": 0.095404
+     "demand": 0.12,
+     "weight": 0.137416
     }
    ]
   },
@@ -902,83 +494,43 @@
    "requirements": [
     {
      "skill": "figma",
-     "demand": 0.5385,
-     "weight": 1.492932
-    },
-    {
-     "skill": "adobe",
-     "demand": 0.6923,
-     "weight": 1.481584
+     "demand": 0.62,
+     "weight": 1.719005
     },
     {
      "skill": "ui_design",
-     "demand": 0.8462,
-     "weight": 1.173018
-    },
-    {
-     "skill": "prototyping",
-     "demand": 0.6154,
-     "weight": 0.958858
+     "demand": 0.55,
+     "weight": 1.524924
     },
     {
      "skill": "ux_research",
-     "demand": 0.7692,
-     "weight": 0.812348
+     "demand": 0.45,
+     "weight": 1.247665
+    },
+    {
+     "skill": "prototyping",
+     "demand": 0.42,
+     "weight": 1.164487
+    },
+    {
+     "skill": "adobe",
+     "demand": 0.34,
+     "weight": 0.94268
+    },
+    {
+     "skill": "design_system",
+     "demand": 0.18,
+     "weight": 0.499066
     },
     {
      "skill": "html_css",
-     "demand": 0.4615,
-     "weight": 0.719144
-    },
-    {
-     "skill": "javascript",
-     "demand": 0.3846,
-     "weight": 0.599286
-    },
-    {
-     "skill": "product_management",
-     "demand": 0.4615,
-     "weight": 0.578198
-    },
-    {
-     "skill": "android",
-     "demand": 0.2308,
-     "weight": 0.493861
-    },
-    {
-     "skill": "angular",
-     "demand": 0.2308,
-     "weight": 0.413483
+     "demand": 0.16,
+     "weight": 0.286682
     },
     {
      "skill": "agile_scrum",
-     "demand": 0.3077,
-     "weight": 0.249517
-    },
-    {
-     "skill": "hardware",
-     "demand": 0.2308,
-     "weight": 0.243704
-    },
-    {
-     "skill": "git",
-     "demand": 0.2308,
-     "weight": 0.226345
-    },
-    {
-     "skill": "requirement_analysis",
-     "demand": 0.1538,
-     "weight": 0.192733
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.1538,
-     "weight": 0.176174
-    },
-    {
-     "skill": "excel",
-     "demand": 0.1538,
-     "weight": 0.176174
+     "demand": 0.1,
+     "weight": 0.138629
     }
    ]
   },
@@ -989,99 +541,59 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "sql",
-     "demand": 0.5833,
-     "weight": 0.616031
-    },
-    {
-     "skill": "data_warehouse",
-     "demand": 0.3333,
-     "weight": 0.597253
+     "skill": "excel",
+     "demand": 0.48,
+     "weight": 1.330843
     },
     {
      "skill": "data_visualization",
-     "demand": 0.4167,
-     "weight": 0.577623
+     "demand": 0.32,
+     "weight": 0.887228
     },
     {
      "skill": "power_bi",
-     "demand": 0.4167,
-     "weight": 0.521985
+     "demand": 0.3,
+     "weight": 0.831777
     },
     {
-     "skill": "excel",
-     "demand": 0.4167,
-     "weight": 0.477138
+     "skill": "tableau",
+     "demand": 0.28,
+     "weight": 0.776325
     },
     {
-     "skill": "erp",
-     "demand": 0.5833,
-     "weight": 0.473043
-    },
-    {
-     "skill": "data_structures",
-     "demand": 0.3333,
-     "weight": 0.462098
+     "skill": "sql",
+     "demand": 0.62,
+     "weight": 0.654753
     },
     {
      "skill": "statistics",
-     "demand": 0.25,
-     "weight": 0.389536
-    },
-    {
-     "skill": "scikit_learn",
-     "demand": 0.1667,
-     "weight": 0.356678
-    },
-    {
-     "skill": "ms_office",
-     "demand": 0.25,
-     "weight": 0.346574
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.4167,
-     "weight": 0.337888
+     "demand": 0.3,
+     "weight": 0.64202
     },
     {
      "skill": "python",
-     "demand": 0.3333,
-     "weight": 0.326943
+     "demand": 0.4,
+     "weight": 0.458053
     },
     {
-     "skill": "etl",
-     "demand": 0.1667,
-     "weight": 0.298627
+     "skill": "looker",
+     "demand": 0.14,
+     "weight": 0.388162
     },
     {
      "skill": "pandas",
-     "demand": 0.1667,
-     "weight": 0.259691
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "oracle_db",
-     "demand": 0.1667,
-     "weight": 0.208794
+     "skill": "r_lang",
+     "demand": 0.12,
+     "weight": 0.256808
     },
     {
-     "skill": "networking",
-     "demand": 0.25,
-     "weight": 0.202733
-    },
-    {
-     "skill": "project_management",
-     "demand": 0.1667,
-     "weight": 0.190855
-    },
-    {
-     "skill": "documentation",
-     "demand": 0.1667,
-     "weight": 0.176009
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.1667,
-     "weight": 0.152715
+     "skill": "data_warehouse",
+     "demand": 0.1,
+     "weight": 0.214007
     }
    ]
   },
@@ -1092,249 +604,69 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "kafka",
-     "demand": 0.5556,
-     "weight": 1.540327
-    },
-    {
      "skill": "etl",
-     "demand": 0.7778,
-     "weight": 1.393591
-    },
-    {
-     "skill": "spark",
-     "demand": 0.8889,
-     "weight": 1.113567
-    },
-    {
-     "skill": "jenkins",
-     "demand": 0.5556,
-     "weight": 0.995422
-    },
-    {
-     "skill": "hadoop",
-     "demand": 0.4444,
-     "weight": 0.951141
-    },
-    {
-     "skill": "nosql",
-     "demand": 0.4444,
-     "weight": 0.951141
-    },
-    {
-     "skill": "oop",
-     "demand": 0.3333,
-     "weight": 0.713355
-    },
-    {
-     "skill": "kubernetes",
-     "demand": 0.5556,
-     "weight": 0.695979
-    },
-    {
-     "skill": "codeigniter",
-     "demand": 0.5556,
-     "weight": 0.586696
-    },
-    {
-     "skill": "python",
-     "demand": 0.5556,
-     "weight": 0.544905
-    },
-    {
-     "skill": "ci_cd",
-     "demand": 0.4444,
-     "weight": 0.508948
-    },
-    {
-     "skill": "java",
-     "demand": 0.4444,
-     "weight": 0.508948
-    },
-    {
-     "skill": "sql",
-     "demand": 0.4444,
-     "weight": 0.469357
-    },
-    {
-     "skill": "data_structures",
-     "demand": 0.3333,
-     "weight": 0.462098
-    },
-    {
-     "skill": "git",
-     "demand": 0.4444,
-     "weight": 0.435924
-    },
-    {
-     "skill": "power_bi",
-     "demand": 0.3333,
-     "weight": 0.417588
-    },
-    {
-     "skill": "docker",
-     "demand": 0.3333,
-     "weight": 0.417588
-    },
-    {
-     "skill": "requirement_analysis",
-     "demand": 0.3333,
-     "weight": 0.417588
+     "demand": 0.48,
+     "weight": 1.330843
     },
     {
      "skill": "data_warehouse",
-     "demand": 0.2222,
-     "weight": 0.398169
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.3333,
-     "weight": 0.381711
-    },
-    {
-     "skill": "monitoring",
-     "demand": 0.3333,
-     "weight": 0.381711
-    },
-    {
-     "skill": "linux",
-     "demand": 0.3333,
-     "weight": 0.381711
-    },
-    {
-     "skill": "tableau",
-     "demand": 0.2222,
-     "weight": 0.346254
-    },
-    {
-     "skill": "scripting",
-     "demand": 0.2222,
-     "weight": 0.346254
-    },
-    {
-     "skill": "ansible",
-     "demand": 0.2222,
-     "weight": 0.346254
-    },
-    {
-     "skill": "azure",
-     "demand": 0.3333,
-     "weight": 0.326943
-    },
-    {
-     "skill": "performance_testing",
-     "demand": 0.1111,
-     "weight": 0.308065
+     "demand": 0.38,
+     "weight": 0.813225
     },
     {
      "skill": "airflow",
-     "demand": 0.1111,
-     "weight": 0.308065
+     "demand": 0.26,
+     "weight": 0.720873
+    },
+    {
+     "skill": "sql",
+     "demand": 0.68,
+     "weight": 0.718116
+    },
+    {
+     "skill": "python",
+     "demand": 0.62,
+     "weight": 0.709982
+    },
+    {
+     "skill": "spark",
+     "demand": 0.32,
+     "weight": 0.684821
+    },
+    {
+     "skill": "hadoop",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "kafka",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "gcp",
+     "demand": 0.22,
+     "weight": 0.470815
+    },
+    {
+     "skill": "aws",
+     "demand": 0.2,
+     "weight": 0.428013
     },
     {
      "skill": "postgresql",
-     "demand": 0.1111,
-     "weight": 0.308065
+     "demand": 0.16,
+     "weight": 0.342411
     },
     {
-     "skill": "computer_vision",
-     "demand": 0.1111,
-     "weight": 0.308065
+     "skill": "nosql",
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "troubleshooting",
-     "demand": 0.3333,
-     "weight": 0.30543
-    },
-    {
-     "skill": "oracle_db",
-     "demand": 0.2222,
-     "weight": 0.278392
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.3333,
-     "weight": 0.27031
-    },
-    {
-     "skill": "data_modeling",
-     "demand": 0.1111,
-     "weight": 0.237785
-    },
-    {
-     "skill": "tensorflow",
-     "demand": 0.1111,
-     "weight": 0.237785
-    },
-    {
-     "skill": "hardware",
-     "demand": 0.2222,
-     "weight": 0.234678
-    },
-    {
-     "skill": "unit_testing",
-     "demand": 0.1111,
-     "weight": 0.199084
-    },
-    {
-     "skill": "machine_learning",
-     "demand": 0.1111,
-     "weight": 0.199084
-    },
-    {
-     "skill": "prototyping",
-     "demand": 0.1111,
-     "weight": 0.173127
-    },
-    {
-     "skill": "statistics",
-     "demand": 0.1111,
-     "weight": 0.173127
-    },
-    {
-     "skill": "pandas",
-     "demand": 0.1111,
-     "weight": 0.173127
-    },
-    {
-     "skill": "ui_design",
-     "demand": 0.1111,
-     "weight": 0.154033
-    },
-    {
-     "skill": "sdlc",
-     "demand": 0.1111,
-     "weight": 0.139196
-    },
-    {
-     "skill": "project_management",
-     "demand": 0.1111,
-     "weight": 0.127237
-    },
-    {
-     "skill": "excel",
-     "demand": 0.1111,
-     "weight": 0.127237
-    },
-    {
-     "skill": "documentation",
-     "demand": 0.1111,
-     "weight": 0.117339
-    },
-    {
-     "skill": "ux_research",
-     "demand": 0.1111,
-     "weight": 0.117339
-    },
-    {
-     "skill": "networking",
-     "demand": 0.1111,
-     "weight": 0.090103
-    },
-    {
-     "skill": "erp",
-     "demand": 0.1111,
-     "weight": 0.090103
+     "skill": "docker",
+     "demand": 0.14,
+     "weight": 0.250846
     }
    ]
   },
@@ -1346,213 +678,73 @@
    "requirements": [
     {
      "skill": "machine_learning",
-     "demand": 0.8571,
-     "weight": 1.535794
-    },
-    {
-     "skill": "hadoop",
-     "demand": 0.7143,
-     "weight": 1.528619
+     "demand": 0.66,
+     "weight": 1.829909
     },
     {
      "skill": "python",
-     "demand": 1.0,
-     "weight": 0.980829
-    },
-    {
-     "skill": "data_structures",
-     "demand": 0.5714,
-     "weight": 0.792168
-    },
-    {
-     "skill": "deep_learning",
-     "demand": 0.2857,
-     "weight": 0.792168
-    },
-    {
-     "skill": "gcp",
-     "demand": 0.2857,
-     "weight": 0.792168
-    },
-    {
-     "skill": "nlp",
-     "demand": 0.2857,
-     "weight": 0.792168
-    },
-    {
-     "skill": "spark",
-     "demand": 0.5714,
-     "weight": 0.715865
-    },
-    {
-     "skill": "azure",
-     "demand": 0.7143,
-     "weight": 0.700592
-    },
-    {
-     "skill": "prototyping",
-     "demand": 0.4286,
-     "weight": 0.667776
-    },
-    {
-     "skill": "tensorflow",
-     "demand": 0.2857,
-     "weight": 0.611447
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.7143,
-     "weight": 0.579236
-    },
-    {
-     "skill": "docker",
-     "demand": 0.4286,
-     "weight": 0.536898
-    },
-    {
-     "skill": "kubernetes",
-     "demand": 0.4286,
-     "weight": 0.536898
-    },
-    {
-     "skill": "monitoring",
-     "demand": 0.4286,
-     "weight": 0.490771
-    },
-    {
-     "skill": "sql",
-     "demand": 0.4286,
-     "weight": 0.452594
+     "demand": 0.78,
+     "weight": 0.893203
     },
     {
      "skill": "statistics",
-     "demand": 0.2857,
-     "weight": 0.445184
+     "demand": 0.4,
+     "weight": 0.856026
     },
     {
-     "skill": "aws",
-     "demand": 0.2857,
-     "weight": 0.396084
+     "skill": "deep_learning",
+     "demand": 0.3,
+     "weight": 0.831777
     },
     {
-     "skill": "gen_ai",
-     "demand": 0.1429,
-     "weight": 0.396084
-    },
-    {
-     "skill": "pytorch",
-     "demand": 0.1429,
-     "weight": 0.396084
-    },
-    {
-     "skill": "requirement_analysis",
-     "demand": 0.2857,
-     "weight": 0.357932
-    },
-    {
-     "skill": "oracle_db",
-     "demand": 0.2857,
-     "weight": 0.357932
-    },
-    {
-     "skill": "power_bi",
-     "demand": 0.2857,
-     "weight": 0.357932
-    },
-    {
-     "skill": "db_tuning",
-     "demand": 0.1429,
-     "weight": 0.305724
+     "skill": "tensorflow",
+     "demand": 0.24,
+     "weight": 0.665421
     },
     {
      "skill": "scikit_learn",
-     "demand": 0.1429,
-     "weight": 0.305724
-    },
-    {
-     "skill": "uml",
-     "demand": 0.1429,
-     "weight": 0.305724
-    },
-    {
-     "skill": "ux_research",
-     "demand": 0.2857,
-     "weight": 0.301729
-    },
-    {
-     "skill": "codeigniter",
-     "demand": 0.2857,
-     "weight": 0.301729
-    },
-    {
-     "skill": "git",
-     "demand": 0.2857,
-     "weight": 0.280237
-    },
-    {
-     "skill": "etl",
-     "demand": 0.1429,
-     "weight": 0.255966
-    },
-    {
-     "skill": "terraform",
-     "demand": 0.1429,
-     "weight": 0.255966
-    },
-    {
-     "skill": "jira",
-     "demand": 0.1429,
-     "weight": 0.222592
-    },
-    {
-     "skill": "html_css",
-     "demand": 0.1429,
-     "weight": 0.222592
+     "demand": 0.22,
+     "weight": 0.60997
     },
     {
      "skill": "pandas",
-     "demand": 0.1429,
-     "weight": 0.222592
+     "demand": 0.26,
+     "weight": 0.556417
     },
     {
-     "skill": "tableau",
-     "demand": 0.1429,
-     "weight": 0.222592
+     "skill": "pytorch",
+     "demand": 0.2,
+     "weight": 0.554518
     },
     {
-     "skill": "cpp",
-     "demand": 0.1429,
-     "weight": 0.198042
+     "skill": "sql",
+     "demand": 0.48,
+     "weight": 0.506905
     },
     {
-     "skill": "data_visualization",
-     "demand": 0.1429,
-     "weight": 0.198042
+     "skill": "nlp",
+     "demand": 0.16,
+     "weight": 0.443614
     },
     {
-     "skill": "linux",
-     "demand": 0.1429,
-     "weight": 0.16359
+     "skill": "computer_vision",
+     "demand": 0.12,
+     "weight": 0.332711
     },
     {
-     "skill": "ci_cd",
-     "demand": 0.1429,
-     "weight": 0.16359
+     "skill": "gen_ai",
+     "demand": 0.12,
+     "weight": 0.332711
     },
     {
-     "skill": "excel",
-     "demand": 0.1429,
-     "weight": 0.16359
+     "skill": "r_lang",
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "erp",
-     "demand": 0.1429,
-     "weight": 0.115847
-    },
-    {
-     "skill": "networking",
-     "demand": 0.1429,
-     "weight": 0.115847
+     "skill": "spark",
+     "demand": 0.1,
+     "weight": 0.214007
     }
    ]
   },
@@ -1563,179 +755,79 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "docker",
-     "demand": 0.7143,
-     "weight": 0.894831
-    },
-    {
-     "skill": "terraform",
-     "demand": 0.4762,
-     "weight": 0.853219
+     "skill": "kubernetes",
+     "demand": 0.46,
+     "weight": 1.275391
     },
     {
      "skill": "ci_cd",
-     "demand": 0.7143,
-     "weight": 0.817952
+     "demand": 0.45,
+     "weight": 1.247665
     },
     {
-     "skill": "kubernetes",
-     "demand": 0.619,
-     "weight": 0.77552
-    },
-    {
-     "skill": "azure",
-     "demand": 0.7619,
-     "weight": 0.747298
+     "skill": "docker",
+     "demand": 0.55,
+     "weight": 0.985468
     },
     {
      "skill": "linux",
-     "demand": 0.619,
-     "weight": 0.708891
-    },
-    {
-     "skill": "monitoring",
-     "demand": 0.619,
-     "weight": 0.708891
-    },
-    {
-     "skill": "python",
-     "demand": 0.7143,
-     "weight": 0.700592
-    },
-    {
-     "skill": "ansible",
-     "demand": 0.3333,
-     "weight": 0.519382
-    },
-    {
-     "skill": "siem",
-     "demand": 0.2381,
-     "weight": 0.50954
-    },
-    {
-     "skill": "codeigniter",
-     "demand": 0.4762,
-     "weight": 0.502882
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.619,
-     "weight": 0.502004
+     "demand": 0.58,
+     "weight": 0.903724
     },
     {
      "skill": "aws",
-     "demand": 0.3333,
-     "weight": 0.462098
+     "demand": 0.4,
+     "weight": 0.856026
     },
     {
-     "skill": "scripting",
-     "demand": 0.2857,
-     "weight": 0.445184
-    },
-    {
-     "skill": "mongodb",
-     "demand": 0.1905,
-     "weight": 0.407632
-    },
-    {
-     "skill": "sql",
-     "demand": 0.381,
-     "weight": 0.402306
-    },
-    {
-     "skill": "git",
-     "demand": 0.381,
-     "weight": 0.373649
+     "skill": "terraform",
+     "demand": 0.24,
+     "weight": 0.665421
     },
     {
      "skill": "jenkins",
-     "demand": 0.1905,
-     "weight": 0.341288
+     "demand": 0.22,
+     "weight": 0.60997
     },
     {
-     "skill": "firewall",
-     "demand": 0.1905,
-     "weight": 0.341288
+     "skill": "gcp",
+     "demand": 0.26,
+     "weight": 0.556417
     },
     {
-     "skill": "cpp",
-     "demand": 0.2381,
-     "weight": 0.33007
+     "skill": "azure",
+     "demand": 0.2,
+     "weight": 0.554518
     },
     {
-     "skill": "nodejs",
-     "demand": 0.1429,
-     "weight": 0.305724
+     "skill": "monitoring",
+     "demand": 0.3,
+     "weight": 0.537528
     },
     {
-     "skill": "jira",
-     "demand": 0.1905,
-     "weight": 0.296789
+     "skill": "ansible",
+     "demand": 0.18,
+     "weight": 0.499066
+    },
+    {
+     "skill": "scripting",
+     "demand": 0.32,
+     "weight": 0.498606
+    },
+    {
+     "skill": "git",
+     "demand": 0.28,
+     "weight": 0.43628
     },
     {
      "skill": "networking",
-     "demand": 0.3333,
-     "weight": 0.27031
+     "demand": 0.16,
+     "weight": 0.249303
     },
     {
-     "skill": "microservices",
-     "demand": 0.1429,
-     "weight": 0.255966
-    },
-    {
-     "skill": "power_bi",
-     "demand": 0.1905,
-     "weight": 0.238622
-    },
-    {
-     "skill": "erp",
-     "demand": 0.2857,
-     "weight": 0.231694
-    },
-    {
-     "skill": "pandas",
-     "demand": 0.1429,
-     "weight": 0.222592
-    },
-    {
-     "skill": "tableau",
-     "demand": 0.1429,
-     "weight": 0.222592
-    },
-    {
-     "skill": "java",
-     "demand": 0.1905,
-     "weight": 0.21812
-    },
-    {
-     "skill": "hardware",
-     "demand": 0.1905,
-     "weight": 0.201153
-    },
-    {
-     "skill": "ms_office",
-     "demand": 0.1429,
-     "weight": 0.198042
-    },
-    {
-     "skill": "oracle_db",
-     "demand": 0.1429,
-     "weight": 0.178966
-    },
-    {
-     "skill": "spark",
-     "demand": 0.1429,
-     "weight": 0.178966
-    },
-    {
-     "skill": "documentation",
-     "demand": 0.1429,
-     "weight": 0.150865
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.1429,
-     "weight": 0.130899
+     "skill": "python",
+     "demand": 0.18,
+     "weight": 0.206124
     }
    ]
   },
@@ -1746,84 +838,64 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "scripting",
-     "demand": 1.0,
-     "weight": 1.558145
-    },
-    {
-     "skill": "network_security",
-     "demand": 0.6667,
-     "weight": 1.426711
+     "skill": "networking",
+     "demand": 0.66,
+     "weight": 1.028375
     },
     {
      "skill": "cisco",
-     "demand": 0.6667,
-     "weight": 1.194506
-    },
-    {
-     "skill": "python",
-     "demand": 1.0,
-     "weight": 0.980829
-    },
-    {
-     "skill": "terraform",
-     "demand": 0.3333,
-     "weight": 0.597253
-    },
-    {
-     "skill": "erp",
-     "demand": 0.6667,
-     "weight": 0.54062
-    },
-    {
-     "skill": "networking",
-     "demand": 0.6667,
-     "weight": 0.54062
-    },
-    {
-     "skill": "ansible",
-     "demand": 0.3333,
-     "weight": 0.519382
-    },
-    {
-     "skill": "itil",
-     "demand": 0.3333,
-     "weight": 0.519382
-    },
-    {
-     "skill": "ci_cd",
-     "demand": 0.3333,
-     "weight": 0.381711
+     "demand": 0.34,
+     "weight": 0.94268
     },
     {
      "skill": "linux",
-     "demand": 0.3333,
-     "weight": 0.381711
+     "demand": 0.44,
+     "weight": 0.685584
+    },
+    {
+     "skill": "windows_server",
+     "demand": 0.32,
+     "weight": 0.684821
+    },
+    {
+     "skill": "virtualization",
+     "demand": 0.24,
+     "weight": 0.665421
+    },
+    {
+     "skill": "troubleshooting",
+     "demand": 0.3,
+     "weight": 0.64202
+    },
+    {
+     "skill": "mikrotik",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "firewall",
+     "demand": 0.26,
+     "weight": 0.556417
+    },
+    {
+     "skill": "active_directory",
+     "demand": 0.18,
+     "weight": 0.385212
     },
     {
      "skill": "monitoring",
-     "demand": 0.3333,
-     "weight": 0.381711
+     "demand": 0.18,
+     "weight": 0.322517
     },
     {
-     "skill": "codeigniter",
-     "demand": 0.3333,
-     "weight": 0.352018
+     "skill": "network_security",
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "hardware",
-     "demand": 0.3333,
-     "weight": 0.352018
-    },
-    {
-     "skill": "azure",
-     "demand": 0.3333,
-     "weight": 0.326943
-    },
-    {
-     "skill": "git",
-     "demand": 0.3333,
-     "weight": 0.326943
+     "skill": "scripting",
+     "demand": 0.12,
+     "weight": 0.186977
     }
    ]
   },
@@ -1834,64 +906,54 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "iso27001",
-     "demand": 0.5,
-     "weight": 1.386294
-    },
-    {
-     "skill": "bpmn",
-     "demand": 0.25,
-     "weight": 0.693147
-    },
-    {
-     "skill": "erp",
-     "demand": 0.75,
-     "weight": 0.608198
-    },
-    {
-     "skill": "project_management",
-     "demand": 0.5,
-     "weight": 0.572566
+     "skill": "vuln_assessment",
+     "demand": 0.42,
+     "weight": 1.164487
     },
     {
      "skill": "network_security",
-     "demand": 0.25,
-     "weight": 0.535017
+     "demand": 0.52,
+     "weight": 1.112834
+    },
+    {
+     "skill": "pentest",
+     "demand": 0.36,
+     "weight": 0.998132
     },
     {
      "skill": "siem",
-     "demand": 0.25,
-     "weight": 0.535017
+     "demand": 0.32,
+     "weight": 0.887228
     },
     {
-     "skill": "ux_research",
-     "demand": 0.5,
-     "weight": 0.528026
-    },
-    {
-     "skill": "cisco",
-     "demand": 0.25,
-     "weight": 0.44794
+     "skill": "iso27001",
+     "demand": 0.26,
+     "weight": 0.720873
     },
     {
      "skill": "firewall",
-     "demand": 0.25,
-     "weight": 0.44794
+     "demand": 0.3,
+     "weight": 0.64202
     },
     {
-     "skill": "data_visualization",
-     "demand": 0.25,
-     "weight": 0.346574
+     "skill": "linux",
+     "demand": 0.32,
+     "weight": 0.498606
     },
     {
      "skill": "networking",
-     "demand": 0.25,
-     "weight": 0.202733
+     "demand": 0.3,
+     "weight": 0.467443
     },
     {
-     "skill": "agile_scrum",
-     "demand": 0.25,
-     "weight": 0.202733
+     "skill": "scripting",
+     "demand": 0.12,
+     "weight": 0.186977
+    },
+    {
+     "skill": "python",
+     "demand": 0.14,
+     "weight": 0.160319
     }
    ]
   },
@@ -1902,119 +964,49 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "itil",
-     "demand": 0.5,
-     "weight": 0.779072
-    },
-    {
-     "skill": "backup_recovery",
-     "demand": 0.25,
-     "weight": 0.535017
-    },
-    {
-     "skill": "documentation",
-     "demand": 0.5,
-     "weight": 0.528026
-    },
-    {
-     "skill": "ms_office",
-     "demand": 0.375,
-     "weight": 0.51986
+     "skill": "hardware",
+     "demand": 0.48,
+     "weight": 1.330843
     },
     {
      "skill": "troubleshooting",
-     "demand": 0.5,
-     "weight": 0.458145
+     "demand": 0.58,
+     "weight": 1.241238
     },
     {
      "skill": "os_install",
-     "demand": 0.25,
-     "weight": 0.44794
+     "demand": 0.4,
+     "weight": 1.109035
     },
     {
-     "skill": "codeigniter",
-     "demand": 0.375,
-     "weight": 0.39602
+     "skill": "ms_office",
+     "demand": 0.3,
+     "weight": 0.831777
     },
     {
      "skill": "helpdesk",
-     "demand": 0.125,
-     "weight": 0.346574
-    },
-    {
-     "skill": "spark",
-     "demand": 0.25,
-     "weight": 0.313191
+     "demand": 0.28,
+     "weight": 0.776325
     },
     {
      "skill": "networking",
-     "demand": 0.375,
-     "weight": 0.304099
-    },
-    {
-     "skill": "excel",
-     "demand": 0.25,
-     "weight": 0.286283
+     "demand": 0.4,
+     "weight": 0.623258
     },
     {
      "skill": "active_directory",
-     "demand": 0.125,
-     "weight": 0.267508
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "virtualization",
-     "demand": 0.125,
-     "weight": 0.267508
+     "skill": "windows_server",
+     "demand": 0.14,
+     "weight": 0.299609
     },
     {
-     "skill": "hardware",
-     "demand": 0.25,
-     "weight": 0.264013
-    },
-    {
-     "skill": "erp",
-     "demand": 0.25,
-     "weight": 0.202733
-    },
-    {
-     "skill": "data_visualization",
-     "demand": 0.125,
-     "weight": 0.173287
-    },
-    {
-     "skill": "cpp",
-     "demand": 0.125,
-     "weight": 0.173287
-    },
-    {
-     "skill": "power_bi",
-     "demand": 0.125,
-     "weight": 0.156595
-    },
-    {
-     "skill": "rest_api",
-     "demand": 0.125,
-     "weight": 0.143142
-    },
-    {
-     "skill": "monitoring",
-     "demand": 0.125,
-     "weight": 0.143142
-    },
-    {
-     "skill": "linux",
-     "demand": 0.125,
-     "weight": 0.143142
-    },
-    {
-     "skill": "sql",
-     "demand": 0.125,
-     "weight": 0.132007
-    },
-    {
-     "skill": "agile_scrum",
-     "demand": 0.125,
-     "weight": 0.101366
+     "skill": "itil",
+     "demand": 0.1,
+     "weight": 0.214007
     }
    ]
   },
@@ -2025,64 +1017,49 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "product_management",
-     "demand": 0.7333,
-     "weight": 0.918693
+     "skill": "project_management",
+     "demand": 0.58,
+     "weight": 1.608101
     },
     {
      "skill": "agile_scrum",
-     "demand": 0.6667,
-     "weight": 0.54062
+     "demand": 0.52,
+     "weight": 0.720873
     },
     {
-     "skill": "project_management",
-     "demand": 0.3333,
-     "weight": 0.381711
+     "skill": "product_management",
+     "demand": 0.26,
+     "weight": 0.720873
     },
     {
-     "skill": "erp",
-     "demand": 0.3667,
-     "weight": 0.297341
-    },
-    {
-     "skill": "ms_office",
-     "demand": 0.2,
-     "weight": 0.277259
-    },
-    {
-     "skill": "excel",
-     "demand": 0.2333,
-     "weight": 0.267198
-    },
-    {
-     "skill": "ux_research",
-     "demand": 0.2333,
-     "weight": 0.246412
-    },
-    {
-     "skill": "jira",
-     "demand": 0.1333,
-     "weight": 0.207753
-    },
-    {
-     "skill": "power_bi",
-     "demand": 0.1,
-     "weight": 0.125276
+     "skill": "requirement_analysis",
+     "demand": 0.28,
+     "weight": 0.599219
     },
     {
      "skill": "sdlc",
-     "demand": 0.1,
-     "weight": 0.125276
+     "demand": 0.3,
+     "weight": 0.537528
     },
     {
-     "skill": "azure",
-     "demand": 0.1,
-     "weight": 0.098083
+     "skill": "jira",
+     "demand": 0.3,
+     "weight": 0.537528
     },
     {
-     "skill": "networking",
+     "skill": "documentation",
+     "demand": 0.18,
+     "weight": 0.385212
+    },
+    {
+     "skill": "itil",
+     "demand": 0.12,
+     "weight": 0.256808
+    },
+    {
+     "skill": "erp",
      "demand": 0.1,
-     "weight": 0.081093
+     "weight": 0.214007
     }
    ]
   }
@@ -3569,5 +2546,6 @@
     "tableau"
    ]
   }
- ]
+ ],
+ "demand_source": "demand_seed.csv"
 }
