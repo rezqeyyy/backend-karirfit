@@ -92,7 +92,7 @@ class Profile(BaseModel):
     skills: dict[str, str] = Field(default_factory=dict)         # skill_id -> beginner|intermediate|advanced
     soft_skills: dict[str, str] = Field(default_factory=dict)    # soft skill -> level (advice only, never scored)
     experience_skills: list[str] = Field(default_factory=list)   # confirmed skill ids
-    interests: list[str] = Field(default_factory=list, max_length=3)
+    interests: list[str] = Field(default_factory=list, max_length=30)   # any number of areas (UI: no limit)
     major: str | None = None                                     # e.g. "Akuntansi" (context only)
     target_career: str | None = None
 
@@ -326,14 +326,24 @@ def _results_text(res: dict, lang: str, focus: dict | None) -> str:
 @app.post("/api/chat")
 def do_chat(req: ChatReq, user: dict | None = Depends(current_user)):
     session, consent = who(user, req.session, req.consent)
-    res = recommend(req.profile.model_dump(), MODEL)
+    p = req.profile
+    tested = bool(p.interests or p.skills or p.courses or p.experience_skills)
+    res = recommend(p.model_dump(), MODEL)
     focus = next((r for r in res["all"] if r["career"] == req.career), None) if req.career else None
     target = focus or res["top"][0]
-    passages = RETRIEVER.search(target["career"], [NAMES[r["skill"]] for r in target["matched"]],
-                                [NAMES[r["skill"]] for r in target["gaps"]], target["name_en"])
+    if tested or focus:
+        passages = RETRIEVER.search(target["career"], [NAMES[r["skill"]] for r in target["matched"]],
+                                    [NAMES[r["skill"]] for r in target["gaps"]], target["name_en"])
+        results_text = _results_text(res, req.lang, focus)
+    else:   # chat opened before the test: general career help, no personal scores exist yet
+        passages = []
+        name = (lambda c: c["name_id"]) if req.lang == "id" else (lambda c: c["name_en"])
+        results_text = ("The user has NOT taken the test yet, so there are no personal scores. Answer general "
+                        "questions about careers, skills and learning, and suggest taking the KarirFit test for a "
+                        "personal recommendation. Careers covered by KarirFit: "
+                        + ", ".join(name(c) for c in MODEL["careers"]))
     try:
-        reply, model_id = llm.chat([m.model_dump() for m in req.messages], _results_text(res, req.lang, focus),
-                                   passages, req.lang)
+        reply, model_id = llm.chat([m.model_dump() for m in req.messages], results_text, passages, req.lang)
     except Exception as e:
         raise HTTPException(503, f"assistant unavailable: {str(e)[:150]}")
     if consent:
@@ -468,4 +478,4 @@ def health():
             "eval_mode": EVAL_MODE, "auth_required": REQUIRE_AUTH, "chat": bool(os.getenv("GROQ_API_KEY") or os.getenv("GEMINI_API_KEY")),
             "llm_keys": {"gemini": bool(os.getenv("GEMINI_API_KEY")), "groq": bool(os.getenv("GROQ_API_KEY"))},
             "demand_source": MODEL.get("demand_source"), "data_label": MODEL.get("data_label"),
-            "storage": STORE.kind}
+            "storage": STORE.kind, "storage_error": STORE.error}

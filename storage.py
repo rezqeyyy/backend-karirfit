@@ -22,15 +22,22 @@ DB_PATH = os.getenv("DB_PATH", str(Path(__file__).resolve().parent / "karirfit.d
 class Storage:
     def __init__(self):
         self.pg = DATABASE_URL.startswith(("postgres://", "postgresql://"))
+        self.error = None
         if self.pg:
-            import psycopg  # psycopg[binary]
-            self._psycopg = psycopg
-            self.url = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+            try:
+                import psycopg  # psycopg[binary]
+                self._psycopg = psycopg
+                self.url = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+                with self._conn() as con:
+                    con.execute("CREATE TABLE IF NOT EXISTS log(id SERIAL PRIMARY KEY, ts DOUBLE PRECISION, "
+                                "kind TEXT, session TEXT, payload TEXT)")
+                return
+            except Exception as e:   # a wrong DATABASE_URL must not take the whole API down
+                self.error = str(e)[:300]
+                print("[storage] Postgres unavailable, falling back to SQLite:", self.error, flush=True)
+                self.pg = False
         with self._conn() as con:
-            con.execute(
-                "CREATE TABLE IF NOT EXISTS log(id SERIAL PRIMARY KEY, ts DOUBLE PRECISION, kind TEXT, session TEXT, payload TEXT)"
-                if self.pg else
-                "CREATE TABLE IF NOT EXISTS log(id INTEGER PRIMARY KEY, ts REAL, kind TEXT, session TEXT, payload TEXT)")
+            con.execute("CREATE TABLE IF NOT EXISTS log(id INTEGER PRIMARY KEY, ts REAL, kind TEXT, session TEXT, payload TEXT)")
 
     @property
     def kind(self) -> str:
