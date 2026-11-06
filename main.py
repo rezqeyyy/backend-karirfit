@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import json
 import os
-import sqlite3
 import sys
 import time
 from pathlib import Path
@@ -38,27 +37,22 @@ except ImportError:
     pass
 
 import llm  # noqa: E402
+from storage import Storage  # noqa: E402
 from rag import Retriever  # noqa: E402
 
 MODEL = json.load(open(HERE / "model.json", encoding="utf-8"))
 NAMES = {s["id"]: s["name"] for s in MODEL["skills"]}
 EXTRACTOR = SkillExtractor(MODEL["skills"])
 RETRIEVER = Retriever()
-DB_PATH = os.getenv("DB_PATH", str(HERE / "karirfit.db"))
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "")
-
-
-def db():
-    con = sqlite3.connect(DB_PATH)
-    con.execute("""CREATE TABLE IF NOT EXISTS log(id INTEGER PRIMARY KEY, ts REAL, kind TEXT,
-                   session TEXT, payload TEXT)""")
-    return con
+STORE = Storage()
 
 
 def log(kind: str, session: str, payload: dict):
-    with db() as con:
-        con.execute("INSERT INTO log(ts, kind, session, payload) VALUES (?,?,?,?)",
-                    (time.time(), kind, session, json.dumps(payload, ensure_ascii=False)))
+    try:
+        STORE.log(kind, session, payload)
+    except Exception as e:  # logging must never break a recommendation
+        print("[log] failed:", e)
 
 
 app = FastAPI(title="KarirFit API", version="1.0")
@@ -76,7 +70,7 @@ class Profile(BaseModel):
 
 class RecommendReq(BaseModel):
     profile: Profile
-    alpha: float | None = Field(default=None, ge=0, le=1)   # sensitivity view; default 0.5
+    alpha: float | None = Field(default=None, ge=0, le=1)   # evaluation only: honoured with X-Admin-Token
     include_all: bool = False                                # also return all 15 careers
     session: str = "anon"
     consent: bool = False   # only logged when the user consents (FR1 / Section 3.8)
@@ -89,7 +83,7 @@ class ExtractReq(BaseModel):
 class ExplainReq(BaseModel):
     profile: Profile
     career: str
-    alpha: float | None = Field(default=None, ge=0, le=1)
+    alpha: float | None = Field(default=None, ge=0, le=1)   # evaluation only: honoured with X-Admin-Token
     lang: str = "id"
     session: str = "anon"
     consent: bool = False
@@ -99,6 +93,16 @@ class RatingReq(BaseModel):
     session: str
     career: str
     rating: int = Field(ge=1, le=5)
+
+
+def effective_alpha(requested: float | None, token: str) -> float | None:
+    """alpha is fixed at 0.5 before testing (Section 3.5.2). Other values are only for the
+    researcher's sensitivity analysis / alpha=1 comparison (Sections 3.6.3-3.6.4)."""
+    if requested is None:
+        return None
+    if not ADMIN_TOKEN or token != ADMIN_TOKEN:
+        raise HTTPException(403, "alpha is fixed; custom alpha requires the admin token")
+    return requested
 
 
 @app.get("/api/model")
@@ -116,9 +120,9 @@ def extract_skills(req: ExtractReq):
 
 
 @app.post("/api/recommend")
-def do_recommend(req: RecommendReq):
+def do_recommend(req: RecommendReq, x_admin_token: str = Header(default="")):
     t0 = time.time()
-    res = recommend(req.profile.model_dump(), MODEL, alpha=req.alpha)
+    res = recommend(req.profile.model_dump(), MODEL, alpha=effective_alpha(req.alpha, x_admin_token))
     if not req.include_all:
         res.pop("all")
     if req.consent:
@@ -128,8 +132,8 @@ def do_recommend(req: RecommendReq):
 
 
 @app.post("/api/explain")
-def do_explain(req: ExplainReq):
-    ranked = recommend(req.profile.model_dump(), MODEL, alpha=req.alpha)["all"]
+def do_explain(req: ExplainReq, x_admin_token: str = Header(default="")):
+    ranked = recommend(req.profile.model_dump(), MODEL, alpha=effective_alpha(req.alpha, x_admin_token))["all"]
     result = next((r for r in ranked if r["career"] == req.career), None)
     if not result:
         raise HTTPException(404, "unknown career")
@@ -163,14 +167,13 @@ def rate(req: RatingReq):
 def export(x_admin_token: str = Header(default="")):
     if not ADMIN_TOKEN or x_admin_token != ADMIN_TOKEN:
         raise HTTPException(403)
-    with db() as con:
-        rows = con.execute("SELECT ts, kind, session, payload FROM log ORDER BY id").fetchall()
-    return [{"ts": t, "kind": k, "session": s, **json.loads(p)} for t, k, s, p in rows]
+    return STORE.export()
 
 
 @app.get("/api/health")
 def health():
     return {"ok": True, "rag": RETRIEVER.ready, "public_mode": os.getenv("PUBLIC_MODE", "1") == "1",
             "llm_keys": {"gemini": bool(os.getenv("GEMINI_API_KEY")), "groq": bool(os.getenv("GROQ_API_KEY"))},
-            "demand_source": MODEL.get("demand_source")}
+            "demand_source": MODEL.get("demand_source"), "data_label": MODEL.get("data_label"),
+            "storage": STORE.kind}
 
