@@ -25,7 +25,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 HERE = Path(__file__).resolve().parent
+# career_model is found either next to main.py (stand-alone backend repo, e.g. on Render)
+# or in ../model (full project layout)
 sys.path.insert(0, str(HERE.parent / "model"))
+sys.path.insert(0, str(HERE))
 from career_model.explain import template_explanation  # noqa: E402
 from career_model.extract import SkillExtractor  # noqa: E402
 from career_model.scoring import recommend  # noqa: E402
