@@ -1,0 +1,7 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+python-dotenv>=1.0
+# optional – retrieval (RAG). Without these the app runs with template / no-context explanations.
+# sentence-transformers>=2.7
+# faiss-cpu>=1.8

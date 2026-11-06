@@ -1,0 +1,2551 @@
+{
+ "version": 1,
+ "params": {
+  "alpha": 0.5,
+  "threshold": 0.1,
+  "n_careers": 15,
+  "grade_points": {
+   "A": 1.0,
+   "B": 0.75,
+   "C": 0.5,
+   "D": 0.0,
+   "E": 0.0
+  },
+  "self_level": {
+   "advanced": 1.0,
+   "intermediate": 0.67,
+   "beginner": 0.33
+  }
+ },
+ "careers": [
+  {
+   "id": "senior_programmer",
+   "name_en": "Senior Programmer",
+   "name_id": "Senior Programmer",
+   "group": "primary",
+   "requirements": [
+    {
+     "skill": "javascript",
+     "demand": 0.42,
+     "weight": 0.752539
+    },
+    {
+     "skill": "php",
+     "demand": 0.33,
+     "weight": 0.706222
+    },
+    {
+     "skill": "java",
+     "demand": 0.45,
+     "weight": 0.701165
+    },
+    {
+     "skill": "microservices",
+     "demand": 0.25,
+     "weight": 0.693147
+    },
+    {
+     "skill": "rest_api",
+     "demand": 0.36,
+     "weight": 0.645033
+    },
+    {
+     "skill": "html_css",
+     "demand": 0.34,
+     "weight": 0.609198
+    },
+    {
+     "skill": "git",
+     "demand": 0.38,
+     "weight": 0.592095
+    },
+    {
+     "skill": "sql",
+     "demand": 0.52,
+     "weight": 0.549147
+    },
+    {
+     "skill": "spring",
+     "demand": 0.18,
+     "weight": 0.499066
+    },
+    {
+     "skill": "mysql",
+     "demand": 0.25,
+     "weight": 0.44794
+    },
+    {
+     "skill": "nodejs",
+     "demand": 0.2,
+     "weight": 0.428013
+    },
+    {
+     "skill": "react",
+     "demand": 0.2,
+     "weight": 0.428013
+    },
+    {
+     "skill": "unit_testing",
+     "demand": 0.15,
+     "weight": 0.415888
+    },
+    {
+     "skill": "oop",
+     "demand": 0.22,
+     "weight": 0.394187
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.24,
+     "weight": 0.332711
+    },
+    {
+     "skill": "golang",
+     "demand": 0.12,
+     "weight": 0.332711
+    },
+    {
+     "skill": "docker",
+     "demand": 0.18,
+     "weight": 0.322517
+    },
+    {
+     "skill": "android",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "kotlin",
+     "demand": 0.11,
+     "weight": 0.235407
+    }
+   ]
+  },
+  {
+   "id": "software_developer",
+   "name_en": "Software Developer",
+   "name_id": "Pengembang Perangkat Lunak",
+   "group": "primary",
+   "requirements": [
+    {
+     "skill": "php",
+     "demand": 0.355,
+     "weight": 0.759723
+    },
+    {
+     "skill": "javascript",
+     "demand": 0.416,
+     "weight": 0.745372
+    },
+    {
+     "skill": "html_css",
+     "demand": 0.404,
+     "weight": 0.723871
+    },
+    {
+     "skill": "java",
+     "demand": 0.407,
+     "weight": 0.634165
+    },
+    {
+     "skill": "laravel",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "sql",
+     "demand": 0.495,
+     "weight": 0.522746
+    },
+    {
+     "skill": "mysql",
+     "demand": 0.28,
+     "weight": 0.501693
+    },
+    {
+     "skill": "rest_api",
+     "demand": 0.26,
+     "weight": 0.465857
+    },
+    {
+     "skill": "git",
+     "demand": 0.24,
+     "weight": 0.373955
+    },
+    {
+     "skill": "react",
+     "demand": 0.17,
+     "weight": 0.363811
+    },
+    {
+     "skill": "codeigniter",
+     "demand": 0.13,
+     "weight": 0.360437
+    },
+    {
+     "skill": "csharp",
+     "demand": 0.12,
+     "weight": 0.332711
+    },
+    {
+     "skill": "dotnet",
+     "demand": 0.12,
+     "weight": 0.332711
+    },
+    {
+     "skill": "nodejs",
+     "demand": 0.15,
+     "weight": 0.32101
+    },
+    {
+     "skill": "css_framework",
+     "demand": 0.11,
+     "weight": 0.304985
+    },
+    {
+     "skill": "vue",
+     "demand": 0.1,
+     "weight": 0.277259
+    },
+    {
+     "skill": "oop",
+     "demand": 0.14,
+     "weight": 0.250846
+    },
+    {
+     "skill": "python",
+     "demand": 0.16,
+     "weight": 0.183221
+    }
+   ]
+  },
+  {
+   "id": "system_analyst",
+   "name_en": "System Analyst",
+   "name_id": "Analis Sistem",
+   "group": "primary",
+   "requirements": [
+    {
+     "skill": "requirement_analysis",
+     "demand": 0.469,
+     "weight": 1.003691
+    },
+    {
+     "skill": "bpmn",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "documentation",
+     "demand": 0.28,
+     "weight": 0.599219
+    },
+    {
+     "skill": "uml",
+     "demand": 0.148,
+     "weight": 0.410343
+    },
+    {
+     "skill": "sdlc",
+     "demand": 0.219,
+     "weight": 0.392395
+    },
+    {
+     "skill": "sql",
+     "demand": 0.312,
+     "weight": 0.329488
+    },
+    {
+     "skill": "data_modeling",
+     "demand": 0.13,
+     "weight": 0.278209
+    },
+    {
+     "skill": "erp",
+     "demand": 0.12,
+     "weight": 0.256808
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.151,
+     "weight": 0.20933
+    },
+    {
+     "skill": "jira",
+     "demand": 0.11,
+     "weight": 0.197094
+    }
+   ]
+  },
+  {
+   "id": "database_administrator",
+   "name_en": "Database Administrator",
+   "name_id": "Administrator Basis Data",
+   "group": "primary",
+   "requirements": [
+    {
+     "skill": "backup_recovery",
+     "demand": 0.477,
+     "weight": 1.322525
+    },
+    {
+     "skill": "sql_server",
+     "demand": 0.399,
+     "weight": 1.106263
+    },
+    {
+     "skill": "db_tuning",
+     "demand": 0.3,
+     "weight": 0.831777
+    },
+    {
+     "skill": "oracle_db",
+     "demand": 0.288,
+     "weight": 0.798506
+    },
+    {
+     "skill": "sql",
+     "demand": 0.641,
+     "weight": 0.67693
+    },
+    {
+     "skill": "mysql",
+     "demand": 0.35,
+     "weight": 0.627116
+    },
+    {
+     "skill": "postgresql",
+     "demand": 0.268,
+     "weight": 0.573538
+    },
+    {
+     "skill": "mongodb",
+     "demand": 0.13,
+     "weight": 0.360437
+    },
+    {
+     "skill": "linux",
+     "demand": 0.22,
+     "weight": 0.342792
+    },
+    {
+     "skill": "data_modeling",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "scripting",
+     "demand": 0.12,
+     "weight": 0.186977
+    },
+    {
+     "skill": "monitoring",
+     "demand": 0.1,
+     "weight": 0.179176
+    }
+   ]
+  },
+  {
+   "id": "mobile_developer",
+   "name_en": "Mobile Developer",
+   "name_id": "Pengembang Aplikasi Mobile",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "android",
+     "demand": 0.62,
+     "weight": 1.326841
+    },
+    {
+     "skill": "flutter",
+     "demand": 0.35,
+     "weight": 0.970406
+    },
+    {
+     "skill": "kotlin",
+     "demand": 0.42,
+     "weight": 0.898828
+    },
+    {
+     "skill": "ios",
+     "demand": 0.28,
+     "weight": 0.776325
+    },
+    {
+     "skill": "dart",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "swift",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "java",
+     "demand": 0.38,
+     "weight": 0.592095
+    },
+    {
+     "skill": "rest_api",
+     "demand": 0.32,
+     "weight": 0.573363
+    },
+    {
+     "skill": "git",
+     "demand": 0.28,
+     "weight": 0.43628
+    },
+    {
+     "skill": "react_native",
+     "demand": 0.14,
+     "weight": 0.388162
+    },
+    {
+     "skill": "nosql",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "oop",
+     "demand": 0.1,
+     "weight": 0.179176
+    }
+   ]
+  },
+  {
+   "id": "qa_tester",
+   "name_en": "QA / Software Tester",
+   "name_id": "QA / Penguji Perangkat Lunak",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "manual_testing",
+     "demand": 0.48,
+     "weight": 1.330843
+    },
+    {
+     "skill": "test_case",
+     "demand": 0.45,
+     "weight": 1.247665
+    },
+    {
+     "skill": "automation_testing",
+     "demand": 0.4,
+     "weight": 1.109035
+    },
+    {
+     "skill": "selenium",
+     "demand": 0.32,
+     "weight": 0.887228
+    },
+    {
+     "skill": "api_testing",
+     "demand": 0.28,
+     "weight": 0.776325
+    },
+    {
+     "skill": "performance_testing",
+     "demand": 0.14,
+     "weight": 0.388162
+    },
+    {
+     "skill": "jira",
+     "demand": 0.2,
+     "weight": 0.358352
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.22,
+     "weight": 0.304985
+    },
+    {
+     "skill": "sql",
+     "demand": 0.24,
+     "weight": 0.253453
+    },
+    {
+     "skill": "sdlc",
+     "demand": 0.14,
+     "weight": 0.250846
+    },
+    {
+     "skill": "java",
+     "demand": 0.12,
+     "weight": 0.186977
+    },
+    {
+     "skill": "javascript",
+     "demand": 0.1,
+     "weight": 0.179176
+    },
+    {
+     "skill": "python",
+     "demand": 0.12,
+     "weight": 0.137416
+    }
+   ]
+  },
+  {
+   "id": "ui_ux_designer",
+   "name_en": "UI/UX Designer",
+   "name_id": "Desainer UI/UX",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "figma",
+     "demand": 0.62,
+     "weight": 1.719005
+    },
+    {
+     "skill": "ui_design",
+     "demand": 0.55,
+     "weight": 1.524924
+    },
+    {
+     "skill": "ux_research",
+     "demand": 0.45,
+     "weight": 1.247665
+    },
+    {
+     "skill": "prototyping",
+     "demand": 0.42,
+     "weight": 1.164487
+    },
+    {
+     "skill": "adobe",
+     "demand": 0.34,
+     "weight": 0.94268
+    },
+    {
+     "skill": "design_system",
+     "demand": 0.18,
+     "weight": 0.499066
+    },
+    {
+     "skill": "html_css",
+     "demand": 0.16,
+     "weight": 0.286682
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.1,
+     "weight": 0.138629
+    }
+   ]
+  },
+  {
+   "id": "data_analyst",
+   "name_en": "Data Analyst / BI",
+   "name_id": "Analis Data / BI",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "excel",
+     "demand": 0.48,
+     "weight": 1.330843
+    },
+    {
+     "skill": "data_visualization",
+     "demand": 0.32,
+     "weight": 0.887228
+    },
+    {
+     "skill": "power_bi",
+     "demand": 0.3,
+     "weight": 0.831777
+    },
+    {
+     "skill": "tableau",
+     "demand": 0.28,
+     "weight": 0.776325
+    },
+    {
+     "skill": "sql",
+     "demand": 0.62,
+     "weight": 0.654753
+    },
+    {
+     "skill": "statistics",
+     "demand": 0.3,
+     "weight": 0.64202
+    },
+    {
+     "skill": "python",
+     "demand": 0.4,
+     "weight": 0.458053
+    },
+    {
+     "skill": "looker",
+     "demand": 0.14,
+     "weight": 0.388162
+    },
+    {
+     "skill": "pandas",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "r_lang",
+     "demand": 0.12,
+     "weight": 0.256808
+    },
+    {
+     "skill": "data_warehouse",
+     "demand": 0.1,
+     "weight": 0.214007
+    }
+   ]
+  },
+  {
+   "id": "data_engineer",
+   "name_en": "Data Engineer",
+   "name_id": "Data Engineer",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "etl",
+     "demand": 0.48,
+     "weight": 1.330843
+    },
+    {
+     "skill": "data_warehouse",
+     "demand": 0.38,
+     "weight": 0.813225
+    },
+    {
+     "skill": "airflow",
+     "demand": 0.26,
+     "weight": 0.720873
+    },
+    {
+     "skill": "sql",
+     "demand": 0.68,
+     "weight": 0.718116
+    },
+    {
+     "skill": "python",
+     "demand": 0.62,
+     "weight": 0.709982
+    },
+    {
+     "skill": "spark",
+     "demand": 0.32,
+     "weight": 0.684821
+    },
+    {
+     "skill": "hadoop",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "kafka",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "gcp",
+     "demand": 0.22,
+     "weight": 0.470815
+    },
+    {
+     "skill": "aws",
+     "demand": 0.2,
+     "weight": 0.428013
+    },
+    {
+     "skill": "postgresql",
+     "demand": 0.16,
+     "weight": 0.342411
+    },
+    {
+     "skill": "nosql",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "docker",
+     "demand": 0.14,
+     "weight": 0.250846
+    }
+   ]
+  },
+  {
+   "id": "data_scientist",
+   "name_en": "Data Scientist / ML / AI Engineer",
+   "name_id": "Data Scientist / ML / AI Engineer",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "machine_learning",
+     "demand": 0.66,
+     "weight": 1.829909
+    },
+    {
+     "skill": "python",
+     "demand": 0.78,
+     "weight": 0.893203
+    },
+    {
+     "skill": "statistics",
+     "demand": 0.4,
+     "weight": 0.856026
+    },
+    {
+     "skill": "deep_learning",
+     "demand": 0.3,
+     "weight": 0.831777
+    },
+    {
+     "skill": "tensorflow",
+     "demand": 0.24,
+     "weight": 0.665421
+    },
+    {
+     "skill": "scikit_learn",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "pandas",
+     "demand": 0.26,
+     "weight": 0.556417
+    },
+    {
+     "skill": "pytorch",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "sql",
+     "demand": 0.48,
+     "weight": 0.506905
+    },
+    {
+     "skill": "nlp",
+     "demand": 0.16,
+     "weight": 0.443614
+    },
+    {
+     "skill": "computer_vision",
+     "demand": 0.12,
+     "weight": 0.332711
+    },
+    {
+     "skill": "gen_ai",
+     "demand": 0.12,
+     "weight": 0.332711
+    },
+    {
+     "skill": "r_lang",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "spark",
+     "demand": 0.1,
+     "weight": 0.214007
+    }
+   ]
+  },
+  {
+   "id": "devops_cloud",
+   "name_en": "DevOps / Cloud Engineer",
+   "name_id": "DevOps / Cloud Engineer",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "kubernetes",
+     "demand": 0.46,
+     "weight": 1.275391
+    },
+    {
+     "skill": "ci_cd",
+     "demand": 0.45,
+     "weight": 1.247665
+    },
+    {
+     "skill": "docker",
+     "demand": 0.55,
+     "weight": 0.985468
+    },
+    {
+     "skill": "linux",
+     "demand": 0.58,
+     "weight": 0.903724
+    },
+    {
+     "skill": "aws",
+     "demand": 0.4,
+     "weight": 0.856026
+    },
+    {
+     "skill": "terraform",
+     "demand": 0.24,
+     "weight": 0.665421
+    },
+    {
+     "skill": "jenkins",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "gcp",
+     "demand": 0.26,
+     "weight": 0.556417
+    },
+    {
+     "skill": "azure",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "monitoring",
+     "demand": 0.3,
+     "weight": 0.537528
+    },
+    {
+     "skill": "ansible",
+     "demand": 0.18,
+     "weight": 0.499066
+    },
+    {
+     "skill": "scripting",
+     "demand": 0.32,
+     "weight": 0.498606
+    },
+    {
+     "skill": "git",
+     "demand": 0.28,
+     "weight": 0.43628
+    },
+    {
+     "skill": "networking",
+     "demand": 0.16,
+     "weight": 0.249303
+    },
+    {
+     "skill": "python",
+     "demand": 0.18,
+     "weight": 0.206124
+    }
+   ]
+  },
+  {
+   "id": "network_sysadmin",
+   "name_en": "Network / System Administrator",
+   "name_id": "Administrator Jaringan / Sistem",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "networking",
+     "demand": 0.66,
+     "weight": 1.028375
+    },
+    {
+     "skill": "cisco",
+     "demand": 0.34,
+     "weight": 0.94268
+    },
+    {
+     "skill": "linux",
+     "demand": 0.44,
+     "weight": 0.685584
+    },
+    {
+     "skill": "windows_server",
+     "demand": 0.32,
+     "weight": 0.684821
+    },
+    {
+     "skill": "virtualization",
+     "demand": 0.24,
+     "weight": 0.665421
+    },
+    {
+     "skill": "troubleshooting",
+     "demand": 0.3,
+     "weight": 0.64202
+    },
+    {
+     "skill": "mikrotik",
+     "demand": 0.22,
+     "weight": 0.60997
+    },
+    {
+     "skill": "firewall",
+     "demand": 0.26,
+     "weight": 0.556417
+    },
+    {
+     "skill": "active_directory",
+     "demand": 0.18,
+     "weight": 0.385212
+    },
+    {
+     "skill": "monitoring",
+     "demand": 0.18,
+     "weight": 0.322517
+    },
+    {
+     "skill": "network_security",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "scripting",
+     "demand": 0.12,
+     "weight": 0.186977
+    }
+   ]
+  },
+  {
+   "id": "cyber_security",
+   "name_en": "Cyber Security",
+   "name_id": "Keamanan Siber",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "vuln_assessment",
+     "demand": 0.42,
+     "weight": 1.164487
+    },
+    {
+     "skill": "network_security",
+     "demand": 0.52,
+     "weight": 1.112834
+    },
+    {
+     "skill": "pentest",
+     "demand": 0.36,
+     "weight": 0.998132
+    },
+    {
+     "skill": "siem",
+     "demand": 0.32,
+     "weight": 0.887228
+    },
+    {
+     "skill": "iso27001",
+     "demand": 0.26,
+     "weight": 0.720873
+    },
+    {
+     "skill": "firewall",
+     "demand": 0.3,
+     "weight": 0.64202
+    },
+    {
+     "skill": "linux",
+     "demand": 0.32,
+     "weight": 0.498606
+    },
+    {
+     "skill": "networking",
+     "demand": 0.3,
+     "weight": 0.467443
+    },
+    {
+     "skill": "scripting",
+     "demand": 0.12,
+     "weight": 0.186977
+    },
+    {
+     "skill": "python",
+     "demand": 0.14,
+     "weight": 0.160319
+    }
+   ]
+  },
+  {
+   "id": "it_support",
+   "name_en": "IT Support / Helpdesk",
+   "name_id": "IT Support / Helpdesk",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "hardware",
+     "demand": 0.48,
+     "weight": 1.330843
+    },
+    {
+     "skill": "troubleshooting",
+     "demand": 0.58,
+     "weight": 1.241238
+    },
+    {
+     "skill": "os_install",
+     "demand": 0.4,
+     "weight": 1.109035
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.3,
+     "weight": 0.831777
+    },
+    {
+     "skill": "helpdesk",
+     "demand": 0.28,
+     "weight": 0.776325
+    },
+    {
+     "skill": "networking",
+     "demand": 0.4,
+     "weight": 0.623258
+    },
+    {
+     "skill": "active_directory",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "windows_server",
+     "demand": 0.14,
+     "weight": 0.299609
+    },
+    {
+     "skill": "itil",
+     "demand": 0.1,
+     "weight": 0.214007
+    }
+   ]
+  },
+  {
+   "id": "it_pm",
+   "name_en": "IT Project / Product Manager",
+   "name_id": "Manajer Proyek / Produk TI",
+   "group": "alternative",
+   "requirements": [
+    {
+     "skill": "project_management",
+     "demand": 0.58,
+     "weight": 1.608101
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.52,
+     "weight": 0.720873
+    },
+    {
+     "skill": "product_management",
+     "demand": 0.26,
+     "weight": 0.720873
+    },
+    {
+     "skill": "requirement_analysis",
+     "demand": 0.28,
+     "weight": 0.599219
+    },
+    {
+     "skill": "sdlc",
+     "demand": 0.3,
+     "weight": 0.537528
+    },
+    {
+     "skill": "jira",
+     "demand": 0.3,
+     "weight": 0.537528
+    },
+    {
+     "skill": "documentation",
+     "demand": 0.18,
+     "weight": 0.385212
+    },
+    {
+     "skill": "itil",
+     "demand": 0.12,
+     "weight": 0.256808
+    },
+    {
+     "skill": "erp",
+     "demand": 0.1,
+     "weight": 0.214007
+    }
+   ]
+  }
+ ],
+ "interests": [
+  {
+   "id": "software_dev",
+   "name_en": "Software development",
+   "name_id": "Pengembangan perangkat lunak",
+   "careers": [
+    "senior_programmer",
+    "software_developer",
+    "mobile_developer"
+   ]
+  },
+  {
+   "id": "systems_analysis",
+   "name_en": "Systems analysis",
+   "name_id": "Analisis sistem",
+   "careers": [
+    "system_analyst"
+   ]
+  },
+  {
+   "id": "data_mgmt",
+   "name_en": "Databases & data management",
+   "name_id": "Basis data & manajemen data",
+   "careers": [
+    "database_administrator",
+    "data_engineer"
+   ]
+  },
+  {
+   "id": "data_ai",
+   "name_en": "Data science & AI",
+   "name_id": "Sains data & AI",
+   "careers": [
+    "data_analyst",
+    "data_engineer",
+    "data_scientist"
+   ]
+  },
+  {
+   "id": "infra_cloud",
+   "name_en": "Infrastructure & cloud",
+   "name_id": "Infrastruktur & cloud",
+   "careers": [
+    "network_sysadmin",
+    "devops_cloud"
+   ]
+  },
+  {
+   "id": "security",
+   "name_en": "Security",
+   "name_id": "Keamanan",
+   "careers": [
+    "cyber_security"
+   ]
+  },
+  {
+   "id": "qa",
+   "name_en": "Quality assurance",
+   "name_id": "Penjaminan mutu (QA)",
+   "careers": [
+    "qa_tester"
+   ]
+  },
+  {
+   "id": "design",
+   "name_en": "Design (UI/UX)",
+   "name_id": "Desain (UI/UX)",
+   "careers": [
+    "ui_ux_designer"
+   ]
+  },
+  {
+   "id": "it_service_mgmt",
+   "name_en": "IT service & management",
+   "name_id": "Layanan & manajemen TI",
+   "careers": [
+    "it_support",
+    "it_pm"
+   ]
+  }
+ ],
+ "skills": [
+  {
+   "id": "python",
+   "name": "Python",
+   "category": "Programming",
+   "patterns": [
+    "\\bpython\\b"
+   ]
+  },
+  {
+   "id": "java",
+   "name": "Java",
+   "category": "Programming",
+   "patterns": [
+    "\\bjava\\b(?!\\s*script)"
+   ]
+  },
+  {
+   "id": "javascript",
+   "name": "JavaScript",
+   "category": "Programming",
+   "patterns": [
+    "\\bjavascript\\b",
+    "\\bjs\\b",
+    "\\bes6\\b"
+   ]
+  },
+  {
+   "id": "typescript",
+   "name": "TypeScript",
+   "category": "Programming",
+   "patterns": [
+    "\\btypescript\\b"
+   ]
+  },
+  {
+   "id": "php",
+   "name": "PHP",
+   "category": "Programming",
+   "patterns": [
+    "\\bphp\\b"
+   ]
+  },
+  {
+   "id": "csharp",
+   "name": "C#",
+   "category": "Programming",
+   "patterns": [
+    "c#",
+    "\\bc sharp\\b"
+   ]
+  },
+  {
+   "id": "cpp",
+   "name": "C/C++",
+   "category": "Programming",
+   "patterns": [
+    "c\\+\\+",
+    "\\bbahasa c\\b",
+    "\\bc language\\b"
+   ]
+  },
+  {
+   "id": "golang",
+   "name": "Go (Golang)",
+   "category": "Programming",
+   "patterns": [
+    "\\bgolang\\b",
+    "\\bgo (?:language|lang|programming)\\b"
+   ]
+  },
+  {
+   "id": "kotlin",
+   "name": "Kotlin",
+   "category": "Programming",
+   "patterns": [
+    "\\bkotlin\\b"
+   ]
+  },
+  {
+   "id": "swift",
+   "name": "Swift",
+   "category": "Programming",
+   "patterns": [
+    "\\bswift\\b(?!\\s*code)"
+   ]
+  },
+  {
+   "id": "dart",
+   "name": "Dart",
+   "category": "Programming",
+   "patterns": [
+    "\\bdart\\b"
+   ]
+  },
+  {
+   "id": "r_lang",
+   "name": "R language",
+   "category": "Programming",
+   "patterns": [
+    "\\br (?:programming|language|studio|statistical)\\b",
+    "\\brstudio\\b",
+    "\\bbahasa r\\b"
+   ]
+  },
+  {
+   "id": "oop",
+   "name": "Object-Oriented Programming",
+   "category": "Programming",
+   "patterns": [
+    "\\boop\\b",
+    "object[- ]oriented",
+    "berorientasi objek"
+   ]
+  },
+  {
+   "id": "data_structures",
+   "name": "Data Structures & Algorithms",
+   "category": "Programming",
+   "patterns": [
+    "data structures?",
+    "struktur data",
+    "\\balgorithms?\\b",
+    "\\balgoritma\\b"
+   ]
+  },
+  {
+   "id": "git",
+   "name": "Git / Version Control",
+   "category": "Programming",
+   "patterns": [
+    "\\bgit\\b",
+    "\\bgithub\\b",
+    "\\bgitlab\\b",
+    "version control"
+   ]
+  },
+  {
+   "id": "unit_testing",
+   "name": "Unit Testing",
+   "category": "Programming",
+   "patterns": [
+    "unit test",
+    "\\bjunit\\b",
+    "\\bphpunit\\b",
+    "\\bjest\\b",
+    "\\bpytest\\b"
+   ]
+  },
+  {
+   "id": "html_css",
+   "name": "HTML/CSS",
+   "category": "Web",
+   "patterns": [
+    "\\bhtml5?\\b",
+    "\\bcss3?\\b"
+   ]
+  },
+  {
+   "id": "css_framework",
+   "name": "Bootstrap/Tailwind",
+   "category": "Web",
+   "patterns": [
+    "\\bbootstrap\\b",
+    "\\btailwind\\b"
+   ]
+  },
+  {
+   "id": "react",
+   "name": "React",
+   "category": "Web",
+   "patterns": [
+    "\\breact(?:\\.?js)?\\b(?!\\s*native)"
+   ]
+  },
+  {
+   "id": "vue",
+   "name": "Vue.js",
+   "category": "Web",
+   "patterns": [
+    "\\bvue(?:\\.?js)?\\b",
+    "\\bnuxt\\b"
+   ]
+  },
+  {
+   "id": "angular",
+   "name": "Angular",
+   "category": "Web",
+   "patterns": [
+    "\\bangular(?:js)?\\b"
+   ]
+  },
+  {
+   "id": "nextjs",
+   "name": "Next.js",
+   "category": "Web",
+   "patterns": [
+    "\\bnext\\.?js\\b"
+   ]
+  },
+  {
+   "id": "nodejs",
+   "name": "Node.js",
+   "category": "Web",
+   "patterns": [
+    "\\bnode\\.?js\\b",
+    "\\bexpress(?:\\.?js)?\\b",
+    "\\bnestjs\\b"
+   ]
+  },
+  {
+   "id": "laravel",
+   "name": "Laravel",
+   "category": "Web",
+   "patterns": [
+    "\\blaravel\\b"
+   ]
+  },
+  {
+   "id": "codeigniter",
+   "name": "CodeIgniter",
+   "category": "Web",
+   "patterns": [
+    "\\bcodeigniter\\b",
+    "\\bci4?\\b"
+   ]
+  },
+  {
+   "id": "spring",
+   "name": "Spring Boot",
+   "category": "Web",
+   "patterns": [
+    "\\bspring(?: boot)?\\b"
+   ]
+  },
+  {
+   "id": "django",
+   "name": "Django",
+   "category": "Web",
+   "patterns": [
+    "\\bdjango\\b"
+   ]
+  },
+  {
+   "id": "flask",
+   "name": "Flask/FastAPI",
+   "category": "Web",
+   "patterns": [
+    "\\bflask\\b",
+    "\\bfastapi\\b"
+   ]
+  },
+  {
+   "id": "dotnet",
+   "name": ".NET",
+   "category": "Web",
+   "patterns": [
+    "\\.net\\b",
+    "\\basp\\.net\\b",
+    "\\bdotnet\\b"
+   ]
+  },
+  {
+   "id": "rest_api",
+   "name": "REST API",
+   "category": "Web",
+   "patterns": [
+    "\\brest(?:ful)?\\b",
+    "\\bapi\\b",
+    "web service"
+   ]
+  },
+  {
+   "id": "graphql",
+   "name": "GraphQL",
+   "category": "Web",
+   "patterns": [
+    "\\bgraphql\\b"
+   ]
+  },
+  {
+   "id": "microservices",
+   "name": "Microservices",
+   "category": "Web",
+   "patterns": [
+    "micro-?services?"
+   ]
+  },
+  {
+   "id": "android",
+   "name": "Android",
+   "category": "Mobile",
+   "patterns": [
+    "\\bandroid\\b"
+   ]
+  },
+  {
+   "id": "ios",
+   "name": "iOS",
+   "category": "Mobile",
+   "patterns": [
+    "\\bios\\b",
+    "\\bxcode\\b"
+   ]
+  },
+  {
+   "id": "flutter",
+   "name": "Flutter",
+   "category": "Mobile",
+   "patterns": [
+    "\\bflutter\\b"
+   ]
+  },
+  {
+   "id": "react_native",
+   "name": "React Native",
+   "category": "Mobile",
+   "patterns": [
+    "react native"
+   ]
+  },
+  {
+   "id": "sql",
+   "name": "SQL",
+   "category": "Data",
+   "patterns": [
+    "\\bsql\\b",
+    "\\bquery\\b"
+   ]
+  },
+  {
+   "id": "mysql",
+   "name": "MySQL",
+   "category": "Data",
+   "patterns": [
+    "\\bmysql\\b",
+    "\\bmariadb\\b"
+   ]
+  },
+  {
+   "id": "postgresql",
+   "name": "PostgreSQL",
+   "category": "Data",
+   "patterns": [
+    "\\bpostgre(?:s|sql)?\\b"
+   ]
+  },
+  {
+   "id": "sql_server",
+   "name": "SQL Server",
+   "category": "Data",
+   "patterns": [
+    "sql server",
+    "\\bmssql\\b",
+    "\\bt-sql\\b"
+   ]
+  },
+  {
+   "id": "oracle_db",
+   "name": "Oracle Database",
+   "category": "Data",
+   "patterns": [
+    "\\boracle\\b",
+    "\\bpl/sql\\b"
+   ]
+  },
+  {
+   "id": "mongodb",
+   "name": "MongoDB",
+   "category": "Data",
+   "patterns": [
+    "\\bmongo(?:db)?\\b"
+   ]
+  },
+  {
+   "id": "redis",
+   "name": "Redis",
+   "category": "Data",
+   "patterns": [
+    "\\bredis\\b"
+   ]
+  },
+  {
+   "id": "nosql",
+   "name": "NoSQL",
+   "category": "Data",
+   "patterns": [
+    "\\bnosql\\b",
+    "\\bcassandra\\b",
+    "\\bfirebase\\b"
+   ]
+  },
+  {
+   "id": "backup_recovery",
+   "name": "Backup & Recovery",
+   "category": "Data",
+   "patterns": [
+    "\\bbackup\\b",
+    "disaster recovery",
+    "\\brestore\\b"
+   ]
+  },
+  {
+   "id": "db_tuning",
+   "name": "Database Performance Tuning",
+   "category": "Data",
+   "patterns": [
+    "performance tuning",
+    "query optimi[sz]ation",
+    "\\bindexing\\b"
+   ]
+  },
+  {
+   "id": "data_modeling",
+   "name": "Data Modeling / ERD",
+   "category": "Data",
+   "patterns": [
+    "data model(?:l)?ing",
+    "\\berd\\b",
+    "entity relationship",
+    "normali[sz]ation"
+   ]
+  },
+  {
+   "id": "etl",
+   "name": "ETL / Data Pipeline",
+   "category": "Data",
+   "patterns": [
+    "\\betl\\b",
+    "\\belt\\b",
+    "data pipelines?"
+   ]
+  },
+  {
+   "id": "data_warehouse",
+   "name": "Data Warehouse",
+   "category": "Data",
+   "patterns": [
+    "data warehous",
+    "\\bbigquery\\b",
+    "\\bsnowflake\\b",
+    "\\bredshift\\b"
+   ]
+  },
+  {
+   "id": "spark",
+   "name": "Apache Spark",
+   "category": "Data",
+   "patterns": [
+    "\\bspark\\b",
+    "\\bpyspark\\b"
+   ]
+  },
+  {
+   "id": "hadoop",
+   "name": "Hadoop / Big Data",
+   "category": "Data",
+   "patterns": [
+    "\\bhadoop\\b",
+    "big data",
+    "\\bhive\\b"
+   ]
+  },
+  {
+   "id": "airflow",
+   "name": "Airflow",
+   "category": "Data",
+   "patterns": [
+    "\\bairflow\\b"
+   ]
+  },
+  {
+   "id": "kafka",
+   "name": "Kafka",
+   "category": "Data",
+   "patterns": [
+    "\\bkafka\\b"
+   ]
+  },
+  {
+   "id": "excel",
+   "name": "Excel / Spreadsheet",
+   "category": "Data",
+   "patterns": [
+    "\\bexcel\\b",
+    "spreadsheet",
+    "google sheets?"
+   ]
+  },
+  {
+   "id": "power_bi",
+   "name": "Power BI",
+   "category": "Data",
+   "patterns": [
+    "power ?bi\\b"
+   ]
+  },
+  {
+   "id": "tableau",
+   "name": "Tableau",
+   "category": "Data",
+   "patterns": [
+    "\\btableau\\b"
+   ]
+  },
+  {
+   "id": "looker",
+   "name": "Looker / Data Studio",
+   "category": "Data",
+   "patterns": [
+    "\\blooker\\b",
+    "data studio"
+   ]
+  },
+  {
+   "id": "statistics",
+   "name": "Statistics",
+   "category": "Data",
+   "patterns": [
+    "\\bstatistic",
+    "\\bstatistik"
+   ]
+  },
+  {
+   "id": "data_visualization",
+   "name": "Data Visualization",
+   "category": "Data",
+   "patterns": [
+    "data visuali[sz]ation",
+    "visualisasi data",
+    "\\bdashboards?\\b"
+   ]
+  },
+  {
+   "id": "pandas",
+   "name": "Pandas / NumPy",
+   "category": "Data",
+   "patterns": [
+    "\\bpandas\\b",
+    "\\bnumpy\\b"
+   ]
+  },
+  {
+   "id": "machine_learning",
+   "name": "Machine Learning",
+   "category": "AI",
+   "patterns": [
+    "machine learning",
+    "\\bml\\b",
+    "pembelajaran mesin"
+   ]
+  },
+  {
+   "id": "deep_learning",
+   "name": "Deep Learning",
+   "category": "AI",
+   "patterns": [
+    "deep learning",
+    "neural networks?",
+    "\\bcnn\\b",
+    "\\blstm\\b"
+   ]
+  },
+  {
+   "id": "tensorflow",
+   "name": "TensorFlow/Keras",
+   "category": "AI",
+   "patterns": [
+    "\\btensorflow\\b",
+    "\\bkeras\\b"
+   ]
+  },
+  {
+   "id": "pytorch",
+   "name": "PyTorch",
+   "category": "AI",
+   "patterns": [
+    "\\bpytorch\\b"
+   ]
+  },
+  {
+   "id": "scikit_learn",
+   "name": "scikit-learn",
+   "category": "AI",
+   "patterns": [
+    "scikit[- ]learn",
+    "\\bsklearn\\b"
+   ]
+  },
+  {
+   "id": "nlp",
+   "name": "NLP",
+   "category": "AI",
+   "patterns": [
+    "\\bnlp\\b",
+    "natural language"
+   ]
+  },
+  {
+   "id": "computer_vision",
+   "name": "Computer Vision",
+   "category": "AI",
+   "patterns": [
+    "computer vision",
+    "\\bopencv\\b",
+    "image processing",
+    "pengolahan citra"
+   ]
+  },
+  {
+   "id": "gen_ai",
+   "name": "Generative AI / LLM",
+   "category": "AI",
+   "patterns": [
+    "\\bllms?\\b",
+    "generative ai",
+    "\\bgenai\\b",
+    "\\bgpt\\b",
+    "\\brag\\b"
+   ]
+  },
+  {
+   "id": "linux",
+   "name": "Linux",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\blinux\\b",
+    "\\bubuntu\\b",
+    "\\bcentos\\b",
+    "\\bdebian\\b",
+    "\\bred ?hat\\b"
+   ]
+  },
+  {
+   "id": "windows_server",
+   "name": "Windows Server",
+   "category": "Infrastructure",
+   "patterns": [
+    "windows server"
+   ]
+  },
+  {
+   "id": "active_directory",
+   "name": "Active Directory",
+   "category": "Infrastructure",
+   "patterns": [
+    "active directory",
+    "\\bldap\\b"
+   ]
+  },
+  {
+   "id": "networking",
+   "name": "Computer Networking (TCP/IP)",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bnetwork(?:ing)?\\b",
+    "\\btcp/?ip\\b",
+    "\\blan\\b",
+    "\\bwan\\b",
+    "jaringan komputer",
+    "\\brouting\\b",
+    "\\bswitching\\b"
+   ]
+  },
+  {
+   "id": "cisco",
+   "name": "Cisco / CCNA",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bcisco\\b",
+    "\\bccna\\b",
+    "\\bccnp\\b"
+   ]
+  },
+  {
+   "id": "mikrotik",
+   "name": "MikroTik",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bmikrotik\\b",
+    "\\bmtcna\\b"
+   ]
+  },
+  {
+   "id": "virtualization",
+   "name": "Virtualization (VMware)",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bvmware\\b",
+    "virtuali[sz]ation",
+    "\\bhyper-v\\b",
+    "\\bproxmox\\b"
+   ]
+  },
+  {
+   "id": "docker",
+   "name": "Docker",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bdocker\\b",
+    "\\bcontainers?\\b"
+   ]
+  },
+  {
+   "id": "kubernetes",
+   "name": "Kubernetes",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bkubernetes\\b",
+    "\\bk8s\\b",
+    "\\bopenshift\\b"
+   ]
+  },
+  {
+   "id": "aws",
+   "name": "AWS",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\baws\\b",
+    "amazon web services",
+    "\\bec2\\b"
+   ]
+  },
+  {
+   "id": "gcp",
+   "name": "Google Cloud",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bgcp\\b",
+    "google cloud"
+   ]
+  },
+  {
+   "id": "azure",
+   "name": "Microsoft Azure",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bazure\\b"
+   ]
+  },
+  {
+   "id": "ci_cd",
+   "name": "CI/CD",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bci/?cd\\b",
+    "continuous integration",
+    "continuous delivery",
+    "github actions",
+    "gitlab ci"
+   ]
+  },
+  {
+   "id": "jenkins",
+   "name": "Jenkins",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bjenkins\\b"
+   ]
+  },
+  {
+   "id": "terraform",
+   "name": "Terraform / IaC",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bterraform\\b",
+    "infrastructure as code",
+    "\\biac\\b"
+   ]
+  },
+  {
+   "id": "ansible",
+   "name": "Ansible",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bansible\\b",
+    "\\bpuppet\\b",
+    "\\bchef\\b"
+   ]
+  },
+  {
+   "id": "monitoring",
+   "name": "Monitoring (Prometheus/Grafana)",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bprometheus\\b",
+    "\\bgrafana\\b",
+    "\\bzabbix\\b",
+    "\\bnagios\\b",
+    "\\bmonitoring\\b"
+   ]
+  },
+  {
+   "id": "scripting",
+   "name": "Shell Scripting",
+   "category": "Infrastructure",
+   "patterns": [
+    "\\bbash\\b",
+    "shell script",
+    "\\bpowershell\\b"
+   ]
+  },
+  {
+   "id": "network_security",
+   "name": "Network Security",
+   "category": "Security",
+   "patterns": [
+    "network security",
+    "keamanan jaringan",
+    "\\bvpn\\b",
+    "\\bids\\b",
+    "\\bips\\b"
+   ]
+  },
+  {
+   "id": "firewall",
+   "name": "Firewall",
+   "category": "Security",
+   "patterns": [
+    "\\bfirewalls?\\b",
+    "\\bfortigate\\b",
+    "palo alto"
+   ]
+  },
+  {
+   "id": "pentest",
+   "name": "Penetration Testing",
+   "category": "Security",
+   "patterns": [
+    "penetration test",
+    "\\bpentest",
+    "ethical hack",
+    "\\bburp\\b",
+    "\\bkali\\b"
+   ]
+  },
+  {
+   "id": "vuln_assessment",
+   "name": "Vulnerability Assessment",
+   "category": "Security",
+   "patterns": [
+    "vulnerabilit",
+    "\\bvapt\\b",
+    "\\bowasp\\b",
+    "\\bnessus\\b"
+   ]
+  },
+  {
+   "id": "siem",
+   "name": "SIEM / SOC",
+   "category": "Security",
+   "patterns": [
+    "\\bsiem\\b",
+    "\\bsoc\\b",
+    "\\bsplunk\\b",
+    "\\bqradar\\b",
+    "\\bwazuh\\b"
+   ]
+  },
+  {
+   "id": "iso27001",
+   "name": "ISO 27001 / Security Governance",
+   "category": "Security",
+   "patterns": [
+    "iso ?27001",
+    "\\bnist\\b",
+    "risk assessment",
+    "\\bisms\\b"
+   ]
+  },
+  {
+   "id": "manual_testing",
+   "name": "Manual Testing",
+   "category": "QA",
+   "patterns": [
+    "manual test",
+    "black ?box",
+    "\\buat\\b",
+    "functional test"
+   ]
+  },
+  {
+   "id": "test_case",
+   "name": "Test Case / Test Plan",
+   "category": "QA",
+   "patterns": [
+    "test cases?",
+    "test plan",
+    "test scenario",
+    "bug report"
+   ]
+  },
+  {
+   "id": "automation_testing",
+   "name": "Test Automation",
+   "category": "QA",
+   "patterns": [
+    "automation test",
+    "automated test",
+    "test automation"
+   ]
+  },
+  {
+   "id": "selenium",
+   "name": "Selenium / Cypress",
+   "category": "QA",
+   "patterns": [
+    "\\bselenium\\b",
+    "\\bcypress\\b",
+    "\\bappium\\b",
+    "\\bkatalon\\b",
+    "\\bplaywright\\b"
+   ]
+  },
+  {
+   "id": "api_testing",
+   "name": "API Testing (Postman)",
+   "category": "QA",
+   "patterns": [
+    "\\bpostman\\b",
+    "api test"
+   ]
+  },
+  {
+   "id": "performance_testing",
+   "name": "Performance Testing (JMeter)",
+   "category": "QA",
+   "patterns": [
+    "\\bjmeter\\b",
+    "performance test",
+    "load test",
+    "\\bk6\\b"
+   ]
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "category": "Design",
+   "patterns": [
+    "\\bfigma\\b"
+   ]
+  },
+  {
+   "id": "ui_design",
+   "name": "UI Design",
+   "category": "Design",
+   "patterns": [
+    "\\bui\\b",
+    "user interface",
+    "visual design"
+   ]
+  },
+  {
+   "id": "ux_research",
+   "name": "UX Research",
+   "category": "Design",
+   "patterns": [
+    "\\bux\\b",
+    "user research",
+    "usability",
+    "user experience"
+   ]
+  },
+  {
+   "id": "prototyping",
+   "name": "Wireframing & Prototyping",
+   "category": "Design",
+   "patterns": [
+    "\\bwireframes?\\b",
+    "\\bprototyp",
+    "\\bmockups?\\b"
+   ]
+  },
+  {
+   "id": "adobe",
+   "name": "Adobe XD/Photoshop/Illustrator",
+   "category": "Design",
+   "patterns": [
+    "adobe",
+    "photoshop",
+    "illustrator",
+    "\\bxd\\b"
+   ]
+  },
+  {
+   "id": "design_system",
+   "name": "Design System",
+   "category": "Design",
+   "patterns": [
+    "design system",
+    "style guide"
+   ]
+  },
+  {
+   "id": "requirement_analysis",
+   "name": "Requirement Analysis",
+   "category": "Analysis",
+   "patterns": [
+    "requirements? (?:analysis|gathering|elicitation)",
+    "analisis kebutuhan",
+    "business requirements?",
+    "\\bbrd\\b"
+   ]
+  },
+  {
+   "id": "uml",
+   "name": "UML",
+   "category": "Analysis",
+   "patterns": [
+    "\\buml\\b",
+    "use case",
+    "sequence diagram",
+    "class diagram"
+   ]
+  },
+  {
+   "id": "bpmn",
+   "name": "Business Process Modeling (BPMN)",
+   "category": "Analysis",
+   "patterns": [
+    "\\bbpmn\\b",
+    "business process",
+    "proses bisnis",
+    "\\bflowchart\\b"
+   ]
+  },
+  {
+   "id": "sdlc",
+   "name": "SDLC",
+   "category": "Analysis",
+   "patterns": [
+    "\\bsdlc\\b",
+    "software development life ?cycle",
+    "\\bwaterfall\\b"
+   ]
+  },
+  {
+   "id": "agile_scrum",
+   "name": "Agile / Scrum",
+   "category": "Analysis",
+   "patterns": [
+    "\\bagile\\b",
+    "\\bscrum\\b",
+    "\\bkanban\\b",
+    "\\bsprint\\b"
+   ]
+  },
+  {
+   "id": "jira",
+   "name": "Jira / Trello",
+   "category": "Analysis",
+   "patterns": [
+    "\\bjira\\b",
+    "\\btrello\\b",
+    "\\bconfluence\\b"
+   ]
+  },
+  {
+   "id": "documentation",
+   "name": "Technical Documentation",
+   "category": "Analysis",
+   "patterns": [
+    "documentation",
+    "dokumentasi",
+    "\\bsrs\\b",
+    "technical writing"
+   ]
+  },
+  {
+   "id": "project_management",
+   "name": "Project Management",
+   "category": "Management",
+   "patterns": [
+    "project manage",
+    "manajemen proyek",
+    "\\bpmp\\b",
+    "\\bprince2\\b"
+   ]
+  },
+  {
+   "id": "product_management",
+   "name": "Product Management",
+   "category": "Management",
+   "patterns": [
+    "product manage",
+    "product roadmap",
+    "\\bprd\\b",
+    "product owner"
+   ]
+  },
+  {
+   "id": "erp",
+   "name": "ERP (SAP/Odoo)",
+   "category": "Management",
+   "patterns": [
+    "\\berp\\b",
+    "\\bsap\\b",
+    "\\bodoo\\b"
+   ]
+  },
+  {
+   "id": "itil",
+   "name": "ITIL / IT Service Management",
+   "category": "Management",
+   "patterns": [
+    "\\bitil\\b",
+    "service management",
+    "\\bitsm\\b",
+    "\\bsla\\b"
+   ]
+  },
+  {
+   "id": "troubleshooting",
+   "name": "Troubleshooting",
+   "category": "Support",
+   "patterns": [
+    "troubleshoot",
+    "\\bperbaikan\\b"
+   ]
+  },
+  {
+   "id": "hardware",
+   "name": "Hardware & PC Maintenance",
+   "category": "Support",
+   "patterns": [
+    "\\bhardware\\b",
+    "perangkat keras",
+    "\\bprinters?\\b",
+    "pc maintenance",
+    "\\bmaintenance\\b"
+   ]
+  },
+  {
+   "id": "helpdesk",
+   "name": "Helpdesk / Ticketing",
+   "category": "Support",
+   "patterns": [
+    "help ?desk",
+    "service desk",
+    "\\bticketing\\b",
+    "\\bfreshdesk\\b",
+    "\\bzendesk\\b"
+   ]
+  },
+  {
+   "id": "os_install",
+   "name": "OS Installation & Configuration",
+   "category": "Support",
+   "patterns": [
+    "\\bos install",
+    "install(?:ation|asi)? (?:os|windows|software|sistem operasi)",
+    "\\bwindows\\b(?! server)"
+   ]
+  },
+  {
+   "id": "ms_office",
+   "name": "Microsoft Office",
+   "category": "Support",
+   "patterns": [
+    "ms office",
+    "microsoft office",
+    "\\bword\\b",
+    "\\bpowerpoint\\b",
+    "\\boutlook\\b"
+   ]
+  }
+ ],
+ "courses": [
+  {
+   "id": "algo",
+   "name_id": "Algoritma & Pemrograman",
+   "name_en": "Algorithms & Programming",
+   "skills": [
+    "data_structures",
+    "python",
+    "cpp"
+   ]
+  },
+  {
+   "id": "oop",
+   "name_id": "Pemrograman Berorientasi Objek",
+   "name_en": "Object-Oriented Programming",
+   "skills": [
+    "oop",
+    "java"
+   ]
+  },
+  {
+   "id": "struktur_data",
+   "name_id": "Struktur Data",
+   "name_en": "Data Structures",
+   "skills": [
+    "data_structures"
+   ]
+  },
+  {
+   "id": "basis_data",
+   "name_id": "Basis Data",
+   "name_en": "Databases",
+   "skills": [
+    "sql",
+    "mysql",
+    "data_modeling"
+   ]
+  },
+  {
+   "id": "basis_data_lanjut",
+   "name_id": "Basis Data Lanjut",
+   "name_en": "Advanced Databases",
+   "skills": [
+    "sql",
+    "postgresql",
+    "db_tuning",
+    "backup_recovery"
+   ]
+  },
+  {
+   "id": "web",
+   "name_id": "Pemrograman Web",
+   "name_en": "Web Programming",
+   "skills": [
+    "html_css",
+    "javascript",
+    "php",
+    "css_framework"
+   ]
+  },
+  {
+   "id": "web_lanjut",
+   "name_id": "Pemrograman Web Lanjut",
+   "name_en": "Advanced Web Programming",
+   "skills": [
+    "laravel",
+    "rest_api",
+    "git",
+    "mysql"
+   ]
+  },
+  {
+   "id": "mobile",
+   "name_id": "Pemrograman Mobile",
+   "name_en": "Mobile Programming",
+   "skills": [
+    "android",
+    "kotlin",
+    "flutter",
+    "dart"
+   ]
+  },
+  {
+   "id": "rpl",
+   "name_id": "Rekayasa Perangkat Lunak",
+   "name_en": "Software Engineering",
+   "skills": [
+    "sdlc",
+    "uml",
+    "requirement_analysis",
+    "agile_scrum",
+    "unit_testing"
+   ]
+  },
+  {
+   "id": "apsi",
+   "name_id": "Analisis & Perancangan Sistem",
+   "name_en": "Systems Analysis & Design",
+   "skills": [
+    "requirement_analysis",
+    "uml",
+    "bpmn",
+    "documentation"
+   ]
+  },
+  {
+   "id": "imk",
+   "name_id": "Interaksi Manusia & Komputer",
+   "name_en": "Human-Computer Interaction",
+   "skills": [
+    "ui_design",
+    "ux_research",
+    "prototyping",
+    "figma"
+   ]
+  },
+  {
+   "id": "jarkom",
+   "name_id": "Jaringan Komputer",
+   "name_en": "Computer Networks",
+   "skills": [
+    "networking",
+    "cisco",
+    "mikrotik"
+   ]
+  },
+  {
+   "id": "so",
+   "name_id": "Sistem Operasi",
+   "name_en": "Operating Systems",
+   "skills": [
+    "linux",
+    "scripting"
+   ]
+  },
+  {
+   "id": "keamanan",
+   "name_id": "Keamanan Informasi",
+   "name_en": "Information Security",
+   "skills": [
+    "network_security",
+    "vuln_assessment",
+    "firewall"
+   ]
+  },
+  {
+   "id": "cloud",
+   "name_id": "Komputasi Awan",
+   "name_en": "Cloud Computing",
+   "skills": [
+    "docker",
+    "aws",
+    "virtualization"
+   ]
+  },
+  {
+   "id": "statistika",
+   "name_id": "Statistika",
+   "name_en": "Statistics",
+   "skills": [
+    "statistics",
+    "excel"
+   ]
+  },
+  {
+   "id": "data_mining",
+   "name_id": "Data Mining",
+   "name_en": "Data Mining",
+   "skills": [
+    "machine_learning",
+    "python",
+    "pandas",
+    "scikit_learn"
+   ]
+  },
+  {
+   "id": "ai",
+   "name_id": "Kecerdasan Buatan",
+   "name_en": "Artificial Intelligence",
+   "skills": [
+    "machine_learning",
+    "deep_learning",
+    "python"
+   ]
+  },
+  {
+   "id": "bigdata",
+   "name_id": "Big Data",
+   "name_en": "Big Data",
+   "skills": [
+    "hadoop",
+    "spark",
+    "etl"
+   ]
+  },
+  {
+   "id": "testing",
+   "name_id": "Pengujian Perangkat Lunak",
+   "name_en": "Software Testing",
+   "skills": [
+    "manual_testing",
+    "test_case",
+    "automation_testing",
+    "selenium"
+   ]
+  },
+  {
+   "id": "manpro",
+   "name_id": "Manajemen Proyek TI",
+   "name_en": "IT Project Management",
+   "skills": [
+    "project_management",
+    "agile_scrum",
+    "jira"
+   ]
+  },
+  {
+   "id": "orkom",
+   "name_id": "Organisasi & Arsitektur Komputer",
+   "name_en": "Computer Organisation",
+   "skills": [
+    "hardware"
+   ]
+  },
+  {
+   "id": "vis_data",
+   "name_id": "Visualisasi Data",
+   "name_en": "Data Visualization",
+   "skills": [
+    "data_visualization",
+    "power_bi",
+    "tableau"
+   ]
+  }
+ ],
+ "demand_source": "demand_seed.csv"
+}

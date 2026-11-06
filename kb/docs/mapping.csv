@@ -1,0 +1,6 @@
+file,doc_type,careers,source,access,id_prefix
+# Satu baris per dokumen. Hapus baris contoh di bawah dan isi dengan file milikmu (letakkan file di folder ini).
+# doc_type: skkni | occupation_map | rps | course | other     access: public | private (RPS/kurikulum PNJ = private)
+# careers : id karier dipisah "|" (lihat daftar di README_RAG.md)
+# CONTOH_SKKNI_282_2016.pdf,skkni,software_developer|senior_programmer|mobile_developer,Kepmenaker No. 282 Tahun 2016 SKKNI Bidang Pemrograman,public,SKKNI282
+# CONTOH_Peta_Okupasi_TIK.pdf,occupation_map,system_analyst|database_administrator|software_developer|senior_programmer,Peta Okupasi Nasional Area Fungsi TIK,public,POTIK
