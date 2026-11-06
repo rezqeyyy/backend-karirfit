@@ -2,8 +2,10 @@
 the factual skeleton. Mirrors templateExplain() in web/app.js."""
 
 
-def template_explanation(result: dict, names: dict, lang: str = "id") -> str:
+def template_explanation(result: dict, names: dict, lang: str = "id", soft_names: dict | None = None) -> str:
     n = lambda r: names.get(r["skill"], r["skill"])
+    soft_names = soft_names or {}
+    soft_todo = [soft_names.get(r["skill"], r["skill"]) for r in result.get("soft", []) if not r.get("have")][:3]
     matched = sorted(result["matched"], key=lambda r: -r["weight"])
     gaps = result["gaps"]
     career = result["name_id"] if lang == "id" else result["name_en"]
@@ -19,7 +21,9 @@ def template_explanation(result: dict, names: dict, lang: str = "id") -> str:
             "4. Saran pengembangan\n" + (
                 f"Mulailah dari {', '.join(n(r) for r in gaps[:3])}: keterampilan ini paling berbobot untuk {career}. "
                 "Buat satu proyek portofolio kecil yang memakainya, lalu tambahkan ke pengalaman Anda."
-                if gaps else "Perdalam keterampilan yang ada lewat proyek nyata dan sertifikasi."),
+                if gaps else "Perdalam keterampilan yang ada lewat proyek nyata dan sertifikasi.")
+            + (f" Soft skill yang sering diminta untuk karier ini dan masih bisa Anda kembangkan: {', '.join(soft_todo)}."
+               if soft_todo else ""),
         ]
     else:
         parts = [
@@ -32,6 +36,8 @@ def template_explanation(result: dict, names: dict, lang: str = "id") -> str:
             "4. Development advice\n" + (
                 f"Start with {', '.join(n(r) for r in gaps[:3])}: these carry the most weight for {career}. "
                 "Build one small portfolio project that uses them and add it to your experience."
-                if gaps else "Deepen your current skills through real projects and certifications."),
+                if gaps else "Deepen your current skills through real projects and certifications.")
+            + (f" Soft skills often requested for this career that you can still develop: {', '.join(soft_todo)}."
+               if soft_todo else ""),
         ]
     return "\n\n".join(parts)

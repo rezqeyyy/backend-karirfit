@@ -1,7 +1,7 @@
 """
 Evaluation log storage.
 
-  DATABASE_URL set (e.g. Render Postgres)  -> PostgreSQL via psycopg 3 (persistent)
+  DATABASE_URL set (Supabase Postgres)     -> PostgreSQL via psycopg 3 (persistent)
   otherwise                                -> SQLite file DB_PATH (local development)
 
 On Render's free web service the filesystem is ephemeral, so SQLite data would be lost on every
@@ -37,7 +37,8 @@ class Storage:
         return "postgres" if self.pg else "sqlite"
 
     def _conn(self):
-        return self._psycopg.connect(self.url, autocommit=True) if self.pg else sqlite3.connect(DB_PATH)
+        # prepare_threshold=None: works with Supabase's transaction pooler (port 6543)
+        return self._psycopg.connect(self.url, autocommit=True, prepare_threshold=None) if self.pg else sqlite3.connect(DB_PATH)
 
     def log(self, kind: str, session: str, payload: dict):
         ph = "%s" if self.pg else "?"

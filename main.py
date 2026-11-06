@@ -6,7 +6,11 @@ KarirFit API (FastAPI) – application layer of the thesis architecture (Section
   POST /api/recommend        deterministic ranking (FR6/FR7), never uses the LLM
   POST /api/explain          RAG + LLM explanation with citations (FR8); template fallback
   POST /api/rating           relevance rating 1-5 (FR9)
+  POST /api/chat             career assistant (Groq), grounded in the user's results
   GET  /api/export           evaluation log export (FR10) – needs ADMIN_TOKEN
+
+  With SUPABASE_URL set, every user endpoint needs a Supabase access token
+  (Authorization: Bearer ...); the Supabase user id becomes the session id (auth.py).
 
   Evaluation (EVAL_MODE=1, Sections 3.6.4-3.6.6):
   POST /api/compare          normal vs alpha=1 ranking, random order, no labels
@@ -34,7 +38,7 @@ import threading
 import time
 from pathlib import Path
 
-from fastapi import BackgroundTasks, FastAPI, File, Form, Header, HTTPException, UploadFile
+from fastapi import BackgroundTasks, Depends, FastAPI, File, Form, Header, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -54,6 +58,7 @@ except ImportError:
     pass
 
 import evaluation  # noqa: E402
+from auth import REQUIRE_AUTH, current_user  # noqa: E402
 import llm  # noqa: E402
 from claims import check_explanation  # noqa: E402
 from storage import Storage  # noqa: E402
@@ -61,6 +66,8 @@ from rag import Retriever  # noqa: E402
 
 MODEL = json.load(open(HERE / "model.json", encoding="utf-8"))
 NAMES = {s["id"]: s["name"] for s in MODEL["skills"]}
+SOFT_NAMES = {"id": {s["id"]: s["name_id"] for s in MODEL.get("soft_skills", [])},
+              "en": {s["id"]: s["name_en"] for s in MODEL.get("soft_skills", [])}}
 EXTRACTOR = SkillExtractor(MODEL["skills"])
 RETRIEVER = Retriever()
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "")
@@ -83,8 +90,10 @@ app.add_middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=["*"], a
 class Profile(BaseModel):
     courses: dict[str, str] = Field(default_factory=dict)        # course_id -> grade A-E
     skills: dict[str, str] = Field(default_factory=dict)         # skill_id -> beginner|intermediate|advanced
+    soft_skills: dict[str, str] = Field(default_factory=dict)    # soft skill -> level (advice only, never scored)
     experience_skills: list[str] = Field(default_factory=list)   # confirmed skill ids
     interests: list[str] = Field(default_factory=list, max_length=3)
+    major: str | None = None                                     # e.g. "Akuntansi" (context only)
     target_career: str | None = None
 
 
@@ -132,6 +141,27 @@ class SusReq(BaseModel):
     answers: list[int] = Field(min_length=10, max_length=10)
 
 
+class ChatMessage(BaseModel):
+    role: str
+    content: str = Field(max_length=4000)
+
+
+class ChatReq(BaseModel):
+    messages: list[ChatMessage] = Field(min_length=1, max_length=40)
+    profile: Profile
+    career: str | None = None          # career the user is looking at (focus of retrieval)
+    lang: str = "id"
+    session: str = "anon"
+    consent: bool = False
+
+
+def who(user: dict | None, session: str, consent: bool) -> tuple[str, bool]:
+    """Session id and consent: from the Supabase account when logged in, else from the request."""
+    if user:
+        return user["id"], consent or user.get("consent", False)
+    return session, consent
+
+
 def require_admin(token: str):
     if not ADMIN_TOKEN or token != ADMIN_TOKEN:
         raise HTTPException(403, "admin token required")
@@ -160,7 +190,7 @@ def get_model():
 
 
 @app.post("/api/extract-skills")
-def extract_skills(req: ExtractReq):
+def extract_skills(req: ExtractReq, user: dict | None = Depends(current_user)):
     try:
         skills, model_id = llm.extract_skills(req.text, MODEL["skills"])
     except Exception as e:
@@ -169,14 +199,16 @@ def extract_skills(req: ExtractReq):
 
 
 @app.post("/api/recommend")
-def do_recommend(req: RecommendReq, x_admin_token: str = Header(default="")):
+def do_recommend(req: RecommendReq, x_admin_token: str = Header(default=""), user: dict | None = Depends(current_user)):
     t0 = time.time()
+    session, consent = who(user, req.session, req.consent)
     res = recommend(req.profile.model_dump(), MODEL, alpha=effective_alpha(req.alpha, x_admin_token))
     if not req.include_all:
         res.pop("all")
-    if req.consent:
-        log("recommend", req.session, {"profile": req.profile.model_dump(),
-                                       "ranking": [r["career"] for r in res["primary"] + res["alternative"]]})
+    if consent:
+        log("recommend", session, {"profile": req.profile.model_dump(),
+                                   "ranking": [r["career"] for r in res["primary"] + res["alternative"]],
+                                   "top": [r["career"] for r in res["top"]]})
     return res | {"ms": round((time.time() - t0) * 1000, 1)}
 
 
@@ -187,7 +219,7 @@ def _check_summary(chk: dict) -> dict:
 def _non_rag_twin(result: dict, profile: dict, lang: str, session: str, rag_passages: list[str]):
     """Section 3.5.6: same prompt without passages; checked and logged, never shown."""
     try:
-        text, model_id = llm.explain(result, NAMES, [], lang)
+        text, model_id = llm.explain(result, NAMES, [], lang, SOFT_NAMES.get(lang, SOFT_NAMES["en"]))
         chk = check_explanation(text, result, MODEL, [], profile, EXTRACTOR)
         log("explain_norag", session, {"career": result["career"], "condition": "non_rag", "model": model_id,
                                        "prompt_version": llm.PROMPT_VERSION, "text": text,
@@ -197,7 +229,10 @@ def _non_rag_twin(result: dict, profile: dict, lang: str, session: str, rag_pass
 
 
 @app.post("/api/explain")
-def do_explain(req: ExplainReq, background: BackgroundTasks, x_admin_token: str = Header(default="")):
+def do_explain(req: ExplainReq, background: BackgroundTasks, x_admin_token: str = Header(default=""),
+               user: dict | None = Depends(current_user)):
+    session, consent = who(user, req.session, req.consent)
+    soft_names = SOFT_NAMES.get(req.lang, SOFT_NAMES["en"])
     profile = req.profile.model_dump()
     ranked = recommend(profile, MODEL, alpha=effective_alpha(req.alpha, x_admin_token))["all"]
     result = next((r for r in ranked if r["career"] == req.career), None)
@@ -207,48 +242,51 @@ def do_explain(req: ExplainReq, background: BackgroundTasks, x_admin_token: str 
                                 [NAMES[r["skill"]] for r in result["gaps"]], result["name_en"])
     out = {"career": req.career, "passages": passages, "prompt_version": llm.PROMPT_VERSION}
     try:
-        text, model_id = llm.explain(result, NAMES, passages, req.lang)
+        text, model_id = llm.explain(result, NAMES, passages, req.lang, soft_names)
         out |= {"text": text, "model": model_id, "mode": "rag" if passages else "llm_no_context"}
         if not passages:
             out["notice"] = ("Bukti dari basis pengetahuan tidak cukup; penjelasan hanya memakai data sistem."
                              if req.lang == "id" else
                              "Insufficient evidence in the knowledge base; explanation uses system data only.")
     except Exception as e:  # NFR6: ranking and skill lists remain available
-        out |= {"text": template_explanation(result, NAMES, req.lang), "model": "template",
+        out |= {"text": template_explanation(result, NAMES, req.lang, soft_names), "model": "template",
                 "mode": "template", "error": str(e)[:200]}
     chk = check_explanation(out["text"], result, MODEL, passages, profile, EXTRACTOR)
     out["check"] = _check_summary(chk)
-    if req.consent:
-        log("explain", req.session, {"career": req.career, "condition": "rag", "mode": out["mode"],
+    if consent:
+        log("explain", session, {"career": req.career, "condition": "rag", "mode": out["mode"],
                                      "model": out["model"], "prompt_version": llm.PROMPT_VERSION,
                                      "passages": [p["id"] for p in passages], "text": out["text"],
                                      "check": out["check"], "claims": chk["claims"]})
         if EVAL_MODE and out["mode"] != "template":
-            background.add_task(_non_rag_twin, result, profile, req.lang, req.session, [p["id"] for p in passages])
+            background.add_task(_non_rag_twin, result, profile, req.lang, session, [p["id"] for p in passages])
     return out
 
 
 @app.post("/api/rating")
-def rate(req: RatingReq):
-    log("rating", req.session, {"career": req.career, "rating": req.rating})
+def rate(req: RatingReq, user: dict | None = Depends(current_user)):
+    session, _ = who(user, req.session, True)
+    log("rating", session, {"career": req.career, "rating": req.rating})
     return {"ok": True}
 
 
 @app.post("/api/compare")
-def compare(req: CompareReq):
-    require_eval(req.consent)
-    out = evaluation.make_comparison(req.profile.model_dump(), MODEL, req.session)
-    log("compare_shown", req.session, {"same": out["same"]})
+def compare(req: CompareReq, user: dict | None = Depends(current_user)):
+    session, consent = who(user, req.session, req.consent)
+    require_eval(consent)
+    out = evaluation.make_comparison(req.profile.model_dump(), MODEL, session)
+    log("compare_shown", session, {"same": out["same"]})
     return out
 
 
 @app.post("/api/compare/choice")
-def compare_choice(req: ChoiceReq):
+def compare_choice(req: ChoiceReq, user: dict | None = Depends(current_user)):
     require_eval()
-    res = evaluation.resolve_choice(req.token, req.session, req.choice)
+    session, _ = who(user, req.session, True)
+    res = evaluation.resolve_choice(req.token, session, req.choice)
     if not res:
         raise HTTPException(400, "invalid comparison token")
-    log("compare_choice", req.session, res)
+    log("compare_choice", session, res)
     return {"ok": True}
 
 
@@ -259,14 +297,49 @@ def sus_items(lang: str = "id"):
 
 
 @app.post("/api/sus")
-def sus_submit(req: SusReq):
+def sus_submit(req: SusReq, user: dict | None = Depends(current_user)):
     require_eval()
+    req.session, _ = who(user, req.session, True)
     try:
         score = evaluation.sus_score(req.answers)
     except ValueError as e:
         raise HTTPException(400, str(e))
     log("sus", req.session, {"answers": req.answers, "score": score})
     return {"ok": True}
+
+
+def _results_text(res: dict, lang: str, focus: dict | None) -> str:
+    name = (lambda r: r["name_id"]) if lang == "id" else (lambda r: r["name_en"])
+    soft = SOFT_NAMES.get(lang, SOFT_NAMES["en"])
+    lines = ["Top careers (fit score 0-100): " + "; ".join(f"{name(r)} {r['fit']:.0f}" for r in res["top"])]
+    lines.append("IT graduate-profile careers: " + "; ".join(f"{name(r)} {r['fit']:.0f}" for r in res["primary"]))
+    for r in ([focus] if focus else []) + [x for x in res["top"][:2] if not focus or x["career"] != focus["career"]]:
+        has = ", ".join(NAMES[m["skill"]] for m in r["matched"][:8]) or "none"
+        todo = ", ".join("%s %.0f%%" % (NAMES[g["skill"]], g["demand"] * 100) for g in r["gaps"][:6]) or "none"
+        soft_todo = ", ".join(soft.get(x["skill"], x["skill"]) for x in r.get("soft", []) if not x["have"]) or "none"
+        lines.append("- %s: fit %.0f, competency %.0f%%, interest match %s; has: %s; to learn (most important first, "
+                     "%% of job ads): %s; soft skills to develop: %s"
+                     % (name(r), r["fit"], r["K"] * 100, "yes" if r["M"] else "no", has, todo, soft_todo))
+    return "\n".join(lines)
+
+
+@app.post("/api/chat")
+def do_chat(req: ChatReq, user: dict | None = Depends(current_user)):
+    session, consent = who(user, req.session, req.consent)
+    res = recommend(req.profile.model_dump(), MODEL)
+    focus = next((r for r in res["all"] if r["career"] == req.career), None) if req.career else None
+    target = focus or res["top"][0]
+    passages = RETRIEVER.search(target["career"], [NAMES[r["skill"]] for r in target["matched"]],
+                                [NAMES[r["skill"]] for r in target["gaps"]], target["name_en"])
+    try:
+        reply, model_id = llm.chat([m.model_dump() for m in req.messages], _results_text(res, req.lang, focus),
+                                   passages, req.lang)
+    except Exception as e:
+        raise HTTPException(503, f"assistant unavailable: {str(e)[:150]}")
+    if consent:
+        log("chat", session, {"career": target["career"], "question": req.messages[-1].content[:1000],
+                              "answer": reply[:3000], "model": model_id, "passages": [p["id"] for p in passages]})
+    return {"reply": reply, "model": model_id, "passages": [{"id": p["id"], "source": p["source"]} for p in passages]}
 
 
 @app.get("/api/export")
@@ -392,7 +465,7 @@ def kb_status(x_admin_token: str = Header(default="")):
 @app.get("/api/health")
 def health():
     return {"ok": True, "rag": RETRIEVER.ready, "public_mode": os.getenv("PUBLIC_MODE", "1") == "1",
-            "eval_mode": EVAL_MODE,
+            "eval_mode": EVAL_MODE, "auth_required": REQUIRE_AUTH, "chat": bool(os.getenv("GROQ_API_KEY") or os.getenv("GEMINI_API_KEY")),
             "llm_keys": {"gemini": bool(os.getenv("GEMINI_API_KEY")), "groq": bool(os.getenv("GROQ_API_KEY"))},
             "demand_source": MODEL.get("demand_source"), "data_label": MODEL.get("data_label"),
             "storage": STORE.kind}

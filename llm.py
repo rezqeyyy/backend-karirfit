@@ -105,6 +105,7 @@ FACTS (computed by the system, do not change them):
 - Fit score: {fit:.0f}/100 (competency fit {k:.0%}, interest match: {interest})
 - Matched skills (skill: demand in job ads, evidence): {matched}
 - Skill gaps ordered by importance (skill: demand in job ads): {gaps}
+- Soft skills often requested for this career that the person has not marked as strong (advice only): {soft}
 
 CONTEXT:
 {context}
@@ -122,10 +123,12 @@ HEADINGS = {
 }
 
 
-def explain(result: dict, names: dict, passages: list[dict], lang="id") -> tuple[str, str]:
+def explain(result: dict, names: dict, passages: list[dict], lang="id", soft_names: dict | None = None) -> tuple[str, str]:
     fmt = lambda r: f"{names.get(r['skill'], r['skill'])}: {r['demand']:.0%}"
     matched = "; ".join(f"{fmt(r)}, {r['evidence']['source']}" for r in result["matched"]) or "none"
     gaps = "; ".join(fmt(r) for r in result["gaps"][:6]) or "none"
+    soft_names = soft_names or {}
+    soft = ", ".join(soft_names.get(r["skill"], r["skill"]) for r in result.get("soft", []) if not r.get("have"))[:300] or "none"
     context = "\n\n".join(f"[{p['id']}] ({p['source']}) {p['text']}" for p in passages) or "(no passages)"
     h = HEADINGS.get(lang, HEADINGS["en"])
     prompt = EXPLAIN_PROMPT.format(
@@ -133,7 +136,7 @@ def explain(result: dict, names: dict, passages: list[dict], lang="id") -> tuple
         career=result["name_id"] if lang == "id" else result["name_en"],
         example_id=passages[0]["id"] if passages else "P1",
         fit=result["fit"], k=result["K"], interest="yes" if result["M"] else "no",
-        matched=matched, gaps=gaps, context=context, h1=h[0], h2=h[1], h3=h[2], h4=h[3])
+        matched=matched, gaps=gaps, soft=soft, context=context, h1=h[0], h2=h[1], h3=h[2], h4=h[3])
     return complete(prompt)
 
 
@@ -143,3 +146,51 @@ def check_citations(text: str, passages: list[dict]) -> dict:
     known = {p["id"] for p in passages}
     return {"cited": sorted(cited), "unknown_citations": sorted(cited - known),
             "supported_ratio": (len(cited & known) / len(cited)) if cited else None}
+
+
+# --------------------------------------------------------------------------- career assistant chat
+CHAT_SYSTEM = """You are KarirFit's career assistant. Answer in {language}, briefly and concretely.
+Help the person understand their career test results and plan how to learn the skills they lack.
+Rules:
+- Use the RESULTS and CONTEXT below for anything about their scores, skills or job-ad demand. Never
+  invent scores, percentages, salaries or statistics; if the data is not here, say you do not know.
+- When you use a CONTEXT passage, cite its id in square brackets, e.g. [{example_id}].
+- You may give general study advice (what to learn first, project ideas, kinds of courses or
+  certifications) but do not claim specific prices, dates or that a particular course exists.
+- Stay on careers, skills, learning and job searching. Politely decline unrelated requests.
+- The ranking was computed by a fixed formula; you cannot change it. Recommendations are
+  suggestions to explore, not decisions.
+
+RESULTS (computed by the system):
+{results}
+
+CONTEXT:
+{context}"""
+
+
+def chat(messages: list[dict], results_text: str, passages: list[dict], lang: str = "id") -> tuple[str, str]:
+    """Groq chat completion (GROQ_MODEL); falls back to Gemini if Groq is unavailable."""
+    context = "\n\n".join(f"[{p['id']}] ({p['source']}) {p['text'][:900]}" for p in passages) or "(no passages)"
+    system = CHAT_SYSTEM.format(language="Indonesian" if lang == "id" else "English",
+                                example_id=passages[0]["id"] if passages else "P1",
+                                results=results_text, context=context)
+    history = [{"role": m["role"], "content": str(m["content"])[:2000]}
+               for m in messages[-12:] if m.get("role") in ("user", "assistant")]
+    key = os.getenv("GROQ_API_KEY")
+    if key:
+        try:
+            out = _post("https://api.groq.com/openai/v1/chat/completions",
+                        {"model": GROQ_MODEL, "temperature": 0.3, "max_tokens": 700,
+                         "messages": [{"role": "system", "content": system}] + history},
+                        {"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
+            return out["choices"][0]["message"]["content"], f"groq:{GROQ_MODEL}"
+        except Exception as e:
+            err = e
+    else:
+        err = LLMUnavailable("GROQ_API_KEY not set")
+    transcript = "\n".join(f"{m['role'].upper()}: {m['content']}" for m in history)
+    try:   # fallback keeps the assistant available
+        text = _gemini(system + "\n\nCONVERSATION:\n" + transcript + "\nASSISTANT:", json_mode=False)
+        return text, f"gemini:{GEMINI_MODEL}"
+    except Exception as e2:
+        raise LLMUnavailable(f"groq: {err}; gemini: {e2}")

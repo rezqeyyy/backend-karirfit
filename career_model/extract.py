@@ -33,25 +33,32 @@ class SkillExtractor:
 
 class CareerClassifier:
     """Classifies a job-ad title into one of the careers by title patterns (Section 3.2.2).
-    Order matters: Senior Programmer is checked before Software Developer, specific roles
-    before generic ones."""
+    IT careers are checked first (specific roles before generic ones, Senior Programmer before
+    Software Developer), then general careers. A title containing a non-IT word (NON_IT_TITLE,
+    e.g. 'supplier', 'sales', 'accounting') is never assigned to an IT career."""
 
-    PRIORITY = ["mobile_developer", "data_engineer", "data_scientist", "data_analyst",
-                "database_administrator", "devops_cloud", "cyber_security", "qa_tester",
-                "ui_ux_designer", "system_analyst", "network_sysadmin", "it_support", "it_pm",
-                "senior_programmer", "software_developer"]
+    IT_PRIORITY = ["mobile_developer", "data_engineer", "data_scientist", "data_analyst",
+                   "database_administrator", "devops_cloud", "cyber_security", "qa_tester",
+                   "ui_ux_designer", "system_analyst", "network_sysadmin", "it_support", "it_pm",
+                   "senior_programmer", "software_developer"]
+    GENERAL_PRIORITY = ["tax_staff", "accountant", "financial_analyst", "digital_marketing", "content_writer",
+                        "graphic_designer", "hr_recruiter", "teacher", "supply_chain", "civil_engineer",
+                        "electrical_engineer", "qc_production", "customer_service", "sales_bd", "admin_staff"]
 
     def __init__(self, careers: list[dict]):
         by_id = {c["id"]: c for c in careers}
-        self.rules = [(cid, [re.compile(p, re.I) for p in by_id[cid]["title_patterns"]])
-                      for cid in self.PRIORITY if cid in by_id]
-        self.non_it = [re.compile(p, re.I) for p in careers[0].get("non_it_title", [])]
+        compile_ = lambda cid: (cid, [re.compile(p, re.I) for p in by_id[cid]["title_patterns"]])
+        it_ids = [c for c in self.IT_PRIORITY if c in by_id]
+        general = [c for c in self.GENERAL_PRIORITY if c in by_id]
+        others = [c for c in by_id if c not in it_ids and c not in general]   # careers added later
+        self.it_rules = [compile_(c) for c in it_ids]
+        self.general_rules = [compile_(c) for c in general + others]
+        self.non_it = [re.compile(p, re.I) for p in careers[0].get("non_it_title", [])] if careers else []
 
     def classify(self, title: str) -> str | None:
         t = (title or "").lower()
-        if any(p.search(t) for p in self.non_it):
-            return None
-        for cid, pats in self.rules:
+        rules = self.general_rules if any(p.search(t) for p in self.non_it) else self.it_rules + self.general_rules
+        for cid, pats in rules:
             if any(p.search(t) for p in pats):
                 return cid
         return None

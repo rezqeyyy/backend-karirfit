@@ -3,7 +3,7 @@
  "params": {
   "alpha": 0.5,
   "threshold": 0.1,
-  "n_careers": 15,
+  "n_careers": 30,
   "grade_points": {
    "A": 1.0,
    "B": 0.75,
@@ -27,97 +27,115 @@
     {
      "skill": "javascript",
      "demand": 0.42,
-     "weight": 0.752539
-    },
-    {
-     "skill": "php",
-     "demand": 0.33,
-     "weight": 0.706222
+     "weight": 1.007116
     },
     {
      "skill": "java",
      "demand": 0.45,
-     "weight": 0.701165
+     "weight": 0.96303
     },
     {
-     "skill": "microservices",
-     "demand": 0.25,
-     "weight": 0.693147
+     "skill": "php",
+     "demand": 0.33,
+     "weight": 0.914954
     },
     {
      "skill": "rest_api",
      "demand": 0.36,
-     "weight": 0.645033
+     "weight": 0.863242
+    },
+    {
+     "skill": "microservices",
+     "demand": 0.25,
+     "weight": 0.858497
     },
     {
      "skill": "html_css",
      "demand": 0.34,
-     "weight": 0.609198
+     "weight": 0.815284
     },
     {
      "skill": "git",
      "demand": 0.38,
-     "weight": 0.592095
+     "weight": 0.813225
     },
     {
      "skill": "sql",
      "demand": 0.52,
-     "weight": 0.549147
+     "weight": 0.762495
     },
     {
      "skill": "spring",
      "demand": 0.18,
-     "weight": 0.499066
+     "weight": 0.618118
     },
     {
      "skill": "mysql",
      "demand": 0.25,
-     "weight": 0.44794
+     "weight": 0.599474
     },
     {
      "skill": "nodejs",
      "demand": 0.2,
-     "weight": 0.428013
+     "weight": 0.554518
     },
     {
      "skill": "react",
      "demand": 0.2,
-     "weight": 0.428013
-    },
-    {
-     "skill": "unit_testing",
-     "demand": 0.15,
-     "weight": 0.415888
+     "weight": 0.554518
     },
     {
      "skill": "oop",
      "demand": 0.22,
-     "weight": 0.394187
+     "weight": 0.527537
+    },
+    {
+     "skill": "unit_testing",
+     "demand": 0.15,
+     "weight": 0.515098
     },
     {
      "skill": "agile_scrum",
      "demand": 0.24,
-     "weight": 0.332711
-    },
-    {
-     "skill": "golang",
-     "demand": 0.12,
-     "weight": 0.332711
+     "weight": 0.467018
     },
     {
      "skill": "docker",
      "demand": 0.18,
-     "weight": 0.322517
+     "weight": 0.431621
+    },
+    {
+     "skill": "golang",
+     "demand": 0.12,
+     "weight": 0.412078
     },
     {
      "skill": "android",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "kotlin",
      "demand": 0.11,
-     "weight": 0.235407
+     "weight": 0.304985
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "problem_solving",
+     "demand": 0.45
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.4
+    },
+    {
+     "skill": "communication",
+     "demand": 0.4
+    },
+    {
+     "skill": "leadership",
+     "demand": 0.35
     }
    ]
   },
@@ -128,94 +146,112 @@
    "group": "primary",
    "requirements": [
     {
-     "skill": "php",
-     "demand": 0.355,
-     "weight": 0.759723
-    },
-    {
      "skill": "javascript",
      "demand": 0.416,
-     "weight": 0.745372
+     "weight": 0.997524
+    },
+    {
+     "skill": "php",
+     "demand": 0.355,
+     "weight": 0.984269
     },
     {
      "skill": "html_css",
      "demand": 0.404,
-     "weight": 0.723871
+     "weight": 0.96875
     },
     {
      "skill": "java",
      "demand": 0.407,
-     "weight": 0.634165
-    },
-    {
-     "skill": "laravel",
-     "demand": 0.2,
-     "weight": 0.554518
+     "weight": 0.871007
     },
     {
      "skill": "sql",
      "demand": 0.495,
-     "weight": 0.522746
+     "weight": 0.725837
+    },
+    {
+     "skill": "laravel",
+     "demand": 0.2,
+     "weight": 0.686797
     },
     {
      "skill": "mysql",
      "demand": 0.28,
-     "weight": 0.501693
+     "weight": 0.671411
     },
     {
      "skill": "rest_api",
      "demand": 0.26,
-     "weight": 0.465857
+     "weight": 0.623453
     },
     {
      "skill": "git",
      "demand": 0.24,
-     "weight": 0.373955
+     "weight": 0.513616
     },
     {
      "skill": "react",
      "demand": 0.17,
-     "weight": 0.363811
+     "weight": 0.47134
     },
     {
      "skill": "codeigniter",
      "demand": 0.13,
-     "weight": 0.360437
-    },
-    {
-     "skill": "csharp",
-     "demand": 0.12,
-     "weight": 0.332711
-    },
-    {
-     "skill": "dotnet",
-     "demand": 0.12,
-     "weight": 0.332711
+     "weight": 0.446418
     },
     {
      "skill": "nodejs",
      "demand": 0.15,
-     "weight": 0.32101
+     "weight": 0.415888
+    },
+    {
+     "skill": "csharp",
+     "demand": 0.12,
+     "weight": 0.412078
+    },
+    {
+     "skill": "dotnet",
+     "demand": 0.12,
+     "weight": 0.412078
     },
     {
      "skill": "css_framework",
      "demand": 0.11,
-     "weight": 0.304985
+     "weight": 0.377739
     },
     {
      "skill": "vue",
      "demand": 0.1,
-     "weight": 0.277259
+     "weight": 0.343399
     },
     {
      "skill": "oop",
      "demand": 0.14,
-     "weight": 0.250846
+     "weight": 0.335705
     },
     {
      "skill": "python",
      "demand": 0.16,
-     "weight": 0.183221
+     "weight": 0.266401
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "teamwork",
+     "demand": 0.45
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.4
+    },
+    {
+     "skill": "communication",
+     "demand": 0.35
+    },
+    {
+     "skill": "adaptability",
+     "demand": 0.25
     }
    ]
   },
@@ -228,52 +264,70 @@
     {
      "skill": "requirement_analysis",
      "demand": 0.469,
-     "weight": 1.003691
-    },
-    {
-     "skill": "bpmn",
-     "demand": 0.22,
-     "weight": 0.60997
+     "weight": 1.300344
     },
     {
      "skill": "documentation",
      "demand": 0.28,
-     "weight": 0.599219
+     "weight": 0.776325
     },
     {
-     "skill": "uml",
-     "demand": 0.148,
-     "weight": 0.410343
+     "skill": "bpmn",
+     "demand": 0.22,
+     "weight": 0.755477
     },
     {
      "skill": "sdlc",
      "demand": 0.219,
-     "weight": 0.392395
+     "weight": 0.525139
+    },
+    {
+     "skill": "uml",
+     "demand": 0.148,
+     "weight": 0.50823
     },
     {
      "skill": "sql",
      "demand": 0.312,
-     "weight": 0.329488
+     "weight": 0.457497
     },
     {
      "skill": "data_modeling",
      "demand": 0.13,
-     "weight": 0.278209
+     "weight": 0.360437
+    },
+    {
+     "skill": "agile_scrum",
+     "demand": 0.151,
+     "weight": 0.293832
+    },
+    {
+     "skill": "jira",
+     "demand": 0.11,
+     "weight": 0.263768
     },
     {
      "skill": "erp",
      "demand": 0.12,
      "weight": 0.256808
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "communication",
+     "demand": 0.55
     },
     {
-     "skill": "agile_scrum",
-     "demand": 0.151,
-     "weight": 0.20933
+     "skill": "critical_thinking",
+     "demand": 0.45
     },
     {
-     "skill": "jira",
-     "demand": 0.11,
-     "weight": 0.197094
+     "skill": "problem_solving",
+     "demand": 0.35
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.3
     }
    ]
   },
@@ -286,62 +340,80 @@
     {
      "skill": "backup_recovery",
      "demand": 0.477,
-     "weight": 1.322525
+     "weight": 1.638012
     },
     {
      "skill": "sql_server",
      "demand": 0.399,
-     "weight": 1.106263
+     "weight": 1.370161
     },
     {
      "skill": "db_tuning",
      "demand": 0.3,
-     "weight": 0.831777
+     "weight": 1.030196
     },
     {
      "skill": "oracle_db",
      "demand": 0.288,
-     "weight": 0.798506
+     "weight": 0.988988
     },
     {
      "skill": "sql",
      "demand": 0.641,
-     "weight": 0.67693
+     "weight": 0.939922
     },
     {
      "skill": "mysql",
      "demand": 0.35,
-     "weight": 0.627116
+     "weight": 0.839263
     },
     {
      "skill": "postgresql",
      "demand": 0.268,
-     "weight": 0.573538
-    },
-    {
-     "skill": "mongodb",
-     "demand": 0.13,
-     "weight": 0.360437
+     "weight": 0.743054
     },
     {
      "skill": "linux",
      "demand": 0.22,
-     "weight": 0.342792
+     "weight": 0.470815
+    },
+    {
+     "skill": "mongodb",
+     "demand": 0.13,
+     "weight": 0.446418
     },
     {
      "skill": "data_modeling",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "scripting",
      "demand": 0.12,
-     "weight": 0.186977
+     "weight": 0.256808
     },
     {
      "skill": "monitoring",
      "demand": 0.1,
-     "weight": 0.179176
+     "weight": 0.23979
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "problem_solving",
+     "demand": 0.35
+    },
+    {
+     "skill": "attention_detail",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.25
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.25
     }
    ]
   },
@@ -354,62 +426,80 @@
     {
      "skill": "android",
      "demand": 0.62,
-     "weight": 1.326841
+     "weight": 1.719005
     },
     {
      "skill": "flutter",
      "demand": 0.35,
-     "weight": 0.970406
+     "weight": 1.201896
     },
     {
      "skill": "kotlin",
      "demand": 0.42,
-     "weight": 0.898828
+     "weight": 1.164487
     },
     {
      "skill": "ios",
      "demand": 0.28,
-     "weight": 0.776325
-    },
-    {
-     "skill": "dart",
-     "demand": 0.22,
-     "weight": 0.60997
-    },
-    {
-     "skill": "swift",
-     "demand": 0.22,
-     "weight": 0.60997
+     "weight": 0.961516
     },
     {
      "skill": "java",
      "demand": 0.38,
-     "weight": 0.592095
+     "weight": 0.813225
     },
     {
      "skill": "rest_api",
      "demand": 0.32,
-     "weight": 0.573363
+     "weight": 0.767326
+    },
+    {
+     "skill": "dart",
+     "demand": 0.22,
+     "weight": 0.755477
+    },
+    {
+     "skill": "swift",
+     "demand": 0.22,
+     "weight": 0.755477
     },
     {
      "skill": "git",
      "demand": 0.28,
-     "weight": 0.43628
+     "weight": 0.599219
     },
     {
      "skill": "react_native",
      "demand": 0.14,
-     "weight": 0.388162
+     "weight": 0.480758
     },
     {
      "skill": "nosql",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "oop",
      "demand": 0.1,
-     "weight": 0.179176
+     "weight": 0.23979
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "teamwork",
+     "demand": 0.4
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.35
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
+    },
+    {
+     "skill": "creativity",
+     "demand": 0.15
     }
    ]
   },
@@ -422,67 +512,85 @@
     {
      "skill": "manual_testing",
      "demand": 0.48,
-     "weight": 1.330843
+     "weight": 1.648314
     },
     {
      "skill": "test_case",
      "demand": 0.45,
-     "weight": 1.247665
+     "weight": 1.545294
     },
     {
      "skill": "automation_testing",
      "demand": 0.4,
-     "weight": 1.109035
+     "weight": 1.373595
     },
     {
      "skill": "selenium",
      "demand": 0.32,
-     "weight": 0.887228
+     "weight": 1.098876
     },
     {
      "skill": "api_testing",
      "demand": 0.28,
-     "weight": 0.776325
+     "weight": 0.961516
     },
     {
      "skill": "performance_testing",
      "demand": 0.14,
-     "weight": 0.388162
+     "weight": 0.480758
     },
     {
      "skill": "jira",
      "demand": 0.2,
-     "weight": 0.358352
+     "weight": 0.479579
     },
     {
      "skill": "agile_scrum",
      "demand": 0.22,
-     "weight": 0.304985
+     "weight": 0.4281
     },
     {
      "skill": "sql",
      "demand": 0.24,
-     "weight": 0.253453
+     "weight": 0.351921
     },
     {
      "skill": "sdlc",
      "demand": 0.14,
-     "weight": 0.250846
+     "weight": 0.335705
     },
     {
      "skill": "java",
      "demand": 0.12,
-     "weight": 0.186977
+     "weight": 0.256808
     },
     {
      "skill": "javascript",
      "demand": 0.1,
-     "weight": 0.179176
+     "weight": 0.23979
     },
     {
      "skill": "python",
      "demand": 0.12,
-     "weight": 0.137416
+     "weight": 0.199801
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "attention_detail",
+     "demand": 0.55
+    },
+    {
+     "skill": "communication",
+     "demand": 0.35
+    },
+    {
+     "skill": "critical_thinking",
+     "demand": 0.3
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.3
     }
    ]
   },
@@ -493,24 +601,24 @@
    "group": "alternative",
    "requirements": [
     {
+     "skill": "ui_design",
+     "demand": 0.55,
+     "weight": 1.888693
+    },
+    {
      "skill": "figma",
      "demand": 0.62,
      "weight": 1.719005
     },
     {
-     "skill": "ui_design",
-     "demand": 0.55,
-     "weight": 1.524924
-    },
-    {
      "skill": "ux_research",
      "demand": 0.45,
-     "weight": 1.247665
+     "weight": 1.545294
     },
     {
      "skill": "prototyping",
      "demand": 0.42,
-     "weight": 1.164487
+     "weight": 1.442275
     },
     {
      "skill": "adobe",
@@ -520,17 +628,35 @@
     {
      "skill": "design_system",
      "demand": 0.18,
-     "weight": 0.499066
+     "weight": 0.618118
     },
     {
      "skill": "html_css",
      "demand": 0.16,
-     "weight": 0.286682
+     "weight": 0.383663
     },
     {
      "skill": "agile_scrum",
      "demand": 0.1,
-     "weight": 0.138629
+     "weight": 0.194591
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "creativity",
+     "demand": 0.5
+    },
+    {
+     "skill": "communication",
+     "demand": 0.45
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.35
+    },
+    {
+     "skill": "critical_thinking",
+     "demand": 0.25
     }
    ]
   },
@@ -541,14 +667,19 @@
    "group": "alternative",
    "requirements": [
     {
-     "skill": "excel",
-     "demand": 0.48,
-     "weight": 1.330843
-    },
-    {
      "skill": "data_visualization",
      "demand": 0.32,
-     "weight": 0.887228
+     "weight": 1.098876
+    },
+    {
+     "skill": "tableau",
+     "demand": 0.28,
+     "weight": 0.961516
+    },
+    {
+     "skill": "sql",
+     "demand": 0.62,
+     "weight": 0.909129
     },
     {
      "skill": "power_bi",
@@ -556,14 +687,14 @@
      "weight": 0.831777
     },
     {
-     "skill": "tableau",
-     "demand": 0.28,
-     "weight": 0.776325
+     "skill": "python",
+     "demand": 0.4,
+     "weight": 0.666003
     },
     {
-     "skill": "sql",
-     "demand": 0.62,
-     "weight": 0.654753
+     "skill": "excel",
+     "demand": 0.48,
+     "weight": 0.665421
     },
     {
      "skill": "statistics",
@@ -571,29 +702,42 @@
      "weight": 0.64202
     },
     {
-     "skill": "python",
-     "demand": 0.4,
-     "weight": 0.458053
-    },
-    {
      "skill": "looker",
      "demand": 0.14,
-     "weight": 0.388162
+     "weight": 0.480758
     },
     {
      "skill": "pandas",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "r_lang",
      "demand": 0.12,
-     "weight": 0.256808
+     "weight": 0.332711
     },
     {
      "skill": "data_warehouse",
      "demand": 0.1,
-     "weight": 0.214007
+     "weight": 0.277259
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "critical_thinking",
+     "demand": 0.55
+    },
+    {
+     "skill": "communication",
+     "demand": 0.45
+    },
+    {
+     "skill": "attention_detail",
+     "demand": 0.3
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.3
     }
    ]
   },
@@ -606,67 +750,85 @@
     {
      "skill": "etl",
      "demand": 0.48,
-     "weight": 1.330843
+     "weight": 1.648314
     },
     {
      "skill": "data_warehouse",
      "demand": 0.38,
-     "weight": 0.813225
-    },
-    {
-     "skill": "airflow",
-     "demand": 0.26,
-     "weight": 0.720873
-    },
-    {
-     "skill": "sql",
-     "demand": 0.68,
-     "weight": 0.718116
+     "weight": 1.053584
     },
     {
      "skill": "python",
      "demand": 0.62,
-     "weight": 0.709982
+     "weight": 1.032305
+    },
+    {
+     "skill": "sql",
+     "demand": 0.68,
+     "weight": 0.997109
+    },
+    {
+     "skill": "airflow",
+     "demand": 0.26,
+     "weight": 0.892837
     },
     {
      "skill": "spark",
      "demand": 0.32,
-     "weight": 0.684821
+     "weight": 0.887228
     },
     {
      "skill": "hadoop",
      "demand": 0.22,
-     "weight": 0.60997
+     "weight": 0.755477
     },
     {
      "skill": "kafka",
      "demand": 0.2,
-     "weight": 0.554518
+     "weight": 0.686797
     },
     {
      "skill": "gcp",
      "demand": 0.22,
-     "weight": 0.470815
+     "weight": 0.60997
     },
     {
      "skill": "aws",
      "demand": 0.2,
-     "weight": 0.428013
+     "weight": 0.554518
     },
     {
      "skill": "postgresql",
      "demand": 0.16,
-     "weight": 0.342411
+     "weight": 0.443614
     },
     {
      "skill": "nosql",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "docker",
      "demand": 0.14,
-     "weight": 0.250846
+     "weight": 0.335705
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "problem_solving",
+     "demand": 0.4
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.35
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
+    },
+    {
+     "skill": "critical_thinking",
+     "demand": 0.25
     }
    ]
   },
@@ -679,12 +841,17 @@
     {
      "skill": "machine_learning",
      "demand": 0.66,
-     "weight": 1.829909
+     "weight": 2.266432
     },
     {
      "skill": "python",
      "demand": 0.78,
-     "weight": 0.893203
+     "weight": 1.298706
+    },
+    {
+     "skill": "deep_learning",
+     "demand": 0.3,
+     "weight": 1.030196
     },
     {
      "skill": "statistics",
@@ -692,59 +859,72 @@
      "weight": 0.856026
     },
     {
-     "skill": "deep_learning",
-     "demand": 0.3,
-     "weight": 0.831777
-    },
-    {
      "skill": "tensorflow",
      "demand": 0.24,
-     "weight": 0.665421
+     "weight": 0.824157
     },
     {
      "skill": "scikit_learn",
      "demand": 0.22,
-     "weight": 0.60997
+     "weight": 0.755477
     },
     {
      "skill": "pandas",
      "demand": 0.26,
-     "weight": 0.556417
-    },
-    {
-     "skill": "pytorch",
-     "demand": 0.2,
-     "weight": 0.554518
+     "weight": 0.720873
     },
     {
      "skill": "sql",
      "demand": 0.48,
-     "weight": 0.506905
+     "weight": 0.703842
+    },
+    {
+     "skill": "pytorch",
+     "demand": 0.2,
+     "weight": 0.686797
     },
     {
      "skill": "nlp",
      "demand": 0.16,
-     "weight": 0.443614
+     "weight": 0.549438
     },
     {
      "skill": "computer_vision",
      "demand": 0.12,
-     "weight": 0.332711
+     "weight": 0.412078
     },
     {
      "skill": "gen_ai",
      "demand": 0.12,
-     "weight": 0.332711
+     "weight": 0.412078
     },
     {
      "skill": "r_lang",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "spark",
      "demand": 0.1,
-     "weight": 0.214007
+     "weight": 0.277259
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "critical_thinking",
+     "demand": 0.5
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.45
+    },
+    {
+     "skill": "communication",
+     "demand": 0.4
+    },
+    {
+     "skill": "public_speaking",
+     "demand": 0.15
     }
    ]
   },
@@ -757,77 +937,95 @@
     {
      "skill": "kubernetes",
      "demand": 0.46,
-     "weight": 1.275391
+     "weight": 1.579634
     },
     {
      "skill": "ci_cd",
      "demand": 0.45,
-     "weight": 1.247665
+     "weight": 1.545294
     },
     {
      "skill": "docker",
      "demand": 0.55,
-     "weight": 0.985468
+     "weight": 1.318842
     },
     {
      "skill": "linux",
      "demand": 0.58,
-     "weight": 0.903724
+     "weight": 1.241238
     },
     {
      "skill": "aws",
      "demand": 0.4,
-     "weight": 0.856026
+     "weight": 1.109035
     },
     {
      "skill": "terraform",
      "demand": 0.24,
-     "weight": 0.665421
+     "weight": 0.824157
     },
     {
      "skill": "jenkins",
      "demand": 0.22,
-     "weight": 0.60997
+     "weight": 0.755477
     },
     {
      "skill": "gcp",
      "demand": 0.26,
-     "weight": 0.556417
-    },
-    {
-     "skill": "azure",
-     "demand": 0.2,
-     "weight": 0.554518
+     "weight": 0.720873
     },
     {
      "skill": "monitoring",
      "demand": 0.3,
-     "weight": 0.537528
+     "weight": 0.719369
     },
     {
-     "skill": "ansible",
-     "demand": 0.18,
-     "weight": 0.499066
+     "skill": "azure",
+     "demand": 0.2,
+     "weight": 0.686797
     },
     {
      "skill": "scripting",
      "demand": 0.32,
-     "weight": 0.498606
+     "weight": 0.684821
+    },
+    {
+     "skill": "ansible",
+     "demand": 0.18,
+     "weight": 0.618118
     },
     {
      "skill": "git",
      "demand": 0.28,
-     "weight": 0.43628
+     "weight": 0.599219
     },
     {
      "skill": "networking",
      "demand": 0.16,
-     "weight": 0.249303
+     "weight": 0.342411
     },
     {
      "skill": "python",
      "demand": 0.18,
-     "weight": 0.206124
+     "weight": 0.299701
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "problem_solving",
+     "demand": 0.45
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.35
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.15
     }
    ]
   },
@@ -840,62 +1038,80 @@
     {
      "skill": "networking",
      "demand": 0.66,
-     "weight": 1.028375
+     "weight": 1.412444
     },
     {
      "skill": "cisco",
      "demand": 0.34,
-     "weight": 0.94268
+     "weight": 1.167556
     },
     {
      "skill": "linux",
      "demand": 0.44,
-     "weight": 0.685584
+     "weight": 0.941629
     },
     {
      "skill": "windows_server",
      "demand": 0.32,
-     "weight": 0.684821
+     "weight": 0.887228
     },
     {
      "skill": "virtualization",
      "demand": 0.24,
-     "weight": 0.665421
-    },
-    {
-     "skill": "troubleshooting",
-     "demand": 0.3,
-     "weight": 0.64202
+     "weight": 0.824157
     },
     {
      "skill": "mikrotik",
      "demand": 0.22,
-     "weight": 0.60997
+     "weight": 0.755477
     },
     {
      "skill": "firewall",
      "demand": 0.26,
-     "weight": 0.556417
+     "weight": 0.720873
+    },
+    {
+     "skill": "troubleshooting",
+     "demand": 0.3,
+     "weight": 0.719369
     },
     {
      "skill": "active_directory",
      "demand": 0.18,
-     "weight": 0.385212
+     "weight": 0.499066
     },
     {
      "skill": "monitoring",
      "demand": 0.18,
-     "weight": 0.322517
+     "weight": 0.431621
     },
     {
      "skill": "network_security",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "scripting",
      "demand": 0.12,
-     "weight": 0.186977
+     "weight": 0.256808
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "problem_solving",
+     "demand": 0.45
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.2
     }
    ]
   },
@@ -908,52 +1124,70 @@
     {
      "skill": "vuln_assessment",
      "demand": 0.42,
-     "weight": 1.164487
+     "weight": 1.442275
     },
     {
      "skill": "network_security",
      "demand": 0.52,
-     "weight": 1.112834
+     "weight": 1.441746
     },
     {
      "skill": "pentest",
      "demand": 0.36,
-     "weight": 0.998132
+     "weight": 1.236235
     },
     {
      "skill": "siem",
      "demand": 0.32,
-     "weight": 0.887228
+     "weight": 1.098876
     },
     {
      "skill": "iso27001",
      "demand": 0.26,
-     "weight": 0.720873
+     "weight": 0.892837
     },
     {
      "skill": "firewall",
      "demand": 0.3,
-     "weight": 0.64202
+     "weight": 0.831777
     },
     {
      "skill": "linux",
      "demand": 0.32,
-     "weight": 0.498606
+     "weight": 0.684821
     },
     {
      "skill": "networking",
      "demand": 0.3,
-     "weight": 0.467443
+     "weight": 0.64202
     },
     {
      "skill": "scripting",
      "demand": 0.12,
-     "weight": 0.186977
+     "weight": 0.256808
     },
     {
      "skill": "python",
      "demand": 0.14,
-     "weight": 0.160319
+     "weight": 0.233101
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "critical_thinking",
+     "demand": 0.45
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.4
+    },
+    {
+     "skill": "integrity",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
     }
    ]
   },
@@ -966,47 +1200,65 @@
     {
      "skill": "hardware",
      "demand": 0.48,
-     "weight": 1.330843
+     "weight": 1.648314
     },
     {
      "skill": "troubleshooting",
      "demand": 0.58,
-     "weight": 1.241238
+     "weight": 1.390779
     },
     {
      "skill": "os_install",
      "demand": 0.4,
-     "weight": 1.109035
-    },
-    {
-     "skill": "ms_office",
-     "demand": 0.3,
-     "weight": 0.831777
+     "weight": 1.373595
     },
     {
      "skill": "helpdesk",
      "demand": 0.28,
-     "weight": 0.776325
+     "weight": 0.961516
     },
     {
      "skill": "networking",
      "demand": 0.4,
-     "weight": 0.623258
+     "weight": 0.856026
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.3,
+     "weight": 0.439901
     },
     {
      "skill": "active_directory",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "windows_server",
      "demand": 0.14,
-     "weight": 0.299609
+     "weight": 0.388162
     },
     {
      "skill": "itil",
      "demand": 0.1,
-     "weight": 0.214007
+     "weight": 0.277259
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "communication",
+     "demand": 0.55
+    },
+    {
+     "skill": "customer_orientation",
+     "demand": 0.45
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.4
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.3
     }
    ]
   },
@@ -1024,42 +1276,945 @@
     {
      "skill": "agile_scrum",
      "demand": 0.52,
-     "weight": 0.720873
+     "weight": 1.011873
     },
     {
      "skill": "product_management",
      "demand": 0.26,
-     "weight": 0.720873
+     "weight": 0.892837
     },
     {
      "skill": "requirement_analysis",
      "demand": 0.28,
-     "weight": 0.599219
+     "weight": 0.776325
     },
     {
      "skill": "sdlc",
      "demand": 0.3,
-     "weight": 0.537528
+     "weight": 0.719369
     },
     {
      "skill": "jira",
      "demand": 0.3,
-     "weight": 0.537528
+     "weight": 0.719369
     },
     {
      "skill": "documentation",
      "demand": 0.18,
-     "weight": 0.385212
+     "weight": 0.499066
     },
     {
      "skill": "itil",
      "demand": 0.12,
-     "weight": 0.256808
+     "weight": 0.332711
     },
     {
      "skill": "erp",
      "demand": 0.1,
      "weight": 0.214007
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "leadership",
+     "demand": 0.6
+    },
+    {
+     "skill": "communication",
+     "demand": 0.6
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.4
+    },
+    {
+     "skill": "negotiation",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "accountant",
+   "name_en": "Accountant",
+   "name_id": "Akuntan",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "accounting",
+     "demand": 0.7,
+     "weight": 1.678527
+    },
+    {
+     "skill": "financial_reporting",
+     "demand": 0.55,
+     "weight": 1.318842
+    },
+    {
+     "skill": "tax",
+     "demand": 0.35,
+     "weight": 0.970406
+    },
+    {
+     "skill": "accounting_software",
+     "demand": 0.4,
+     "weight": 0.959158
+    },
+    {
+     "skill": "excel",
+     "demand": 0.6,
+     "weight": 0.831777
+    },
+    {
+     "skill": "audit",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "budgeting",
+     "demand": 0.15,
+     "weight": 0.415888
+    },
+    {
+     "skill": "erp",
+     "demand": 0.15,
+     "weight": 0.32101
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "attention_detail",
+     "demand": 0.6
+    },
+    {
+     "skill": "integrity",
+     "demand": 0.45
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "financial_analyst",
+   "name_en": "Financial Analyst",
+   "name_id": "Analis Keuangan",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "financial_analysis",
+     "demand": 0.65,
+     "weight": 2.232092
+    },
+    {
+     "skill": "excel",
+     "demand": 0.7,
+     "weight": 0.970406
+    },
+    {
+     "skill": "budgeting",
+     "demand": 0.35,
+     "weight": 0.970406
+    },
+    {
+     "skill": "financial_reporting",
+     "demand": 0.4,
+     "weight": 0.959158
+    },
+    {
+     "skill": "accounting",
+     "demand": 0.35,
+     "weight": 0.839263
+    },
+    {
+     "skill": "statistics",
+     "demand": 0.2,
+     "weight": 0.428013
+    },
+    {
+     "skill": "power_bi",
+     "demand": 0.15,
+     "weight": 0.415888
+    },
+    {
+     "skill": "sql",
+     "demand": 0.12,
+     "weight": 0.17596
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "critical_thinking",
+     "demand": 0.6
+    },
+    {
+     "skill": "attention_detail",
+     "demand": 0.4
+    },
+    {
+     "skill": "communication",
+     "demand": 0.35
+    },
+    {
+     "skill": "public_speaking",
+     "demand": 0.2
+    }
+   ]
+  },
+  {
+   "id": "tax_staff",
+   "name_en": "Tax Staff / Consultant",
+   "name_id": "Staf / Konsultan Pajak",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "tax",
+     "demand": 0.9,
+     "weight": 2.49533
+    },
+    {
+     "skill": "accounting",
+     "demand": 0.55,
+     "weight": 1.318842
+    },
+    {
+     "skill": "financial_reporting",
+     "demand": 0.3,
+     "weight": 0.719369
+    },
+    {
+     "skill": "excel",
+     "demand": 0.45,
+     "weight": 0.623832
+    },
+    {
+     "skill": "accounting_software",
+     "demand": 0.25,
+     "weight": 0.599474
+    },
+    {
+     "skill": "audit",
+     "demand": 0.15,
+     "weight": 0.415888
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "attention_detail",
+     "demand": 0.55
+    },
+    {
+     "skill": "integrity",
+     "demand": 0.4
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "digital_marketing",
+   "name_en": "Digital Marketing Specialist",
+   "name_id": "Spesialis Pemasaran Digital",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "social_media",
+     "demand": 0.65,
+     "weight": 1.802183
+    },
+    {
+     "skill": "sem_ads",
+     "demand": 0.5,
+     "weight": 1.716994
+    },
+    {
+     "skill": "digital_analytics",
+     "demand": 0.4,
+     "weight": 1.373595
+    },
+    {
+     "skill": "seo",
+     "demand": 0.45,
+     "weight": 1.247665
+    },
+    {
+     "skill": "content_writing",
+     "demand": 0.35,
+     "weight": 0.970406
+    },
+    {
+     "skill": "email_marketing",
+     "demand": 0.2,
+     "weight": 0.686797
+    },
+    {
+     "skill": "canva",
+     "demand": 0.25,
+     "weight": 0.599474
+    },
+    {
+     "skill": "branding",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "market_research",
+     "demand": 0.15,
+     "weight": 0.415888
+    },
+    {
+     "skill": "excel",
+     "demand": 0.15,
+     "weight": 0.207944
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "creativity",
+     "demand": 0.55
+    },
+    {
+     "skill": "communication",
+     "demand": 0.45
+    },
+    {
+     "skill": "critical_thinking",
+     "demand": 0.3
+    },
+    {
+     "skill": "adaptability",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "content_writer",
+   "name_en": "Content Writer / Copywriter",
+   "name_id": "Penulis Konten / Copywriter",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "content_writing",
+     "demand": 0.85,
+     "weight": 2.3567
+    },
+    {
+     "skill": "seo",
+     "demand": 0.4,
+     "weight": 1.109035
+    },
+    {
+     "skill": "social_media",
+     "demand": 0.4,
+     "weight": 1.109035
+    },
+    {
+     "skill": "english",
+     "demand": 0.25,
+     "weight": 0.486478
+    },
+    {
+     "skill": "canva",
+     "demand": 0.15,
+     "weight": 0.359684
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "creativity",
+     "demand": 0.6
+    },
+    {
+     "skill": "communication",
+     "demand": 0.4
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.35
+    },
+    {
+     "skill": "attention_detail",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "graphic_designer",
+   "name_en": "Graphic Designer",
+   "name_id": "Desainer Grafis",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "graphic_design",
+     "demand": 0.7,
+     "weight": 2.403791
+    },
+    {
+     "skill": "adobe",
+     "demand": 0.75,
+     "weight": 2.079442
+    },
+    {
+     "skill": "video_editing",
+     "demand": 0.3,
+     "weight": 1.030196
+    },
+    {
+     "skill": "canva",
+     "demand": 0.35,
+     "weight": 0.839263
+    },
+    {
+     "skill": "branding",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "photography",
+     "demand": 0.15,
+     "weight": 0.515098
+    },
+    {
+     "skill": "figma",
+     "demand": 0.15,
+     "weight": 0.415888
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "creativity",
+     "demand": 0.7
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.3
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "hr_recruiter",
+   "name_en": "HR / Recruiter",
+   "name_id": "HR / Rekrutmen",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "recruitment",
+     "demand": 0.7,
+     "weight": 2.403791
+    },
+    {
+     "skill": "payroll",
+     "demand": 0.35,
+     "weight": 1.201896
+    },
+    {
+     "skill": "labor_law",
+     "demand": 0.35,
+     "weight": 1.201896
+    },
+    {
+     "skill": "training_dev",
+     "demand": 0.25,
+     "weight": 0.858497
+    },
+    {
+     "skill": "hris",
+     "demand": 0.2,
+     "weight": 0.686797
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.4,
+     "weight": 0.586535
+    },
+    {
+     "skill": "admin_filing",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "excel",
+     "demand": 0.35,
+     "weight": 0.485203
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "communication",
+     "demand": 0.7
+    },
+    {
+     "skill": "negotiation",
+     "demand": 0.3
+    },
+    {
+     "skill": "integrity",
+     "demand": 0.3
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "admin_staff",
+   "name_en": "Administrative Staff",
+   "name_id": "Staf Administrasi",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "admin_filing",
+     "demand": 0.65,
+     "weight": 1.802183
+    },
+    {
+     "skill": "data_entry",
+     "demand": 0.45,
+     "weight": 1.247665
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.6,
+     "weight": 0.879802
+    },
+    {
+     "skill": "excel",
+     "demand": 0.55,
+     "weight": 0.762462
+    },
+    {
+     "skill": "english",
+     "demand": 0.15,
+     "weight": 0.291887
+    },
+    {
+     "skill": "accounting_software",
+     "demand": 0.1,
+     "weight": 0.23979
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "attention_detail",
+     "demand": 0.5
+    },
+    {
+     "skill": "communication",
+     "demand": 0.4
+    },
+    {
+     "skill": "time_management",
+     "demand": 0.35
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "sales_bd",
+   "name_en": "Sales / Business Development",
+   "name_id": "Sales / Pengembangan Bisnis",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "sales_skill",
+     "demand": 0.7,
+     "weight": 2.403791
+    },
+    {
+     "skill": "crm",
+     "demand": 0.3,
+     "weight": 0.831777
+    },
+    {
+     "skill": "market_research",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "english",
+     "demand": 0.2,
+     "weight": 0.389182
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.25,
+     "weight": 0.366584
+    },
+    {
+     "skill": "excel",
+     "demand": 0.2,
+     "weight": 0.277259
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "communication",
+     "demand": 0.7
+    },
+    {
+     "skill": "negotiation",
+     "demand": 0.6
+    },
+    {
+     "skill": "customer_orientation",
+     "demand": 0.4
+    },
+    {
+     "skill": "public_speaking",
+     "demand": 0.3
+    }
+   ]
+  },
+  {
+   "id": "customer_service",
+   "name_en": "Customer Service",
+   "name_id": "Layanan Pelanggan",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "customer_handling",
+     "demand": 0.8,
+     "weight": 2.74719
+    },
+    {
+     "skill": "crm",
+     "demand": 0.3,
+     "weight": 0.831777
+    },
+    {
+     "skill": "data_entry",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "english",
+     "demand": 0.25,
+     "weight": 0.486478
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.3,
+     "weight": 0.439901
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "communication",
+     "demand": 0.75
+    },
+    {
+     "skill": "customer_orientation",
+     "demand": 0.6
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.3
+    },
+    {
+     "skill": "adaptability",
+     "demand": 0.2
+    }
+   ]
+  },
+  {
+   "id": "teacher",
+   "name_en": "Teacher / Tutor",
+   "name_id": "Guru / Pengajar",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "teaching",
+     "demand": 0.8,
+     "weight": 2.74719
+    },
+    {
+     "skill": "curriculum",
+     "demand": 0.4,
+     "weight": 1.373595
+    },
+    {
+     "skill": "classroom_mgmt",
+     "demand": 0.35,
+     "weight": 1.201896
+    },
+    {
+     "skill": "english",
+     "demand": 0.25,
+     "weight": 0.486478
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.3,
+     "weight": 0.439901
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "communication",
+     "demand": 0.7
+    },
+    {
+     "skill": "public_speaking",
+     "demand": 0.45
+    },
+    {
+     "skill": "creativity",
+     "demand": 0.3
+    },
+    {
+     "skill": "leadership",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "supply_chain",
+   "name_en": "Supply Chain / Logistics",
+   "name_id": "Rantai Pasok / Logistik",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "inventory",
+     "demand": 0.55,
+     "weight": 1.888693
+    },
+    {
+     "skill": "supply_chain_mgmt",
+     "demand": 0.5,
+     "weight": 1.716994
+    },
+    {
+     "skill": "procurement_skill",
+     "demand": 0.4,
+     "weight": 1.373595
+    },
+    {
+     "skill": "export_import",
+     "demand": 0.25,
+     "weight": 0.858497
+    },
+    {
+     "skill": "excel",
+     "demand": 0.55,
+     "weight": 0.762462
+    },
+    {
+     "skill": "erp",
+     "demand": 0.3,
+     "weight": 0.64202
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.25,
+     "weight": 0.366584
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "attention_detail",
+     "demand": 0.4
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.35
+    },
+    {
+     "skill": "communication",
+     "demand": 0.35
+    },
+    {
+     "skill": "negotiation",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "civil_engineer",
+   "name_en": "Civil Engineer / Drafter",
+   "name_id": "Insinyur Sipil / Drafter",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "autocad",
+     "demand": 0.65,
+     "weight": 1.802183
+    },
+    {
+     "skill": "cost_estimation",
+     "demand": 0.45,
+     "weight": 1.545294
+    },
+    {
+     "skill": "structural",
+     "demand": 0.4,
+     "weight": 1.373595
+    },
+    {
+     "skill": "sketchup_revit",
+     "demand": 0.3,
+     "weight": 1.030196
+    },
+    {
+     "skill": "k3",
+     "demand": 0.3,
+     "weight": 0.719369
+    },
+    {
+     "skill": "project_management",
+     "demand": 0.2,
+     "weight": 0.554518
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.2,
+     "weight": 0.293267
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "teamwork",
+     "demand": 0.4
+    },
+    {
+     "skill": "leadership",
+     "demand": 0.35
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.35
+    },
+    {
+     "skill": "communication",
+     "demand": 0.3
+    }
+   ]
+  },
+  {
+   "id": "electrical_engineer",
+   "name_en": "Electrical Engineer / Technician",
+   "name_id": "Insinyur / Teknisi Listrik",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "electrical_install",
+     "demand": 0.6,
+     "weight": 2.060392
+    },
+    {
+     "skill": "plc",
+     "demand": 0.4,
+     "weight": 1.373595
+    },
+    {
+     "skill": "k3",
+     "demand": 0.4,
+     "weight": 0.959158
+    },
+    {
+     "skill": "troubleshooting",
+     "demand": 0.35,
+     "weight": 0.839263
+    },
+    {
+     "skill": "autocad",
+     "demand": 0.3,
+     "weight": 0.831777
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "problem_solving",
+     "demand": 0.45
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.35
+    },
+    {
+     "skill": "attention_detail",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.25
+    }
+   ]
+  },
+  {
+   "id": "qc_production",
+   "name_en": "Quality Control / Production",
+   "name_id": "Quality Control / Produksi",
+   "group": "non_it",
+   "requirements": [
+    {
+     "skill": "quality_mgmt",
+     "demand": 0.65,
+     "weight": 2.232092
+    },
+    {
+     "skill": "lean",
+     "demand": 0.35,
+     "weight": 1.201896
+    },
+    {
+     "skill": "k3",
+     "demand": 0.35,
+     "weight": 0.839263
+    },
+    {
+     "skill": "excel",
+     "demand": 0.35,
+     "weight": 0.485203
+    },
+    {
+     "skill": "statistics",
+     "demand": 0.2,
+     "weight": 0.428013
+    },
+    {
+     "skill": "ms_office",
+     "demand": 0.2,
+     "weight": 0.293267
+    }
+   ],
+   "soft_skills": [
+    {
+     "skill": "attention_detail",
+     "demand": 0.6
+    },
+    {
+     "skill": "teamwork",
+     "demand": 0.35
+    },
+    {
+     "skill": "problem_solving",
+     "demand": 0.3
+    },
+    {
+     "skill": "communication",
+     "demand": 0.25
     }
    ]
   }
@@ -1132,7 +2287,8 @@
    "name_en": "Design (UI/UX)",
    "name_id": "Desain (UI/UX)",
    "careers": [
-    "ui_ux_designer"
+    "ui_ux_designer",
+    "graphic_designer"
    ]
   },
   {
@@ -1142,6 +2298,80 @@
    "careers": [
     "it_support",
     "it_pm"
+   ]
+  },
+  {
+   "id": "finance",
+   "name_en": "Finance & accounting",
+   "name_id": "Keuangan & akuntansi",
+   "careers": [
+    "accountant",
+    "financial_analyst",
+    "tax_staff"
+   ]
+  },
+  {
+   "id": "marketing",
+   "name_en": "Marketing & content",
+   "name_id": "Pemasaran & konten",
+   "careers": [
+    "digital_marketing",
+    "content_writer",
+    "sales_bd"
+   ]
+  },
+  {
+   "id": "creative",
+   "name_en": "Creative & visual design",
+   "name_id": "Kreatif & desain visual",
+   "careers": [
+    "graphic_designer",
+    "ui_ux_designer",
+    "content_writer"
+   ]
+  },
+  {
+   "id": "people_admin",
+   "name_en": "HR & administration",
+   "name_id": "SDM & administrasi",
+   "careers": [
+    "hr_recruiter",
+    "admin_staff"
+   ]
+  },
+  {
+   "id": "service_sales",
+   "name_en": "Sales & customer service",
+   "name_id": "Penjualan & layanan pelanggan",
+   "careers": [
+    "sales_bd",
+    "customer_service"
+   ]
+  },
+  {
+   "id": "education",
+   "name_en": "Education",
+   "name_id": "Pendidikan",
+   "careers": [
+    "teacher"
+   ]
+  },
+  {
+   "id": "engineering",
+   "name_en": "Engineering & manufacturing",
+   "name_id": "Teknik & manufaktur",
+   "careers": [
+    "civil_engineer",
+    "electrical_engineer",
+    "qc_production"
+   ]
+  },
+  {
+   "id": "logistics",
+   "name_en": "Logistics & supply chain",
+   "name_id": "Logistik & rantai pasok",
+   "careers": [
+    "supply_chain"
    ]
   }
  ],
@@ -2310,6 +3540,655 @@
     "\\bpowerpoint\\b",
     "\\boutlook\\b"
    ]
+  },
+  {
+   "id": "accounting",
+   "name": "Accounting (PSAK)",
+   "category": "Finance",
+   "patterns": [
+    "\\bakuntansi\\b",
+    "\\baccounting\\b",
+    "\\bpsak\\b",
+    "general ledger",
+    "jurnal umum"
+   ]
+  },
+  {
+   "id": "financial_reporting",
+   "name": "Financial Reporting",
+   "category": "Finance",
+   "patterns": [
+    "laporan keuangan",
+    "financial report",
+    "financial statement"
+   ]
+  },
+  {
+   "id": "accounting_software",
+   "name": "Accounting Software (Accurate/MYOB/Zahir)",
+   "category": "Finance",
+   "patterns": [
+    "\\baccurate\\b",
+    "\\bmyob\\b",
+    "\\bzahir\\b",
+    "jurnal\\.id",
+    "accounting software"
+   ]
+  },
+  {
+   "id": "tax",
+   "name": "Taxation (PPh/PPN)",
+   "category": "Finance",
+   "patterns": [
+    "\\bpajak\\b",
+    "perpajakan",
+    "\\btax(?:ation)?\\b",
+    "\\bpph\\b",
+    "\\bppn\\b",
+    "e-?faktur",
+    "\\bspt\\b"
+   ]
+  },
+  {
+   "id": "audit",
+   "name": "Auditing",
+   "category": "Finance",
+   "patterns": [
+    "\\baudit(?:or|ing)?\\b"
+   ]
+  },
+  {
+   "id": "budgeting",
+   "name": "Budgeting",
+   "category": "Finance",
+   "patterns": [
+    "\\bbudget(?:ing)?\\b",
+    "\\banggaran\\b"
+   ]
+  },
+  {
+   "id": "financial_analysis",
+   "name": "Financial Analysis & Modelling",
+   "category": "Finance",
+   "patterns": [
+    "financial analysis",
+    "analisis keuangan",
+    "financial model",
+    "\\bvaluation\\b",
+    "\\bdcf\\b"
+   ]
+  },
+  {
+   "id": "seo",
+   "name": "SEO",
+   "category": "Marketing",
+   "patterns": [
+    "\\bseo\\b",
+    "search engine optimi[sz]ation"
+   ]
+  },
+  {
+   "id": "sem_ads",
+   "name": "Paid Ads (Google/Meta Ads)",
+   "category": "Marketing",
+   "patterns": [
+    "google ads",
+    "\\bsem\\b",
+    "meta ads",
+    "facebook ads",
+    "tiktok ads",
+    "iklan berbayar",
+    "paid ads"
+   ]
+  },
+  {
+   "id": "social_media",
+   "name": "Social Media Marketing",
+   "category": "Marketing",
+   "patterns": [
+    "social media",
+    "media sosial",
+    "\\binstagram\\b",
+    "\\btiktok\\b"
+   ]
+  },
+  {
+   "id": "content_writing",
+   "name": "Content Writing / Copywriting",
+   "category": "Marketing",
+   "patterns": [
+    "content writing",
+    "copywriting",
+    "penulisan konten",
+    "menulis artikel",
+    "\\bjurnalistik\\b"
+   ]
+  },
+  {
+   "id": "digital_analytics",
+   "name": "Digital Analytics (GA4)",
+   "category": "Marketing",
+   "patterns": [
+    "google analytics",
+    "\\bga4\\b",
+    "digital analytics"
+   ]
+  },
+  {
+   "id": "email_marketing",
+   "name": "Email Marketing",
+   "category": "Marketing",
+   "patterns": [
+    "email marketing",
+    "\\bmailchimp\\b"
+   ]
+  },
+  {
+   "id": "market_research",
+   "name": "Market Research",
+   "category": "Marketing",
+   "patterns": [
+    "market research",
+    "riset pasar",
+    "survei pasar"
+   ]
+  },
+  {
+   "id": "branding",
+   "name": "Branding",
+   "category": "Marketing",
+   "patterns": [
+    "\\bbranding\\b",
+    "brand identity"
+   ]
+  },
+  {
+   "id": "graphic_design",
+   "name": "Graphic Design",
+   "category": "Creative",
+   "patterns": [
+    "desain grafis",
+    "graphic design",
+    "\\bcoreldraw\\b",
+    "\\blayout\\b",
+    "\\bnirmana\\b"
+   ]
+  },
+  {
+   "id": "canva",
+   "name": "Canva",
+   "category": "Creative",
+   "patterns": [
+    "\\bcanva\\b"
+   ]
+  },
+  {
+   "id": "video_editing",
+   "name": "Video Editing",
+   "category": "Creative",
+   "patterns": [
+    "video editing",
+    "editing video",
+    "\\bpremiere\\b",
+    "after effects",
+    "\\bcapcut\\b",
+    "\\bvideografi\\b"
+   ]
+  },
+  {
+   "id": "photography",
+   "name": "Photography",
+   "category": "Creative",
+   "patterns": [
+    "\\bfotografi\\b",
+    "\\bphotography\\b",
+    "\\blightroom\\b"
+   ]
+  },
+  {
+   "id": "recruitment",
+   "name": "Recruitment",
+   "category": "HR & Admin",
+   "patterns": [
+    "\\brekrutmen\\b",
+    "\\brecruit(?:ment|ing)\\b",
+    "talent acquisition",
+    "\\bsourcing\\b"
+   ]
+  },
+  {
+   "id": "payroll",
+   "name": "Payroll & BPJS",
+   "category": "HR & Admin",
+   "patterns": [
+    "\\bpayroll\\b",
+    "penggajian",
+    "\\bbpjs\\b"
+   ]
+  },
+  {
+   "id": "labor_law",
+   "name": "Labour Law (UU Ketenagakerjaan)",
+   "category": "HR & Admin",
+   "patterns": [
+    "ketenagakerjaan",
+    "labou?r law",
+    "hubungan industrial"
+   ]
+  },
+  {
+   "id": "training_dev",
+   "name": "Training & Development",
+   "category": "HR & Admin",
+   "patterns": [
+    "training (?:and|&) development",
+    "\\bpelatihan\\b",
+    "learning (?:and|&) development"
+   ]
+  },
+  {
+   "id": "hris",
+   "name": "HRIS",
+   "category": "HR & Admin",
+   "patterns": [
+    "\\bhris\\b",
+    "\\btalenta\\b",
+    "\\bgadjian\\b"
+   ]
+  },
+  {
+   "id": "admin_filing",
+   "name": "Office Administration & Filing",
+   "category": "HR & Admin",
+   "patterns": [
+    "\\badministrasi\\b",
+    "\\bfiling\\b",
+    "\\barsip\\b",
+    "surat[- ]menyurat",
+    "correspondence"
+   ]
+  },
+  {
+   "id": "data_entry",
+   "name": "Data Entry",
+   "category": "HR & Admin",
+   "patterns": [
+    "data entry",
+    "input data"
+   ]
+  },
+  {
+   "id": "crm",
+   "name": "CRM (Salesforce/HubSpot)",
+   "category": "Sales & Service",
+   "patterns": [
+    "\\bcrm\\b",
+    "\\bsalesforce\\b",
+    "\\bhubspot\\b"
+   ]
+  },
+  {
+   "id": "sales_skill",
+   "name": "Sales & Prospecting",
+   "category": "Sales & Service",
+   "patterns": [
+    "\\bprospecting\\b",
+    "\\bclosing\\b",
+    "target penjualan",
+    "sales target",
+    "\\bpenjualan\\b"
+   ]
+  },
+  {
+   "id": "customer_handling",
+   "name": "Customer Handling",
+   "category": "Sales & Service",
+   "patterns": [
+    "customer handling",
+    "\\bkomplain\\b",
+    "\\bcomplaint",
+    "call cent(?:er|re)",
+    "layanan pelanggan"
+   ]
+  },
+  {
+   "id": "teaching",
+   "name": "Teaching & Lesson Planning",
+   "category": "Education",
+   "patterns": [
+    "\\bmengajar\\b",
+    "\\bteaching\\b",
+    "\\bpedagog",
+    "\\brpp\\b",
+    "lesson plan",
+    "modul ajar"
+   ]
+  },
+  {
+   "id": "curriculum",
+   "name": "Curriculum Development",
+   "category": "Education",
+   "patterns": [
+    "\\bkurikulum\\b",
+    "\\bcurriculum\\b"
+   ]
+  },
+  {
+   "id": "classroom_mgmt",
+   "name": "Classroom Management",
+   "category": "Education",
+   "patterns": [
+    "classroom management",
+    "pengelolaan kelas",
+    "manajemen kelas"
+   ]
+  },
+  {
+   "id": "supply_chain_mgmt",
+   "name": "Supply Chain Management",
+   "category": "Logistics",
+   "patterns": [
+    "supply chain",
+    "rantai pasok"
+   ]
+  },
+  {
+   "id": "inventory",
+   "name": "Inventory Management",
+   "category": "Logistics",
+   "patterns": [
+    "\\binventory\\b",
+    "stock opname",
+    "\\bpersediaan\\b",
+    "\\bstok\\b"
+   ]
+  },
+  {
+   "id": "procurement_skill",
+   "name": "Procurement & Purchasing",
+   "category": "Logistics",
+   "patterns": [
+    "\\bprocurement\\b",
+    "\\bpurchasing\\b",
+    "\\bpengadaan\\b",
+    "vendor management"
+   ]
+  },
+  {
+   "id": "export_import",
+   "name": "Export-Import & Customs",
+   "category": "Logistics",
+   "patterns": [
+    "\\bekspor\\b",
+    "\\bimpor\\b",
+    "export[- ]import",
+    "\\bcustoms\\b",
+    "bea cukai",
+    "\\bincoterms\\b"
+   ]
+  },
+  {
+   "id": "autocad",
+   "name": "AutoCAD",
+   "category": "Engineering",
+   "patterns": [
+    "\\bautocad\\b",
+    "gambar teknik"
+   ]
+  },
+  {
+   "id": "sketchup_revit",
+   "name": "SketchUp / Revit / BIM",
+   "category": "Engineering",
+   "patterns": [
+    "\\bsketchup\\b",
+    "\\brevit\\b",
+    "\\bbim\\b"
+   ]
+  },
+  {
+   "id": "structural",
+   "name": "Structural Analysis (SAP2000/ETABS)",
+   "category": "Engineering",
+   "patterns": [
+    "\\bsap ?2000\\b",
+    "\\betabs\\b",
+    "analisis struktur",
+    "structural analysis",
+    "mekanika struktur"
+   ]
+  },
+  {
+   "id": "cost_estimation",
+   "name": "Cost Estimation (RAB)",
+   "category": "Engineering",
+   "patterns": [
+    "\\brab\\b",
+    "cost estimat",
+    "quantity take ?off",
+    "estimasi biaya"
+   ]
+  },
+  {
+   "id": "plc",
+   "name": "PLC / SCADA",
+   "category": "Engineering",
+   "patterns": [
+    "\\bplc\\b",
+    "\\bscada\\b",
+    "sistem kendali"
+   ]
+  },
+  {
+   "id": "electrical_install",
+   "name": "Electrical Installation",
+   "category": "Engineering",
+   "patterns": [
+    "instalasi listrik",
+    "electrical installation",
+    "panel listrik",
+    "\\bwiring\\b"
+   ]
+  },
+  {
+   "id": "k3",
+   "name": "Occupational Health & Safety (K3/HSE)",
+   "category": "Engineering",
+   "patterns": [
+    "\\bk3l?\\b",
+    "\\bhse\\b",
+    "keselamatan kerja",
+    "occupational (?:health|safety)"
+   ]
+  },
+  {
+   "id": "quality_mgmt",
+   "name": "Quality Control (ISO 9001)",
+   "category": "Engineering",
+   "patterns": [
+    "iso ?9001",
+    "quality control",
+    "\\bspc\\b",
+    "\\binspeksi\\b",
+    "manajemen mutu"
+   ]
+  },
+  {
+   "id": "lean",
+   "name": "Lean / Six Sigma",
+   "category": "Engineering",
+   "patterns": [
+    "\\blean\\b",
+    "six sigma",
+    "\\bkaizen\\b"
+   ]
+  },
+  {
+   "id": "english",
+   "name": "English (TOEFL/IELTS)",
+   "category": "General",
+   "patterns": [
+    "\\btoefl\\b",
+    "\\bielts\\b",
+    "\\btoeic\\b",
+    "bahasa inggris",
+    "english (?:proficiency|skill|language)",
+    "fluent (?:in )?english"
+   ]
+  },
+  {
+   "id": "research_methods",
+   "name": "Research Methods (SPSS)",
+   "category": "General",
+   "patterns": [
+    "\\bspss\\b",
+    "metodologi penelitian",
+    "research method",
+    "\\bkuesioner\\b"
+   ]
+  }
+ ],
+ "soft_skills": [
+  {
+   "id": "communication",
+   "name_en": "Communication",
+   "name_id": "Komunikasi",
+   "patterns": [
+    "\\bkomunikasi\\b",
+    "\\bcommunicat"
+   ]
+  },
+  {
+   "id": "teamwork",
+   "name_en": "Teamwork",
+   "name_id": "Kerja sama tim",
+   "patterns": [
+    "\\bteamwork\\b",
+    "kerja ?sama tim",
+    "team player",
+    "bekerja dalam tim"
+   ]
+  },
+  {
+   "id": "problem_solving",
+   "name_en": "Problem solving",
+   "name_id": "Pemecahan masalah",
+   "patterns": [
+    "problem[- ]solving",
+    "pemecahan masalah",
+    "memecahkan masalah"
+   ]
+  },
+  {
+   "id": "critical_thinking",
+   "name_en": "Analytical & critical thinking",
+   "name_id": "Berpikir analitis & kritis",
+   "patterns": [
+    "critical thinking",
+    "berpikir kritis",
+    "\\banalytical\\b",
+    "\\banalitis\\b"
+   ]
+  },
+  {
+   "id": "leadership",
+   "name_en": "Leadership",
+   "name_id": "Kepemimpinan",
+   "patterns": [
+    "\\bleadership\\b",
+    "kepemimpinan",
+    "\\bmemimpin\\b"
+   ]
+  },
+  {
+   "id": "time_management",
+   "name_en": "Time management",
+   "name_id": "Manajemen waktu",
+   "patterns": [
+    "time management",
+    "manajemen waktu",
+    "\\bmultitasking\\b",
+    "bekerja di bawah tekanan",
+    "under pressure"
+   ]
+  },
+  {
+   "id": "adaptability",
+   "name_en": "Adaptability & fast learning",
+   "name_id": "Adaptif & cepat belajar",
+   "patterns": [
+    "\\badaptif\\b",
+    "\\badaptab",
+    "fast learner",
+    "cepat belajar",
+    "\\bfleksibel\\b"
+   ]
+  },
+  {
+   "id": "creativity",
+   "name_en": "Creativity",
+   "name_id": "Kreativitas",
+   "patterns": [
+    "\\bkreatif\\b",
+    "\\bcreativ",
+    "\\binovatif\\b",
+    "\\binnovative\\b"
+   ]
+  },
+  {
+   "id": "attention_detail",
+   "name_en": "Attention to detail",
+   "name_id": "Ketelitian",
+   "patterns": [
+    "detail[- ]oriented",
+    "\\bteliti\\b",
+    "ketelitian",
+    "attention to detail"
+   ]
+  },
+  {
+   "id": "public_speaking",
+   "name_en": "Presentation & public speaking",
+   "name_id": "Presentasi & berbicara di depan umum",
+   "patterns": [
+    "public speaking",
+    "\\bpresentasi\\b",
+    "presentation skill"
+   ]
+  },
+  {
+   "id": "negotiation",
+   "name_en": "Negotiation & persuasion",
+   "name_id": "Negosiasi & persuasi",
+   "patterns": [
+    "\\bnegosiasi\\b",
+    "\\bnegotiat",
+    "\\bpersuasi"
+   ]
+  },
+  {
+   "id": "customer_orientation",
+   "name_en": "Customer orientation",
+   "name_id": "Orientasi pelanggan",
+   "patterns": [
+    "customer orientation",
+    "orientasi pelanggan",
+    "customer[- ]oriented",
+    "berorientasi (?:pada )?pelanggan",
+    "service[- ]oriented",
+    "customer focus"
+   ]
+  },
+  {
+   "id": "integrity",
+   "name_en": "Integrity",
+   "name_id": "Integritas",
+   "patterns": [
+    "\\bintegritas\\b",
+    "\\bintegrity\\b",
+    "\\bjujur\\b",
+    "\\bhonest"
+   ]
   }
  ],
  "courses": [
@@ -2321,7 +4200,8 @@
     "data_structures",
     "python",
     "cpp"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "oop",
@@ -2330,7 +4210,8 @@
    "skills": [
     "oop",
     "java"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "struktur_data",
@@ -2338,7 +4219,8 @@
    "name_en": "Data Structures",
    "skills": [
     "data_structures"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "basis_data",
@@ -2348,7 +4230,8 @@
     "sql",
     "mysql",
     "data_modeling"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "basis_data_lanjut",
@@ -2359,7 +4242,8 @@
     "postgresql",
     "db_tuning",
     "backup_recovery"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "web",
@@ -2370,7 +4254,8 @@
     "javascript",
     "php",
     "css_framework"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "web_lanjut",
@@ -2381,7 +4266,8 @@
     "rest_api",
     "git",
     "mysql"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "mobile",
@@ -2392,7 +4278,8 @@
     "kotlin",
     "flutter",
     "dart"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "rpl",
@@ -2404,7 +4291,8 @@
     "requirement_analysis",
     "agile_scrum",
     "unit_testing"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "apsi",
@@ -2415,7 +4303,8 @@
     "uml",
     "bpmn",
     "documentation"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "imk",
@@ -2426,7 +4315,8 @@
     "ux_research",
     "prototyping",
     "figma"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "jarkom",
@@ -2436,7 +4326,8 @@
     "networking",
     "cisco",
     "mikrotik"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "so",
@@ -2445,7 +4336,8 @@
    "skills": [
     "linux",
     "scripting"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "keamanan",
@@ -2455,7 +4347,8 @@
     "network_security",
     "vuln_assessment",
     "firewall"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "cloud",
@@ -2465,16 +4358,8 @@
     "docker",
     "aws",
     "virtualization"
-   ]
-  },
-  {
-   "id": "statistika",
-   "name_id": "Statistika",
-   "name_en": "Statistics",
-   "skills": [
-    "statistics",
-    "excel"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "data_mining",
@@ -2485,7 +4370,8 @@
     "python",
     "pandas",
     "scikit_learn"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "ai",
@@ -2495,7 +4381,8 @@
     "machine_learning",
     "deep_learning",
     "python"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "bigdata",
@@ -2505,7 +4392,8 @@
     "hadoop",
     "spark",
     "etl"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "testing",
@@ -2516,7 +4404,8 @@
     "test_case",
     "automation_testing",
     "selenium"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "manpro",
@@ -2526,7 +4415,8 @@
     "project_management",
     "agile_scrum",
     "jira"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "orkom",
@@ -2534,7 +4424,8 @@
    "name_en": "Computer Organisation",
    "skills": [
     "hardware"
-   ]
+   ],
+   "category": "it"
   },
   {
    "id": "vis_data",
@@ -2544,7 +4435,363 @@
     "data_visualization",
     "power_bi",
     "tableau"
-   ]
+   ],
+   "category": "it"
+  },
+  {
+   "id": "pengantar_akuntansi",
+   "name_id": "Pengantar Akuntansi",
+   "name_en": "Introductory Accounting",
+   "skills": [
+    "accounting",
+    "financial_reporting"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "akuntansi_keuangan",
+   "name_id": "Akuntansi Keuangan",
+   "name_en": "Financial Accounting",
+   "skills": [
+    "accounting",
+    "financial_reporting",
+    "accounting_software"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "perpajakan",
+   "name_id": "Perpajakan",
+   "name_en": "Taxation",
+   "skills": [
+    "tax"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "auditing",
+   "name_id": "Auditing",
+   "name_en": "Auditing",
+   "skills": [
+    "audit"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "manajemen_keuangan",
+   "name_id": "Manajemen Keuangan",
+   "name_en": "Financial Management",
+   "skills": [
+    "financial_analysis",
+    "budgeting",
+    "excel"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "manajemen_pemasaran",
+   "name_id": "Manajemen Pemasaran",
+   "name_en": "Marketing Management",
+   "skills": [
+    "market_research",
+    "branding",
+    "social_media"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "pemasaran_digital",
+   "name_id": "Pemasaran Digital",
+   "name_en": "Digital Marketing",
+   "skills": [
+    "seo",
+    "sem_ads",
+    "social_media",
+    "digital_analytics"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "manajemen_sdm",
+   "name_id": "Manajemen Sumber Daya Manusia",
+   "name_en": "Human Resource Management",
+   "skills": [
+    "recruitment",
+    "payroll",
+    "labor_law",
+    "training_dev"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "manajemen_rantai_pasok",
+   "name_id": "Manajemen Rantai Pasok",
+   "name_en": "Supply Chain Management",
+   "skills": [
+    "supply_chain_mgmt",
+    "inventory",
+    "procurement_skill"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "bisnis_internasional",
+   "name_id": "Bisnis Internasional / Ekspor-Impor",
+   "name_en": "International Business / Export-Import",
+   "skills": [
+    "export_import"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "kewirausahaan",
+   "name_id": "Kewirausahaan",
+   "name_en": "Entrepreneurship",
+   "skills": [
+    "sales_skill",
+    "market_research"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "sistem_informasi_akuntansi",
+   "name_id": "Sistem Informasi Akuntansi",
+   "name_en": "Accounting Information Systems",
+   "skills": [
+    "accounting_software",
+    "erp"
+   ],
+   "category": "business"
+  },
+  {
+   "id": "desain_grafis",
+   "name_id": "Desain Grafis / Nirmana",
+   "name_en": "Graphic Design",
+   "skills": [
+    "graphic_design",
+    "adobe",
+    "canva"
+   ],
+   "category": "creative"
+  },
+  {
+   "id": "fotografi",
+   "name_id": "Fotografi",
+   "name_en": "Photography",
+   "skills": [
+    "photography"
+   ],
+   "category": "creative"
+  },
+  {
+   "id": "videografi",
+   "name_id": "Videografi & Editing",
+   "name_en": "Videography & Editing",
+   "skills": [
+    "video_editing"
+   ],
+   "category": "creative"
+  },
+  {
+   "id": "penulisan_kreatif",
+   "name_id": "Penulisan Kreatif / Jurnalistik",
+   "name_en": "Creative Writing / Journalism",
+   "skills": [
+    "content_writing"
+   ],
+   "category": "creative"
+  },
+  {
+   "id": "public_relations",
+   "name_id": "Hubungan Masyarakat (PR)",
+   "name_en": "Public Relations",
+   "skills": [
+    "content_writing",
+    "social_media",
+    "branding"
+   ],
+   "category": "creative"
+  },
+  {
+   "id": "gambar_teknik",
+   "name_id": "Gambar Teknik / CAD",
+   "name_en": "Engineering Drawing / CAD",
+   "skills": [
+    "autocad"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "analisis_struktur",
+   "name_id": "Mekanika & Analisis Struktur",
+   "name_en": "Structural Analysis",
+   "skills": [
+    "structural"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "estimasi_biaya",
+   "name_id": "Estimasi Biaya Konstruksi (RAB)",
+   "name_en": "Construction Cost Estimation",
+   "skills": [
+    "cost_estimation"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "bim",
+   "name_id": "Building Information Modeling",
+   "name_en": "Building Information Modeling",
+   "skills": [
+    "sketchup_revit"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "instalasi_listrik",
+   "name_id": "Instalasi Listrik",
+   "name_en": "Electrical Installation",
+   "skills": [
+    "electrical_install"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "sistem_kendali",
+   "name_id": "Sistem Kendali / PLC",
+   "name_en": "Control Systems / PLC",
+   "skills": [
+    "plc"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "k3",
+   "name_id": "Keselamatan & Kesehatan Kerja (K3)",
+   "name_en": "Occupational Health & Safety",
+   "skills": [
+    "k3"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "manajemen_mutu",
+   "name_id": "Manajemen Mutu / Pengendalian Kualitas",
+   "name_en": "Quality Management",
+   "skills": [
+    "quality_mgmt",
+    "lean"
+   ],
+   "category": "engineering"
+  },
+  {
+   "id": "strategi_pembelajaran",
+   "name_id": "Strategi Pembelajaran",
+   "name_en": "Teaching Strategies",
+   "skills": [
+    "teaching"
+   ],
+   "category": "education"
+  },
+  {
+   "id": "pengembangan_kurikulum",
+   "name_id": "Pengembangan Kurikulum",
+   "name_en": "Curriculum Development",
+   "skills": [
+    "curriculum"
+   ],
+   "category": "education"
+  },
+  {
+   "id": "pengelolaan_kelas",
+   "name_id": "Pengelolaan Kelas",
+   "name_en": "Classroom Management",
+   "skills": [
+    "classroom_mgmt"
+   ],
+   "category": "education"
+  },
+  {
+   "id": "bahasa_inggris",
+   "name_id": "Bahasa Inggris",
+   "name_en": "English",
+   "skills": [
+    "english"
+   ],
+   "category": "general"
+  },
+  {
+   "id": "statistika",
+   "name_id": "Statistika",
+   "name_en": "Statistics",
+   "skills": [
+    "statistics",
+    "excel"
+   ],
+   "category": "general"
+  },
+  {
+   "id": "metodologi_penelitian",
+   "name_id": "Metodologi Penelitian",
+   "name_en": "Research Methods",
+   "skills": [
+    "research_methods",
+    "statistics"
+   ],
+   "category": "general"
+  },
+  {
+   "id": "aplikasi_perkantoran",
+   "name_id": "Aplikasi Perkantoran",
+   "name_en": "Office Applications",
+   "skills": [
+    "ms_office",
+    "excel"
+   ],
+   "category": "general"
+  },
+  {
+   "id": "administrasi_perkantoran",
+   "name_id": "Administrasi Perkantoran",
+   "name_en": "Office Administration",
+   "skills": [
+    "admin_filing",
+    "data_entry"
+   ],
+   "category": "general"
+  }
+ ],
+ "course_categories": [
+  {
+   "id": "it",
+   "name_id": "Teknologi Informasi",
+   "name_en": "Information Technology"
+  },
+  {
+   "id": "business",
+   "name_id": "Bisnis, Ekonomi & Akuntansi",
+   "name_en": "Business, Economics & Accounting"
+  },
+  {
+   "id": "creative",
+   "name_id": "Komunikasi, Desain & Media",
+   "name_en": "Communication, Design & Media"
+  },
+  {
+   "id": "engineering",
+   "name_id": "Teknik",
+   "name_en": "Engineering"
+  },
+  {
+   "id": "education",
+   "name_id": "Pendidikan",
+   "name_en": "Education"
+  },
+  {
+   "id": "general",
+   "name_id": "Umum (lintas jurusan)",
+   "name_en": "General (all majors)"
   }
  ],
  "demand_source": "demand_seed.csv"
