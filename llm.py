@@ -15,11 +15,14 @@ from __future__ import annotations
 import json
 import os
 import re
+import urllib.error
 import urllib.request
 
 PROMPT_VERSION = "v1.0"
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+GROQ_REASONING = os.getenv("GROQ_REASONING_EFFORT", "low")   # gpt-oss only: low | medium | high
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 TIMEOUT = 30
 
 
@@ -28,9 +31,24 @@ class LLMUnavailable(RuntimeError):
 
 
 def _post(url, payload, headers):
+    # Groq sits behind Cloudflare, which answers 403 to Python's default "Python-urllib" user agent
+    headers = {"User-Agent": "KarirFit/1.0 (+https://karirfit-ecru.vercel.app)", "Accept": "application/json", **headers}
     req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers=headers, method="POST")
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:   # surface the provider's message (e.g. invalid key, unknown model)
+        detail = e.read().decode("utf-8", "ignore")[:300]
+        raise LLMUnavailable(f"HTTP {e.code}: {detail}") from None
+
+
+def _groq_body(messages: list[dict], temperature: float, max_tokens: int) -> dict:
+    body = {"model": GROQ_MODEL, "temperature": temperature, "messages": messages, "max_completion_tokens": max_tokens}
+    if GROQ_MODEL.startswith("openai/gpt-oss"):
+        # reasoning tokens count towards max_completion_tokens; keep the answer clean of the reasoning text
+        body["reasoning_effort"] = GROQ_REASONING
+        body["include_reasoning"] = False
+    return body
 
 
 def _gemini(prompt: str, json_mode: bool) -> str:
@@ -50,10 +68,10 @@ def _groq(prompt: str, json_mode: bool) -> str:
     key = os.getenv("GROQ_API_KEY")
     if not key:
         raise LLMUnavailable("GROQ_API_KEY not set")
-    body = {"model": GROQ_MODEL, "temperature": 0, "messages": [{"role": "user", "content": prompt}]}
+    body = _groq_body([{"role": "user", "content": prompt}], 0, 3000)
     if json_mode:
         body["response_format"] = {"type": "json_object"}
-    out = _post("https://api.groq.com/openai/v1/chat/completions", body,
+    out = _post(GROQ_URL, body,
                 {"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
     return out["choices"][0]["message"]["content"]
 
@@ -179,11 +197,12 @@ def chat(messages: list[dict], results_text: str, passages: list[dict], lang: st
     key = os.getenv("GROQ_API_KEY")
     if key:
         try:
-            out = _post("https://api.groq.com/openai/v1/chat/completions",
-                        {"model": GROQ_MODEL, "temperature": 0.3, "max_tokens": 700,
-                         "messages": [{"role": "system", "content": system}] + history},
+            out = _post(GROQ_URL, _groq_body([{"role": "system", "content": system}] + history, 0.3, 2500),
                         {"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
-            return out["choices"][0]["message"]["content"], f"groq:{GROQ_MODEL}"
+            text = (out["choices"][0]["message"].get("content") or "").strip()
+            if not text:
+                raise LLMUnavailable("empty reply (reasoning used all tokens)")
+            return text, f"groq:{GROQ_MODEL}"
         except Exception as e:
             err = e
     else:
